@@ -1,6 +1,22 @@
 # fx67llVueUI
 do sth like ElementUI & do sth different
 
+[npm](https://www.npmjs.com/package/fx67ll-vue-ui "npm")
+
+### 使用步骤
++ `npm install fx67ll-vue-ui --save`
++ 在`main.js`中注册组件
+```
+import fx67llVueUI from 'fx67ll-vue-ui'
+Vue.use(fx67llVueUI)
+```
++ 在需要的地方直接使用
+```
+// infinityColor，无限符号的颜色，十六进制颜色代码
+// infinitySize，无限符号的大小，支持数字，包括小数
+<shape-infinity :infinityColor="'#ff5500'" :infinitySize="0.3"></shape-infinity>
+```
+
 ## 0.2.0.20210420
 * 去除不必要的依赖，减少安装时间
 * 添加MIT的软件使用许可证

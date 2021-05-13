@@ -1,6 +1,7 @@
 <template>
 	<div class="fx67ll-box">
-		<shape-infinity></shape-infinity>
+		<!-- <shape-infinity></shape-infinity> -->
+		<!-- <shape-starfive></shape-starfive> -->
 	</div>
 </template>
 
@@ -8,11 +9,9 @@
 export default {
 	name: 'fx67llIndex',
 	data() {
-		return {
-		};
+		return {};
 	},
-	methods: {
-	}
+	methods: {}
 };
 </script>
 

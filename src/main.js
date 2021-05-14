@@ -7,16 +7,8 @@ Vue.config.productionTip = false
 import less from 'less'
 Vue.use(less)
 
-import {
-	shapeInfinity
-} from '@c/index';
-Vue.use(shapeInfinity);
-
-import {
-	shapeStarfive
-} from '@c/index';
-Vue.use(shapeStarfive);
-
+// import fx67llVueUI from '@c/index';
+// Vue.use(fx67llVueUI);
 
 new Vue({
 	router,

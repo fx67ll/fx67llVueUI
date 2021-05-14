@@ -1,17 +1,16 @@
-import shapeInfinity from './shape/infinity.vue';
-shapeInfinity.install = function(Vue) {
-	Vue.component(shapeInfinity.name, shapeInfinity);
-};
-export {
-	default as shapeInfinity
-}
-from './shape/infinity.vue'
+import Vue from 'vue';
 
-import shapeStarfive from './shape/starfive.vue';
-shapeStarfive.install = function(Vue) {
-	Vue.component(shapeStarfive.name, shapeStarfive);
-};
-export {
-	default as shapeStarfive
+import {
+	shapeInfinity
+} from '@c/shape/infinity/infinity.js';
+
+import {
+	shapeStarfive
+} from '@c/shape/starfive/starfive.js';
+
+export default {
+	install(Vue) {
+		Vue.use(shapeInfinity);
+		Vue.use(shapeStarfive);
+	}
 }
-from './shape/starfive.vue';

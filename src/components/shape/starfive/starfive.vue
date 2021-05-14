@@ -1,5 +1,5 @@
 <template>
-	<div class="starfive-box"><div class="starfive" :style="{ '--starfiveColor': starfiveColor, '--starfiveSize': starfiveSize }"></div></div>
+	<div class="starfive-box" :style="{ '--shapeColor': shapeColor, '--shapeSize': shapeSize }"><div class="starfive"></div></div>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {
 	name: 'shapeStarfive',
 	props: {
 		// 无限符号的颜色
-		starfiveColor: {
+		shapeColor: {
 			type: String,
 			required: false,
 			default: '#000000',
@@ -16,7 +16,7 @@ export default {
 			}
 		},
 		// 无限符号的大小
-		starfiveSize: {
+		shapeSize: {
 			type: Number,
 			required: false,
 			default: 1,
@@ -33,24 +33,24 @@ export default {
 	width: 200px;
 	height: 180px;
 	overflow: hidden;
+	zoom: var(--shapeSize);
+	// 火狐不兼容zoom，用transform勉强代替
+	-moz-transform: scale(var(--shapeSize));
 	.starfive {
 		position: relative;
 		top: 58px;
 		left: 4px;
 		display: block;
-		color: var(--starfiveColor);
+		color: var(--shapeColor);
 		width: 0px;
 		height: 0px;
 		border-right: 100px solid transparent;
-		border-bottom: 70px solid var(--starfiveColor);
+		border-bottom: 70px solid var(--shapeColor);
 		border-left: 100px solid transparent;
 		transform: rotate(35deg);
-		zoom: var(--starfiveSize);
-		// 火狐不兼容zoom，用transform勉强代替
-		-moz-transform: scale(var(--starfiveSize));
 	}
 	.starfive:before {
-		border-bottom: 80px solid var(--starfiveColor);
+		border-bottom: 80px solid var(--shapeColor);
 		border-left: 30px solid transparent;
 		border-right: 30px solid transparent;
 		position: absolute;
@@ -65,13 +65,13 @@ export default {
 	.starfive:after {
 		position: absolute;
 		display: block;
-		color: var(--starfiveColor);
+		color: var(--shapeColor);
 		top: 3px;
 		left: -105px;
 		width: 0px;
 		height: 0px;
 		border-right: 100px solid transparent;
-		border-bottom: 70px solid var(--starfiveColor);
+		border-bottom: 70px solid var(--shapeColor);
 		border-left: 100px solid transparent;
 		transform: rotate(-70deg);
 		content: '';

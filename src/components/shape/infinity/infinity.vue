@@ -1,5 +1,5 @@
 <template>
-	<div class="infinity" :style="{ '--infinityColor': infinityColor, '--infinitySize': infinitySize }"></div>
+	<div class="infinity" :style="{ '--shapeColor': shapeColor, '--shapeSize': shapeSize }"></div>
 </template>
 
 <script>
@@ -7,23 +7,23 @@ export default {
 	name: 'shapeInfinity',
 	props: {
 		// 无限符号的颜色
-		infinityColor: {
+		shapeColor: {
 			type: String,
 			required: false,
 			default: '#000000',
 			validator(color) {
-				return new RegExp('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$').test(color)
+				return new RegExp('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$').test(color);
 			}
 		},
 		// 无限符号的大小
-		infinitySize: {
+		shapeSize: {
 			type: Number,
 			required: false,
 			default: 1,
 			validator(num) {
-				return new RegExp('^((-?)0|([1-9][0-9]*))(\.[0-9]+)?$').test(num)
+				return new RegExp('^((-?)0|([1-9][0-9]*))(\.[0-9]+)?$').test(num);
 			}
-		},
+		}
 	}
 };
 </script>
@@ -34,9 +34,9 @@ export default {
 	width: 212px;
 	height: 100px;
 	box-sizing: content-box;
-	zoom: var(--infinitySize);
+	zoom: var(--shapeSize);
 	// 火狐不兼容zoom，用transform勉强代替
-	-moz-transform: scale(var(--infinitySize));
+	-moz-transform: scale(var(--shapeSize));
 }
 .infinity:before,
 .infinity:after {
@@ -47,7 +47,7 @@ export default {
 	left: 0;
 	width: 60px;
 	height: 60px;
-	border: 20px solid var(--infinityColor);
+	border: 20px solid var(--shapeColor);
 	border-radius: 50px 50px 0 50px;
 	transform: rotate(-45deg);
 }

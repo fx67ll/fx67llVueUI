@@ -4,7 +4,7 @@
 
 <script>
 export default {
-	name: 'draggleComplexTable',
+	name: 'draggableTable',
 };
 </script>
 

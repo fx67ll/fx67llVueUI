@@ -30,7 +30,7 @@ Vue.use(fx67llVueUI)
 <shape-starfive type="up" shapeColor="#000000" :shapeSize="1"></shape-starfive>
 ```
 
-## 0.x.x.202105xx
+## 0.x.x.202106xx
 * `下一个版本` 下拉树组件
 * `下一个版本` 一键回顶组件
 * `下一个版本` 右键菜单组件

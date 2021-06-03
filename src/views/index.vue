@@ -2,6 +2,7 @@
 	<div class="fx67ll-box">
 		<!-- <shape-infinity></shape-infinity> -->
 		<!-- <shape-starfive></shape-starfive> -->
+		<!-- <shape-triangle type="up"></shape-triangle> -->
 	</div>
 </template>
 

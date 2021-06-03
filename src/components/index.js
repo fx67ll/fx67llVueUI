@@ -8,9 +8,14 @@ import {
 	shapeStarfive
 } from '@c/shape/starfive/starfive.js';
 
+import {
+	shapeTriangle
+} from '@c/shape/triangle/triangle.js';
+
 export default {
 	install(Vue) {
 		Vue.use(shapeInfinity);
 		Vue.use(shapeStarfive);
+		Vue.use(shapeTriangle);
 	}
 }

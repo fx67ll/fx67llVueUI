@@ -12,10 +12,15 @@ import {
 	shapeTriangle
 } from '@c/shape/triangle/triangle.js';
 
+import {
+	shapeHeart
+} from '@c/shape/heart/heart.js';
+
 export default {
 	install(Vue) {
 		Vue.use(shapeInfinity);
 		Vue.use(shapeStarfive);
 		Vue.use(shapeTriangle);
+		Vue.use(shapeHeart);
 	}
 }

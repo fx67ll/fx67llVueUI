@@ -1,8 +1,10 @@
 <template>
 	<div class="fx67ll-box">
-		<!-- <shape-infinity></shape-infinity> -->
-		<!-- <shape-starfive></shape-starfive> -->
-		<!-- <shape-triangle type="up"></shape-triangle> -->
+		<shape-infinity shapeColor="#ffff7f" :shapeSize="0.5"></shape-infinity>
+		<shape-starfive shapeColor="#aaffff" :shapeSize="3"></shape-starfive>
+		<shape-triangle type="up" shapeColor="#ff5500" :shapeSize="2"></shape-triangle>
+		<shape-heart shapeColor="#dedede" :shapeSize="4"></shape-heart>
+		<shape-triangle shapeColor="#ff5500" :shapeSize="2"></shape-triangle>
 	</div>
 </template>
 

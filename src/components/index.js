@@ -20,6 +20,10 @@ import {
 	shapeSpaceInvader
 } from '@c/shape/space-invader/space-invader.js';
 
+import {
+	shapeEgg
+} from '@c/shape/egg/egg.js';
+
 export default {
 	install(Vue) {
 		Vue.use(shapeInfinity);
@@ -27,5 +31,6 @@ export default {
 		Vue.use(shapeTriangle);
 		Vue.use(shapeHeart);
 		Vue.use(shapeSpaceInvader);
+		Vue.use(shapeEgg);
 	}
 }

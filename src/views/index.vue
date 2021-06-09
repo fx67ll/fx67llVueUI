@@ -5,7 +5,8 @@
 		<shape-triangle type="up" shapeColor="#ff5500" :shapeSize="2"></shape-triangle>
 		<shape-heart shapeColor="#dedede" :shapeSize="4"></shape-heart>
 		<shape-triangle shapeColor="#ff5500" :shapeSize="2"></shape-triangle>
-		<shape-space-invader shapeColor="#00ff00" :shapeSize="2.5" ></shape-space-invader>
+		<shape-space-invader shapeColor="#00ff00" :shapeSize="2.5"></shape-space-invader>
+		<shape-egg shapeColor="#ffff7f" :shapeSize="1.5"></shape-egg>
 	</div>
 </template>
 

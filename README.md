@@ -28,11 +28,23 @@ Vue.use(fx67llVueUI)
 // 三角形符号
 // type，三角形指向，默认值：down，可选值：down/up/left/right
 <shape-starfive type="up" shapeColor="#000000" :shapeSize="1"></shape-starfive>
+
+// 爱心符号
+<shape-heart shapeColor="#000000" :shapeSize="1"></shape-heart>
+
+// 太空入侵者
+<shape-space-invader shapeColor="#000000" :shapeSize="1"></shape-space-invader>
+
+// 鸡蛋形状
+<shape-egg shapeColor="#000000" :shapeSize="1"></shape-egg>
 ```
 
 ## 0.x.x.202106xx
 * `下一个版本` 一键回顶组件
 * `下一个版本` 右键菜单组件
+
+## 0.2.8.20210609
+* 完成纯CSS3绘制的鸡蛋形状组件的封装，可以设置鸡蛋的颜色和大小
 
 ## 0.2.7.20210608
 * 完成纯CSS3绘制的***太空入侵者***组件的封装，可以设置***太空入侵者***的颜色和大小

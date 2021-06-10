@@ -24,6 +24,10 @@ import {
 	shapeEgg
 } from '@c/shape/egg/egg.js';
 
+import {
+	shapePacMan
+} from '@c/shape/pac-man/pac-man.js';
+
 export default {
 	install(Vue) {
 		Vue.use(shapeInfinity);
@@ -32,5 +36,6 @@ export default {
 		Vue.use(shapeHeart);
 		Vue.use(shapeSpaceInvader);
 		Vue.use(shapeEgg);
+		Vue.use(shapePacMan);
 	}
 }

@@ -7,6 +7,7 @@
 		<shape-triangle shapeColor="#ff5500" :shapeSize="2"></shape-triangle>
 		<shape-space-invader shapeColor="#00ff00" :shapeSize="2.5"></shape-space-invader>
 		<shape-egg shapeColor="#ffff7f" :shapeSize="1.5"></shape-egg>
+		<shape-pac-man shapeColor="#aaffff" :shapeSize="2"></shape-pac-man>
 	</div>
 </template>
 

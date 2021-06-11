@@ -28,6 +28,10 @@ import {
 	shapePacMan
 } from '@c/shape/pac-man/pac-man.js';
 
+import {
+	shapeDiamond
+} from '@c/shape/diamond/diamond.js';
+
 export default {
 	install(Vue) {
 		Vue.use(shapeInfinity);
@@ -37,5 +41,6 @@ export default {
 		Vue.use(shapeSpaceInvader);
 		Vue.use(shapeEgg);
 		Vue.use(shapePacMan);
+		Vue.use(shapeDiamond);
 	}
 }

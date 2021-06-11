@@ -8,6 +8,7 @@
 		<shape-space-invader shapeColor="#00ff00" :shapeSize="2.5"></shape-space-invader>
 		<shape-egg shapeColor="#ffff7f" :shapeSize="1.5"></shape-egg>
 		<shape-pac-man shapeColor="#aaffff" :shapeSize="2"></shape-pac-man>
+		<shape-diamond shapeColor="#ff0000" :shapeSize="1"></shape-diamond>
 	</div>
 </template>
 

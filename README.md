@@ -40,11 +40,17 @@ Vue.use(fx67llVueUI)
 
 // 吃豆人
 <shape-pac-man shapeColor="#000000" :shapeSize="1"></shape-pac-man>
+
+// 钻石形状
+<shape-diamond shapeColor="#000000" :shapeSize="1"></shape-diamond>
 ```
 
 ## 0.x.x.202106xx
 * `下一个版本` 一键回顶组件
 * `下一个版本` 右键菜单组件
+
+## 0.2.10.20210611
+* 完成纯CSS3绘制的钻石形状组件的封装，可以设置钻石的颜色和大小
 
 ## 0.2.9.202106010
 * 完成纯CSS3绘制的***吃豆人***组件的封装，可以设置***吃豆人***的颜色和大小

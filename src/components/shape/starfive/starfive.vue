@@ -6,7 +6,6 @@
 export default {
 	name: 'shapeStarfive',
 	props: {
-		// 无限符号的颜色
 		shapeColor: {
 			type: String,
 			required: false,
@@ -15,7 +14,6 @@ export default {
 				return new RegExp('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$').test(color);
 			}
 		},
-		// 无限符号的大小
 		shapeSize: {
 			type: Number,
 			required: false,

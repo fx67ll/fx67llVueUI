@@ -9,6 +9,7 @@
 		<shape-egg shapeColor="#ffff7f" :shapeSize="1.5"></shape-egg>
 		<shape-pac-man shapeColor="#aaffff" :shapeSize="2"></shape-pac-man>
 		<shape-diamond shapeColor="#ff0000" :shapeSize="1"></shape-diamond>
+		<shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1"></shape-yinyang>
 	</div>
 </template>
 

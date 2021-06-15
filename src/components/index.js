@@ -32,6 +32,10 @@ import {
 	shapeDiamond
 } from '@c/shape/diamond/diamond.js';
 
+import {
+	shapeYinyang
+} from '@c/shape/yinyang/yinyang.js';
+
 export default {
 	install(Vue) {
 		Vue.use(shapeInfinity);
@@ -42,5 +46,6 @@ export default {
 		Vue.use(shapeEgg);
 		Vue.use(shapePacMan);
 		Vue.use(shapeDiamond);
+		Vue.use(shapeYinyang);
 	}
 }

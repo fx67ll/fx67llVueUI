@@ -1,6 +1,6 @@
 {
 	"name": "fx67ll-vue-ui",
-	"version": "0.2.10",
+	"version": "0.2.11",
 	"private": false,
 	"main": "lib/fx67ll-vue-ui.umd.min.js",
 	"scripts": {
@@ -41,7 +41,8 @@
 		"space-invader",
 		"egg",
 		"pac-man",
-		"diamond"
+		"diamond",
+		"yinyang"
 	],
 	"description": "类似ElementUI的VueUI练习库，目前只提供一些简单的组件",
 	"author": "fx67ll@github.com",

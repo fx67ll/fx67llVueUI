@@ -43,11 +43,20 @@ Vue.use(fx67llVueUI)
 
 // 钻石形状
 <shape-diamond shapeColor="#000000" :shapeSize="1"></shape-diamond>
+
+// 钻石形状
+// shapeColor，由于本符号必须由两个颜色组合，所以该参数废弃
+// shapeColorYin，阴阳符号阴的颜色，十六进制颜色代码
+// shapeColorYang，阴阳符号阳的颜色，十六进制颜色代码
+<shape-yinyang shapeColorYin="#000000" shapeColorYang="#000000" :shapeSize="1"></shape-yinyang>
 ```
 
 ## 0.x.x.202106xx
 * `下一个版本` 一键回顶组件
 * `下一个版本` 右键菜单组件
+
+## 0.2.11.20210615
+* 完成纯CSS3绘制的***阴阳***组件的封装，可以设置***阴阳***的颜色和大小
 
 ## 0.2.10.20210611
 * 完成纯CSS3绘制的钻石形状组件的封装，可以设置钻石的颜色和大小

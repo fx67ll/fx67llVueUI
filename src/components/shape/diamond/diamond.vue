@@ -40,7 +40,7 @@ export default {
 		top: -20px;
 		margin: 20px 0 50px 0;
 		zoom: var(--shapeSize);
-		// // 火狐不兼容zoom，用transform勉强代替
+		// 火狐不兼容zoom，用transform勉强代替
 		-moz-transform: scale(var(--shapeSize));
 	}
 	.diamond:after {

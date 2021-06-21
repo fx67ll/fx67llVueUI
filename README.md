@@ -49,11 +49,17 @@ Vue.use(fx67llVueUI)
 // shapeColorYin，阴阳符号阴的颜色，十六进制颜色代码
 // shapeColorYang，阴阳符号阳的颜色，十六进制颜色代码
 <shape-yinyang shapeColorYin="#000000" shapeColorYang="#000000" :shapeSize="1"></shape-yinyang>
+
+// 十字架形状
+<shape-cross shapeColor="#000000" :shapeSize="1"></shape-cross>
 ```
 
 ## 0.x.x.202106xx
 * `下一个版本` 一键回顶组件
 * `下一个版本` 右键菜单组件
+
+## 0.2.12.20210621
+* 完成纯CSS3绘制的十字架形状组件的封装，可以设置十字架的颜色和大小
 
 ## 0.2.11.20210615
 * 完成纯CSS3绘制的***阴阳***组件的封装，可以设置***阴阳***的颜色和大小

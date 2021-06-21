@@ -36,6 +36,10 @@ import {
 	shapeYinyang
 } from '@c/shape/yinyang/yinyang.js';
 
+import {
+	shapeCross
+} from '@c/shape/cross/cross.js';
+
 export default {
 	install(Vue) {
 		Vue.use(shapeInfinity);
@@ -47,5 +51,6 @@ export default {
 		Vue.use(shapePacMan);
 		Vue.use(shapeDiamond);
 		Vue.use(shapeYinyang);
+		Vue.use(shapeCross);
 	}
 }

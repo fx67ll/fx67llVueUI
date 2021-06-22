@@ -11,6 +11,8 @@
 		<shape-diamond shapeColor="#ff0000" :shapeSize="1"></shape-diamond>
 		<shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1"></shape-yinyang>
 		<shape-cross shapeColor="#ffaaff" :shapeSize="2.5"></shape-cross>
+		<shape-moon shapeColor="#ffff00" :shapeSize="4"></shape-moon>
+		<shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1"></shape-yinyang>
 	</div>
 </template>
 

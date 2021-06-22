@@ -52,11 +52,17 @@ Vue.use(fx67llVueUI)
 
 // 十字架形状
 <shape-cross shapeColor="#000000" :shapeSize="1"></shape-cross>
+
+// 月亮形状
+<shape-moon shapeColor="#000000" :shapeSize="1"></shape-moon>
 ```
 
 ## 0.x.x.202106xx
 * `下一个版本` 一键回顶组件
 * `下一个版本` 右键菜单组件
+
+## 0.2.13.20210622
+* 完成纯CSS3绘制的月亮形状组件的封装，可以设置月亮的颜色和大小
 
 ## 0.2.12.20210621
 * 完成纯CSS3绘制的十字架形状组件的封装，可以设置十字架的颜色和大小

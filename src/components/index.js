@@ -40,6 +40,10 @@ import {
 	shapeCross
 } from '@c/shape/cross/cross.js';
 
+import {
+	shapeMoon
+} from '@c/shape/moon/moon.js';
+
 export default {
 	install(Vue) {
 		Vue.use(shapeInfinity);
@@ -52,5 +56,6 @@ export default {
 		Vue.use(shapeDiamond);
 		Vue.use(shapeYinyang);
 		Vue.use(shapeCross);
+		Vue.use(shapeMoon);
 	}
 }

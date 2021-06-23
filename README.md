@@ -27,7 +27,7 @@ Vue.use(fx67llVueUI)
 
 // 三角形符号
 // type，三角形指向，默认值：down，可选值：down/up/left/right
-<shape-starfive type="up" shapeColor="#000000" :shapeSize="1"></shape-starfive>
+<shape-triangle type="up" shapeColor="#000000" :shapeSize="1"></shape-triangle>
 
 // 爱心符号
 <shape-heart shapeColor="#000000" :shapeSize="1"></shape-heart>
@@ -55,11 +55,17 @@ Vue.use(fx67llVueUI)
 
 // 月亮形状
 <shape-moon shapeColor="#000000" :shapeSize="1"></shape-moon>
+
+// 六角星形状
+<shape-star-six shapeColor="#000000" :shapeSize="1"></shape-star-six>
 ```
 
 ## 0.x.x.202106xx
 * `下一个版本` 一键回顶组件
 * `下一个版本` 右键菜单组件
+
+## 0.2.14.20210623
+* 完成纯CSS3绘制的六角星形状组件的封装，可以设置六角星的颜色和大小
 
 ## 0.2.13.20210622
 * 完成纯CSS3绘制的月亮形状组件的封装，可以设置月亮的颜色和大小

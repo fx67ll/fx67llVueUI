@@ -1,7 +1,7 @@
 <template>
 	<div class="fx67ll-box">
 		<shape-infinity shapeColor="#ffff7f" :shapeSize="0.5"></shape-infinity>
-		<shape-starfive shapeColor="#aaffff" :shapeSize="3"></shape-starfive>
+		<shape-star-five shapeColor="#aaffff" :shapeSize="3"></shape-star-five>
 		<shape-triangle type="up" shapeColor="#ff5500" :shapeSize="2"></shape-triangle>
 		<shape-heart shapeColor="#dedede" :shapeSize="4"></shape-heart>
 		<shape-triangle shapeColor="#ff5500" :shapeSize="2"></shape-triangle>
@@ -12,6 +12,7 @@
 		<shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1"></shape-yinyang>
 		<shape-cross shapeColor="#ffaaff" :shapeSize="2.5"></shape-cross>
 		<shape-moon shapeColor="#ffff00" :shapeSize="4"></shape-moon>
+		<shape-star-six shapeColor="#aaffff" :shapeSize="3.5"></shape-star-six>
 		<shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1"></shape-yinyang>
 	</div>
 </template>

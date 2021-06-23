@@ -5,8 +5,8 @@ import {
 } from '@c/shape/infinity/infinity.js';
 
 import {
-	shapeStarfive
-} from '@c/shape/starfive/starfive.js';
+	shapeStarFive
+} from '@c/shape/star-five/star-five.js';
 
 import {
 	shapeTriangle
@@ -44,10 +44,14 @@ import {
 	shapeMoon
 } from '@c/shape/moon/moon.js';
 
+import {
+	shapeStarSix
+} from '@c/shape/star-six/star-six.js';
+
 export default {
 	install(Vue) {
 		Vue.use(shapeInfinity);
-		Vue.use(shapeStarfive);
+		Vue.use(shapeStarFive);
 		Vue.use(shapeTriangle);
 		Vue.use(shapeHeart);
 		Vue.use(shapeSpaceInvader);
@@ -57,5 +61,6 @@ export default {
 		Vue.use(shapeYinyang);
 		Vue.use(shapeCross);
 		Vue.use(shapeMoon);
+		Vue.use(shapeStarSix);
 	}
 }

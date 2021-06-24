@@ -13,6 +13,7 @@
 		<shape-cross shapeColor="#ffaaff" :shapeSize="2.5"></shape-cross>
 		<shape-moon shapeColor="#ffff00" :shapeSize="4"></shape-moon>
 		<shape-star-six shapeColor="#aaffff" :shapeSize="3.5"></shape-star-six>
+		<shape-talk-bubble talkText="测试文字" textColor="#ff0000" shapeColor="#00aa00" :shapeSize="2"></shape-talk-bubble>
 		<shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1"></shape-yinyang>
 	</div>
 </template>

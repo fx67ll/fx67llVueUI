@@ -48,6 +48,10 @@ import {
 	shapeStarSix
 } from '@c/shape/star-six/star-six.js';
 
+import {
+	shapeTalkBubble
+} from '@c/shape/talk-bubble/talk-bubble.js';
+
 export default {
 	install(Vue) {
 		Vue.use(shapeInfinity);
@@ -62,5 +66,6 @@ export default {
 		Vue.use(shapeCross);
 		Vue.use(shapeMoon);
 		Vue.use(shapeStarSix);
+		Vue.use(shapeTalkBubble);
 	}
 }

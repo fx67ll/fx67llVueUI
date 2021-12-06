@@ -1,5 +1,6 @@
 import Vue from 'vue';
 
+// 形状插件合集
 import {
 	shapeInfinity
 } from '@c/shape/infinity/infinity.js';
@@ -52,8 +53,16 @@ import {
 	shapeTalkBubble
 } from '@c/shape/talk-bubble/talk-bubble.js';
 
+
+// 网站页脚插件
+import {
+	fx67llFooter
+} from '@c/fx67ll-footer/index.js';
+
 export default {
 	install(Vue) {
+		
+		// 形状插件合集
 		Vue.use(shapeInfinity);
 		Vue.use(shapeStarFive);
 		Vue.use(shapeTriangle);
@@ -67,5 +76,8 @@ export default {
 		Vue.use(shapeMoon);
 		Vue.use(shapeStarSix);
 		Vue.use(shapeTalkBubble);
+		
+		// 网站页脚插件
+		Vue.use(fx67llFooter);
 	}
 }

@@ -1,5 +1,5 @@
 # fx67llVueUI
-do sth like ElementUI & do sth different
+do sth like ElementUI & do sth different ez to use
 
 [npm](https://www.npmjs.com/package/fx67ll-vue-ui "npm")
 
@@ -16,8 +16,21 @@ Vue.use(fx67llVueUI)
 ```
 3. 在需要的地方直接使用
 ```
-// shapeColor，符号的颜色，十六进制颜色代码
-// shapeSize，符号的大小，支持数字，包括小数
+// 网站页脚插件
+// fontColor：字体颜色，默认值：#bababa
+// hoverColor：a标签悬浮颜色，默认值：#42b983
+// authorName：网站作者名称，默认值：fx67ll
+// homePage：网站作者主页，默认值：https://fx67ll.com
+// startYear：网站开始运营年份，默认值：2018，支持字符串和数字，限制四位年份
+// icpNumber：网站备案号，默认值：皖ICP备18017174号
+<fx67ll-footer fontColor="#bababa" hoverColor="#42b983" authorName="fx67ll" homePage="https://fx67ll.com" startYear="2018" icpNumber="皖ICP备18017174号"></fx67ll-footer>
+
+
+// 形状插件合集开始
+
+// 通用公共属性
+// shapeColor：符号的颜色，十六进制颜色代码
+// shapeSize：符号的大小，支持数字，包括小数
 
 // 无限符号
 <shape-infinity shapeColor="#000000" :shapeSize="1"></shape-infinity>
@@ -26,7 +39,7 @@ Vue.use(fx67llVueUI)
 <shape-starfive shapeColor="#000000" :shapeSize="1"></shape-starfive>
 
 // 三角形符号
-// type，三角形指向，默认值：down，可选值：down/up/left/right
+// type：三角形指向，默认值：down，可选值：down/up/left/right
 <shape-triangle type="up" shapeColor="#000000" :shapeSize="1"></shape-triangle>
 
 // 爱心符号
@@ -45,9 +58,9 @@ Vue.use(fx67llVueUI)
 <shape-diamond shapeColor="#000000" :shapeSize="1"></shape-diamond>
 
 // 钻石形状
-// shapeColor，由于本符号必须由两个颜色组合，所以该参数废弃
-// shapeColorYin，阴阳符号阴的颜色，十六进制颜色代码
-// shapeColorYang，阴阳符号阳的颜色，十六进制颜色代码
+// shapeColor：由于本符号必须由两个颜色组合，所以该参数废弃
+// shapeColorYin：阴阳符号阴的颜色，十六进制颜色代码
+// shapeColorYang：阴阳符号阳的颜色，十六进制颜色代码
 <shape-yinyang shapeColorYin="#000000" shapeColorYang="#000000" :shapeSize="1"></shape-yinyang>
 
 // 十字架形状
@@ -60,19 +73,23 @@ Vue.use(fx67llVueUI)
 <shape-star-six shapeColor="#000000" :shapeSize="1"></shape-star-six>
 
 // 聊天框
-// talkText，聊天框文字  
-// textColor，聊天框文字颜色，默认白色（#ffffff）
-// 剩下两个同上
+// talkText：聊天框文字  
+// textColor：聊天框文字颜色，默认白色（#ffffff）
 <shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1"></shape-talk-bubble>
+
+// 形状插件合集结束
 ```
 
-## 0.x.x.202106xx
+## 0.2.16.20211206
+* 完成网站页脚组件的封装，可以设置字体颜色，a标签悬浮颜色，网站作者名称，网站作者主页，网站开始运营年份，网站备案号  
+
+## 0.x.x.20xxxxxx
 * `下一个版本` 一键回顶组件
 * `下一个版本` 右键菜单组件
 
 ## 0.2.15.20210624
 * 完成纯CSS3绘制的***聊天框***组件组件的封装，可以设置***聊天框***组件的颜色和大小，以及传入聊天框宽度、简易的文字内容和文字颜色  
-* 后期考虑丰富组件并用正则验证传入的宽度字符串格式  
+* **后期考虑**丰富组件并用正则验证传入的宽度字符串格式  
 
 ## 0.2.14.20210623
 * 完成纯CSS3绘制的六角星形状组件的封装，可以设置六角星的颜色和大小  

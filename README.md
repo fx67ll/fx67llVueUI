@@ -107,6 +107,9 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 <shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1"></shape-talk-bubble>
 ```
 
+## 0.2.18.20211207
+* 紧急修复发布中忘了打包的问题，`0.2.16`和`0.2.17`版本均为废弃版本，请在`0.2.18`版本中使用上述两个新组件
+
 ## 0.2.17.20211207
 * 完成加载进度条组件的封装，可以设置当前进度百分比、加载是否已完成、进度条样式种类、z-index、背景颜色、提示文字颜色、条纹颜色一、条纹颜色二、渐变颜色一、渐变颜色二、单次动画时间  
 * 添加less中动画的封装，现已支持在less中直接使用animation，定义keyframe的方式稍稍有点区别，示例如下：  

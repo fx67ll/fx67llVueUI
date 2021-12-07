@@ -1,5 +1,6 @@
 <template>
-	<div class="fx67ll-footer" :style="{ '--fontColor': fontColor, '--hoverColor': hoverColor }">
+	<div class="fx67ll-footer"
+		:style="{ '--fontColor': fontColor, '--hoverColor': hoverColor, '--zIndex': parseInt(zIndex) }">
 		Designed & Powered by
 		<a :href="homePage" target="_blank">{{ this.authorName }}</a>
 		&#12288; Copyright© {{ this.startYear + '-'  + this.thisYear }}&#12288;
@@ -29,6 +30,15 @@
 					return new RegExp('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$').test(color);
 				}
 			},
+			// z-index
+			zIndex: {
+				type: String | Number,
+				required: false,
+				default: 99999,
+				validator(num) {
+					return new RegExp('^[0-9]*[1-9][0-9]*$').test(parseInt(num));
+				}
+			},
 			// 网站作者名称
 			authorName: {
 				type: String,
@@ -41,7 +51,9 @@
 				required: false,
 				default: 'https://fx67ll.com',
 				validator(url) {
-					return new RegExp('[a-zA-z]+://[^\s]*').test(url);
+					return new RegExp(
+						"/^(https?|ftp):\/\/([a-zA-Z0-9.-]+(:[a-zA-Z0-9.&%$-]+)*@)*((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}|([a-zA-Z0-9-]+\.)*[a-zA-Z0-9-]+\.(com|top|xyz|love|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(:[0-9]+)*(\/($|[a-zA-Z0-9.,?'\\+&%$#=~_-]+))*$/"
+					).test(url);
 				}
 			},
 			// 网站开始运营年份
@@ -87,7 +99,7 @@
 		position: absolute;
 		bottom: 0;
 		user-select: text;
-		z-index: 99999;
+		z-index: var(--zIndex);
 		color: var(--fontColor);
 
 		a {

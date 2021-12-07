@@ -107,6 +107,13 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 <shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1"></shape-talk-bubble>
 ```
 
+## 0.2.20.20211207
+* 修复加载进度条插件当前进度百分比为零会验证参数异常的问题  
+
+## 0.2.19.20211207
+* 修复页脚插件网站作者主页字段验证错误问题  
+* 修复加载进度条插件加载完成后不隐藏加载页面的问题  
+
 ## 0.2.18.20211207
 * 紧急修复发布中忘了打包的问题，`0.2.16`和`0.2.17`版本均为废弃版本，请在`0.2.18`版本中使用上述两个新组件
 
@@ -183,7 +190,7 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 * 去除不必要的依赖，减少安装时间  
 * 添加MIT的软件使用许可证  
 
-## 0.1.0.20210420
+## 0.1.1.20210420
 * 完成纯CSS3绘制的 ***无限符号*** 组件的封装，可以设置 ***无限*** 的颜色以及大小  
 * 测试单组件发布到npm上的全流程  
 

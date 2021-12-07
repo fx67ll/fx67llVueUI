@@ -45,16 +45,11 @@
 				required: false,
 				default: 'fx67ll'
 			},
-			// 网站作者主页
+			// 网站作者主页，不做校验了随便你跳转
 			homePage: {
 				type: String,
 				required: false,
-				default: 'https://fx67ll.com',
-				validator(url) {
-					return new RegExp(
-						"/^(https?|ftp):\/\/([a-zA-Z0-9.-]+(:[a-zA-Z0-9.&%$-]+)*@)*((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}|([a-zA-Z0-9-]+\.)*[a-zA-Z0-9-]+\.(com|top|xyz|love|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(:[0-9]+)*(\/($|[a-zA-Z0-9.,?'\\+&%$#=~_-]+))*$/"
-					).test(url);
-				}
+				default: 'https://fx67ll.com'
 			},
 			// 网站开始运营年份
 			startYear: {

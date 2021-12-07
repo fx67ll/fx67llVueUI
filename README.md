@@ -12,7 +12,7 @@ practice vue components like elementui & do sth different ez to use
 1. `npm install fx67ll-vue-ui --save`
 2. 在`main.js`中注册组件
 
-```
+```JavaScript
 import fx67llVueUI from 'fx67ll-vue-ui'
 Vue.use(fx67llVueUI)
 ```
@@ -23,7 +23,7 @@ Vue.use(fx67llVueUI)
 ### 插件简介
 1. 网站页脚插件
 
-```
+```Vue
 属性 fontColor：字体颜色，默认值：#bababa
 属性 hoverColor：a标签悬浮颜色，默认值：#42b983
 属性 zIndex: z-index，默认值：99999
@@ -37,7 +37,7 @@ Vue.use(fx67llVueUI)
 
 2.  加载进度条插件
 
-```
+```Vue
 属性 progressNum：当前进度百分比，默认值：0
 属性 isFinished：加载是否已完成，默认值：false，可选值：false/true
 属性 styleType：进度条样式种类，默认值：striped，可选值：striped/gradient/colorful
@@ -56,7 +56,7 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 
 3. 形状插件合集
 
-```
+```Vue
 // 通用公共属性
 属性 shapeColor：符号的颜色，十六进制颜色代码
 属性 shapeSize：符号的大小，支持数字，包括小数
@@ -110,7 +110,7 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 ## 0.2.17.20211207
 * 完成加载进度条组件的封装，可以设置当前进度百分比、加载是否已完成、进度条样式种类、z-index、背景颜色、提示文字颜色、条纹颜色一、条纹颜色二、渐变颜色一、渐变颜色二、单次动画时间  
 * 添加less中动画的封装，现已支持在less中直接使用animation，定义keyframe的方式稍稍有点区别，示例如下：  
-```
+```Less
 .keyframes(all, animationName, {
 		from {
 			width: 0%;

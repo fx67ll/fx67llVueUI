@@ -1,6 +1,14 @@
 <template>
 	<div class="fx67ll-box">
 		
+		<!-- 网站页脚插件测试 -->
+		<!-- <fx67ll-footer fontColor="#aa0000" hoverColor="#5500ff" zIndex="999" authorName="123456"  homePage="https:fx67ll.xyz" startYear="1234" icpNumber="1234567890"></fx67ll-footer> -->
+		
+		<!-- 加载进度条插件 -->
+		<!-- <loading-progress progressNum="38.76" :isFinished="false" styleType="colorful" zIndex="999999" bgColor="#20232a"
+			textColor="#d0ff34" stripedFirstColor="#ff0000" stripedSecondColor="#00aa00" gradientFirstColor="#ff5500"
+			gradientSecondColor="#00ff00" animationTime="0.4"></loading-progress> -->
+		
 		<!-- 形状插件合集测试 -->
 		<!-- <shape-infinity shapeColor="#ffff7f" :shapeSize="0.5"></shape-infinity>
 		<shape-star-five shapeColor="#aaffff" :shapeSize="3"></shape-star-five>
@@ -18,9 +26,6 @@
 		<shape-talk-bubble talkText="测试文字" textColor="#ff0000" shapeColor="#00aa00" :shapeSize="2"></shape-talk-bubble>
 		<shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1"></shape-yinyang> -->
 
-		<!-- 网站页脚插件测试 -->
-		<!-- <fx67ll-footer fontColor="#aa0000" hoverColor="#5500ff" authorName="123456"  homePage="https:fx67ll.xyz" startYear="1234" icpNumber="1234567890"></fx67ll-footer> -->
-	
 	</div>
 </template>
 

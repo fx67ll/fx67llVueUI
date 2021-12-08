@@ -166,15 +166,16 @@ export default {
 			deep: true,
 			handler: function(newval, oldVal) {
 				var self = this;
-				if (!newval) {
+				// isFinished为true的时候隐藏当前加载进度
+				if (newval) {
 					// 延迟1秒透明
 					setTimeout(function() {
-						self.styleTransition = !newval;
+						self.styleTransition = newval;
 					}, 1000);
 
 					// 延迟2.6秒消失，因为前一次透明设置了1.6秒的过渡动画
 					setTimeout(function() {
-						self.styleDisplay = !newval;
+						self.styleDisplay = newval;
 					}, 2600);
 				}
 			}

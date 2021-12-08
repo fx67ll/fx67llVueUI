@@ -20,8 +20,8 @@ Vue.use(fx67llVueUI)
 3. 在vue页面中导入使用
 
 
-### 插件简介
-1. 网站页脚插件
+### 组件简介
+1. 网站页脚组件
 
 ```Vue
 属性 fontColor：字体颜色，默认值：#bababa
@@ -35,7 +35,7 @@ Vue.use(fx67llVueUI)
 <fx67ll-footer fontColor="#bababa" hoverColor="#42b983" zIndex="99999" authorName="fx67ll" homePage="https://fx67ll.com" startYear="2018" icpNumber="皖ICP备18017174号"></fx67ll-footer>
 ```
 
-2.  加载进度条插件
+2.  加载进度条组件
 
 ```Vue
 属性 progressNum：当前进度百分比，默认值：0
@@ -54,7 +54,7 @@ Vue.use(fx67llVueUI)
 stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9BCCA" gradientSecondColor="#aaffff" animationTime="0.6"></loading-progress>
 ```
 
-3. 形状插件合集
+3. 形状组件合集
 
 ```Vue
 // 通用公共属性
@@ -107,15 +107,19 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 <shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1"></shape-talk-bubble>
 ```
 
+## 0.2.21.20211208
+* 修复加载进度条组件百分百之后隐藏异常的问题  
+* 删除不必要中文字体包文件  
+
 ## 0.2.20.20211207
-* 修复加载进度条插件当前进度百分比为零会验证参数异常的问题  
+* 修复加载进度条组件当前进度百分比为零会验证参数异常的问题  
 
 ## 0.2.19.20211207
-* 修复页脚插件网站作者主页字段验证错误问题  
-* 修复加载进度条插件加载完成后不隐藏加载页面的问题  
+* 修复页脚组件网站作者主页字段验证错误问题  
+* 修复加载进度条组件加载完成后不隐藏加载页面的问题  
 
 ## 0.2.18.20211207
-* 紧急修复发布中忘了打包的问题，`0.2.16`和`0.2.17`版本均为废弃版本，请在`0.2.18`版本中使用上述两个新组件
+* 修复16/17版本包提交失败问题，`0.2.16`和`0.2.17`版本均为废弃版本，请在`0.2.18`版本中使用上述两个新组件
 
 ## 0.2.17.20211207
 * 完成加载进度条组件的封装，可以设置当前进度百分比、加载是否已完成、进度条样式种类、z-index、背景颜色、提示文字颜色、条纹颜色一、条纹颜色二、渐变颜色一、渐变颜色二、单次动画时间  
@@ -182,6 +186,7 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 
 ## 0.2.2.20210514
 * 完成一次注册使用多个组件  
+* `0.2.2`版本之前不支持一次注册使用多个组件  
 
 ## 0.2.1.20210513
 * 完成纯CSS3绘制的 ***五角星符号*** 组件的封装，可以设置 ***五角星*** 的颜色和大小  

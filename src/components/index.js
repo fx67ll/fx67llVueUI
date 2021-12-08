@@ -1,18 +1,18 @@
 import Vue from 'vue';
 
-// 网站页脚插件
+// 引入网站页脚组件
 import {
 	fx67llFooter
 } from '@c/fx67ll-footer/index.js';
 
 
-// 加载进度条插件
+// 引入加载进度条组件
 import {
 	loadingProgress
 } from '@c/loading-progress/index.js';
 
 
-// 形状插件合集
+// 引入形状组件合集
 import {
 	shapeInfinity
 } from '@c/shape/infinity/infinity.js';
@@ -68,13 +68,13 @@ import {
 export default {
 	install(Vue) {
 		
-		// 网站页脚插件
+		// 注册网站页脚组件
 		Vue.use(fx67llFooter);
 		
-		// 加载进度条插件
+		// 注册加载进度条组件
 		Vue.use(loadingProgress);
 		
-		// 形状插件合集
+		// 注册形状组件合集
 		Vue.use(shapeInfinity);
 		Vue.use(shapeStarFive);
 		Vue.use(shapeTriangle);

@@ -107,6 +107,11 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 <shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1"></shape-talk-bubble>
 ```
 
+我是 [fx67ll.com](https://fx67ll.com)，如果您发现本组件有什么错误，欢迎在评论区讨论指正，感谢您的阅读！  
+如果您喜欢这个组件，欢迎访问 [本组件github仓库地址](https://github.com/fx67ll/fx67llVueUI)，为我点一颗Star，Thanks~ :)  
+***转发请注明参考地址，非常感谢！！！***
+
+
 ## 0.2.22.20211208
 * 修复21版本包提交失败问题，`0.2.21`版本为废弃版本  
 * 修复加载进度条组件百分百之后隐藏异常的问题  

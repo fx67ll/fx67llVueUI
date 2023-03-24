@@ -112,6 +112,34 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 ***转发请注明参考地址，非常感谢！！！***
 
 
+## 0.x.x.20xxxxxx
+* 使用`VuePress`添加doc文档，并部署在线文档演示  
+* 进度条组件继续丰富  
+	+ [很惊艳的设计](http://www.htmleaf.com/Demo/20141013171.html)  
+	+ [无限时钟加载](https://www.html5tricks.com/5-cool-css3-loading-animation.html)  
+	+ [动画加载](https://www.html5tricks.com/pure-css3-candle-animation.html)  
+* 时钟组件继续丰富
+	+ `FilpClock`和`BinaryClock`添加到组件库中  
+	+ 或者考虑下`FilpClock`添加到fx67llClock库中就行了？
+* 按钮组件添加
+	+ [拟物风格](https://www.html5tricks.com/css3-neumorphic-elements.html)，其中的时钟可以加到上面的时钟组件库  
+	+ [模拟开关](https://www.html5tricks.com/pure-css3-red-switch-button.html)  
+	+ [hove动效菜单按钮](http://www.htmleaf.com/html5/html5donghua/2014100438.html)  
+* 思考下有什么卵用的插件
+	+ [解锁面板，有什么界面需要解锁配置吗？](https://www.html5tricks.com/html5-password-animation.html)  
+	+ [canvas下雨](https://www.html5tricks.com/html5-canvas-rain.html)  
+	+ [磁带播放器，可以模拟一个音乐播放器](https://www.html5tricks.com/html5-cassette-player.html)  
+	+ [消息提示框](http://www.htmleaf.com/html5/html5donghua/20141016210.html)  
+	+ [问卷调查插件](http://www.htmleaf.com/html5/html5muban/20141016202.html)  
+	+ [文章详情查看插件](http://www.htmleaf.com/jQuery/Layout-Interface/20141221952.html)  
+	+ [平滑动画库，查看有没有vue版本](http://www.htmleaf.com/Demo/201501271285.html)  
+	+ [模拟物理作用力和重力效应的js插件库](http://www.htmleaf.com/jQuery/Layout-Interface/201506142030.html)  
+	+ [右键插件](http://www.htmleaf.com/jQuery/Menu-Navigation/201709254757.html)  
+	+ [全屏滚动插件](http://www.htmleaf.com/jQuery/Layout-Interface/201812055442.html)  
+	+ [页面滚动触发插件](http://www.htmleaf.com/jQuery/Layout-Interface/201607073698.html)  
+	+ [页面切换动效插件](http://www.htmleaf.com/jQuery/Layout-Interface/pageSwitch.html)  
+	+ [非常丝滑的全屏滚动插件](http://www.htmleaf.com/jQuery/Layout-Interface/201506132027.html)  
+
 ## 0.2.22.20211208
 * 修复21版本包提交失败问题，`0.2.21`版本为废弃版本  
 * 修复加载进度条组件百分百之后隐藏异常的问题  

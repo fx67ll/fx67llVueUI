@@ -114,7 +114,7 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 
 ## 0.x.x.20xxxxxx
 * 使用`VuePress`添加doc文档，并部署在线文档演示  
-* 进度条组件继续丰富  
+* 进度条组件继续丰富，需要添加如果需要多个资源加载的功能，还要考虑定制化加载文案  
 	+ [很惊艳的设计](http://www.htmleaf.com/Demo/20141013171.html)  
 	+ [无限时钟加载](https://www.html5tricks.com/5-cool-css3-loading-animation.html)  
 	+ [动画加载](https://www.html5tricks.com/pure-css3-candle-animation.html)  

@@ -86,7 +86,7 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 // 钻石符号
 <shape-diamond shapeColor="#000000" :shapeSize="1"></shape-diamond>
 
-// 钻石符号
+// 阴阳符号
 // shapeColor：由于本符号必须由两个颜色组合，所以该参数废弃
 // shapeColorYin：阴阳符号阴的颜色，十六进制颜色代码
 // shapeColorYang：阴阳符号阳的颜色，十六进制颜色代码
@@ -113,7 +113,6 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 
 
 ## 0.x.x.20xxxxxx
-* 使用`VuePress`添加doc文档，并部署在线文档演示  
 * 进度条组件继续丰富，需要添加如果需要多个资源加载的功能，还要考虑定制化加载文案  
 	+ [很惊艳的设计](http://www.htmleaf.com/Demo/20141013171.html)  
 	+ [无限时钟加载](https://www.html5tricks.com/5-cool-css3-loading-animation.html)  
@@ -139,6 +138,15 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 	+ [页面滚动触发插件](http://www.htmleaf.com/jQuery/Layout-Interface/201607073698.html)  
 	+ [页面切换动效插件](http://www.htmleaf.com/jQuery/Layout-Interface/pageSwitch.html)  
 	+ [非常丝滑的全屏滚动插件](http://www.htmleaf.com/jQuery/Layout-Interface/201506132027.html)  
+
+## 0.3.0.20230331
+* 使用`vuepress`构建开发文档站点  
+* 开发文档站点继续完善  
+	+ *需要注意的是！！！* 目前如果直接使用`npm install`安装之后进行自动化构建  
+	+ 可能会出现`vue-server-renderer`版本与`vue@2.6.10`不一致的报错  
+	+ 所以暂时使用本地构建，上传dist，自动覆盖更新的策略处理  
+	+ 完整的自动化流程待后续解决这个问题再使用  
+* 开启新一轮组件封装，用于部分个人站点的效果提升  
 
 ## 0.2.22.20211208
 * 修复21版本包提交失败问题，`0.2.21`版本为废弃版本  

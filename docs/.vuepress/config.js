@@ -3,15 +3,19 @@ module.exports = {
 	title: 'fx67ll Vue UI',
 	description: "fx67ll 的 Vue UI 组件库",
 	head: [
-		['link', {
-			rel: 'shortcut icon',
-			href: 'https://test.fx67ll.com/fx67ll-img-collection/fx67ll.jpg'
-		}]
+		// header里添加<link ref="" href=""/>
+		[
+			'link', {
+				rel: 'icon',
+				href: '/favicon.ico'
+			}
+		]
 	],
 	base: '/',
 	port: '1888',
 	dest: ".vuepress/dist",
 	themeConfig: {
+		// 左上角logo
 		logo: 'https://test.fx67ll.com/fx67ll-img-collection/fx67ll.jpg',
 		// 最后更新时间
 		// 你可以通过 themeConfig.lastUpdated 选项来获取每个文件最后一次 git 提交的 UNIX 时间戳(ms)， 同时它将以合适的日期格式显示在每一页的底部

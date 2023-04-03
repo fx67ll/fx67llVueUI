@@ -20,7 +20,7 @@ Vue.use(fx67llVueUI)
 3. 在vue页面中导入使用
 
 
-### 组件简介(`0.3.0`版本之后不再更新，请访问[官方文档查](https://vue-ui.fx67ll.com)查看)
+### 组件简介
 1. 网站页脚组件
 
 ```Vue
@@ -118,6 +118,8 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 	+ [无限时钟加载](https://www.html5tricks.com/5-cool-css3-loading-animation.html)  
 	+ [动画加载](https://www.html5tricks.com/pure-css3-candle-animation.html)  
 * 时钟组件继续丰富
+	+ `FilpClock`和`BinaryClock`添加到组件库中  
+	+ 或者考虑下`FilpClock`添加到fx67llClock库中就行了？
 * 按钮组件添加
 	+ [拟物风格](https://www.html5tricks.com/css3-neumorphic-elements.html)，其中的时钟可以加到上面的时钟组件库  
 	+ [模拟开关](https://www.html5tricks.com/pure-css3-red-switch-button.html)  
@@ -136,9 +138,6 @@ stripedFirstColor="#fcbc51" stripedSecondColor="#fca311" gradientFirstColor="#F9
 	+ [页面滚动触发插件](http://www.htmleaf.com/jQuery/Layout-Interface/201607073698.html)  
 	+ [页面切换动效插件](http://www.htmleaf.com/jQuery/Layout-Interface/pageSwitch.html)  
 	+ [非常丝滑的全屏滚动插件](http://www.htmleaf.com/jQuery/Layout-Interface/201506132027.html)  
-
-## 0.3.1.20230403
-* 完成[开发文档站点](https://vue-ui.fx67ll.com)的简单构建并上线  
 
 ## 0.3.0.20230331
 * 使用`vuepress`构建开发文档站点  

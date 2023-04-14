@@ -74,7 +74,7 @@ export default {
 		<!-- <loading-progress 
 			progressNum="当前加载进度" 
 			:isFinished="初始化为false，资源加载到100完成后改为true则隐藏当前加载进度条遮盖" 
-			bgColor="rgba(255, 255, 127, 1)"
+			bgColor="rgba(255, 255, 255, 1)"
 			styleType="colorful" />
 			:isShowText="false" -->
 	</div>
@@ -85,7 +85,7 @@ export default {
 	name: 'fx67llDemo',
 	data() {
 		return {
-			iframeSrc: 'https://three.fx67ll.com/fx67ll-vue-ui-progress?styleType=colorful&bgColor=rgba(255, 255, 127, 1)&isShowText=false',
+			iframeSrc: 'https://three.fx67ll.com/fx67ll-vue-ui-progress?styleType=colorful&bgColor=rgba(255, 255, 255, 1)&isShowText=false',
 		};
 	},
 	methods: {}

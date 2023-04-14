@@ -11,3 +11,8 @@
 /package-lock.json
 /postcss.config.js
 /vue.config.js
+/vue.config-back.js
+/README-back.md
+/.temp/
+/.vuepress/
+/docs/

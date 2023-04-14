@@ -1,7 +1,15 @@
+// 配置参考网站
+// https://vuepress.vuejs.org/zh/
+// https://calebman.github.io/vuepress-plugin-demo-container/zh/
+
 module.exports = {
+	// 网站皮肤主题
 	theme: '@vuepress/theme-default',
+	// 网站标题
 	title: 'fx67ll Vue UI',
+	// 网站描述
 	description: "fx67ll 的 Vue UI 组件库",
+	// html head 标签配置
 	head: [
 		// header里添加<link ref="" href=""/>
 		[
@@ -11,19 +19,25 @@ module.exports = {
 			}
 		]
 	],
+	// 默认路径
 	base: '/',
+	// dev port
 	port: '1888',
+	// 打包之后文件目录  
 	dest: ".vuepress/dist",
+	// 主题详细配置
 	themeConfig: {
 		// 左上角logo
 		logo: 'https://test.fx67ll.com/fx67ll-img-collection/fx67ll.jpg',
 		// 最后更新时间
 		// 你可以通过 themeConfig.lastUpdated 选项来获取每个文件最后一次 git 提交的 UNIX 时间戳(ms)， 同时它将以合适的日期格式显示在每一页的底部
 		lastUpdated: 'Last Updated',
+		// 导航栏
 		nav: [{
 				text: '首页',
 				link: '/',
-			}, {
+			},
+			{
 				text: '快速上手',
 				link: '/guide/quick-start',
 			},
@@ -68,11 +82,17 @@ module.exports = {
 		// 显示所有页面的标题链接
 		// 默认情况下，侧边栏只会显示由当前活动页面的标题（headers）组成的链接  
 		displayAllHeaders: true,
+		// 侧边栏
 		sidebar: {
 			'/guide/': [{
-				title: "快速上手",
-				path: '/guide/quick-start',
-			}],
+					title: "快速上手",
+					path: '/guide/quick-start',
+				},
+				{
+					title: "历史版本",
+					path: '/guide/history-version',
+				}
+			],
 			'/components/': [{
 				title: "组件",
 				path: '/components/0.2.0/footer',
@@ -154,7 +174,48 @@ module.exports = {
 			}, ],
 		},
 	},
-	head: [],
-	// plugins: ['demo-container'],
-	markdown: {},
+	// 国际化，目前只支持中文
+	// 后期需要修改配置可以查阅：https://vuepress.vuejs.org/zh/guide/i18n.html#%E7%AB%99%E7%82%B9%E5%A4%9A%E8%AF%AD%E8%A8%80%E9%85%8D%E7%BD%AE  
+	locales: {
+		// 键名是该语言所属的子路径
+		// 作为特例，默认语言可以使用 '/' 作为其路径。
+		'/': {
+			lang: 'zh-CN',
+			title: 'fx67ll Vue UI',
+			description: 'fx67ll 的 Vue UI 组件库'
+		},
+		// '/en/': {
+		// 	lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
+		// 	title: 'fx67ll Vue UI',
+		// 	description: 'fx67ll Vue UI'
+		// }
+	},
+	// vuepress 插件，使用默认配置的简易写法
+	// plugins: ['vuepress-plugin-demo-container'],
+	// vuepress 插件
+	plugins: {
+		// 示例展示插件
+		'vuepress-plugin-demo-container': {
+			// 示例展示插件国际化
+			locales: [{
+					"lang": "zh-CN",
+					"demo-block": {
+						"hide-text": "隐藏代码",
+						"show-text": "显示代码",
+						"copy-text": "复制代码",
+						"copy-success": "复制成功"
+					}
+				},
+				// {
+				// 	"lang": "en-US",
+				// 	"demo-block": {
+				// 		"hide-text": "Hide",
+				// 		"show-text": "Expand",
+				// 		"copy-text": "Copy",
+				// 		"copy-success": "Successful"
+				// 	}
+				// }
+			]
+		}
+	}
 }

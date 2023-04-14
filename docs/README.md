@@ -2,7 +2,7 @@
 home: true
 heroImage: 'https://test.fx67ll.com/fx67ll-img-collection/fx67ll.jpg'
 heroText: fx67ll 的 Vue UI 组件库
-tagline: 该组件库是 fx67ll 个人兴趣使然基于 Vue2.6 搭建的 UI 组件库，用于 fx67ll 的日常建站活动
+tagline: 该组件库是 fx67ll 个人兴趣使然，基于 Vue2.6 搭建的 UI 组件库，用于 fx67ll 的日常建站活动
 actionText: 快速上手 →
 actionLink: '/guide/quick-start'
 features:

@@ -1,6 +1,6 @@
 {
 	"name": "fx67ll-vue-ui",
-	"version": "0.3.0",
+	"version": "0.3.6",
 	"description": "practice vue components like elementui & do sth different ez to use",
 	"private": false,
 	"main": "lib/fx67ll-vue-ui.umd.min.js",
@@ -8,7 +8,7 @@
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
 		"lib": "vue-cli-service build --target lib --name fx67ll-vue-ui --dest lib src/components/index.js",
-		"docs:dev": "vuepress dev docs",
+		"docs:dev": "vuepress dev docs --temp .temp",
 		"docs:build": "vuepress build docs"
 	},
 	"dependencies": {
@@ -19,7 +19,8 @@
 		"vue": "2.6.10",
 		"vue-router": "^3.4.3",
 		"vue-server-renderer": "2.6.10",
-		"vuepress": "^1.9.9"
+		"vuepress": "^1.9.9",
+		"vuepress-plugin-demo-container": "^0.2.0"
 	},
 	"devDependencies": {
 		"@vue/cli-plugin-babel": "^3.8.0",

@@ -110,7 +110,7 @@
 			width: 100%;
 			text-align: center;
 			color: #2ecc71;
-			font-size: 3vw;
+			font-size: 2.2vw;
 			font-weight: bold;
 			position: relative;
 			top: 1vw;
@@ -120,18 +120,18 @@
 
 		table {
 			border-collapse: separate;
-			border-spacing: 3vw;
+			border-spacing: 2vw;
 
 			td {
-				height: 1.5vw;
-				width: 1.5vw;
+				height: 1vw;
+				width: 0.2vw;
 				background-color: #ffffff;
 				border-radius: 50%;
 			}
 
 			tr:after {
 				position: relative;
-				top: 0.8vw;
+				top: 2px;
 				font-size: 1.3vw;
 				color: #bababa;
 			}
@@ -141,11 +141,11 @@
 			}
 
 			.bc-seconds:after {
-				content: 'seconds';
+				content: 'second';
 			}
 
 			.bc-minutes:after {
-				content: 'minutes';
+				content: 'minute';
 			}
 
 			.bc-hours:after {

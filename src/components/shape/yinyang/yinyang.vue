@@ -17,7 +17,7 @@ export default {
 		shapeColorYang: {
 			type: String,
 			required: false,
-			default: '#000000',
+			default: '#ffffff',
 			validator(color) {
 				return new RegExp('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$').test(color);
 			}

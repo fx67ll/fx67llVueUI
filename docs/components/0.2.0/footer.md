@@ -14,7 +14,7 @@ export default {
 	name: 'fx67llDemo',
 	data() {
 		return {
-			iframeSrc: 'https://three.fx67ll.com'
+			iframeSrc: 'https://three.fx67ll.com/fx67ll-vue-ui-index'
 		};
 	},
 	methods: {}

@@ -43,7 +43,7 @@ module.exports = {
 			},
 			{
 				text: '组件',
-				link: '/components/0.3.0/binary-clock',
+				link: '/components/0.1.0/shape',
 			},
 			{
 				text: 'Github',
@@ -95,33 +95,10 @@ module.exports = {
 			],
 			'/components/': [{
 				title: "组件",
-				path: '/components/0.3.0/binary-clock',
+				path: '',
 				// 设置展开全部子导航
 				// collapsable: false,
 				children: [{
-					title: "时钟组件",
-					path: '/components/0.3.0/binary-clock',
-					// 设置展开全部子导航
-					// collapsable: false,
-					children: [{
-						title: "二进制时钟组件",
-						path: '/components/0.3.0/binary-clock',
-					}, ]
-				}, {
-					title: "页面组件",
-					path: '/components/0.2.0/footer',
-					// 设置展开全部子导航
-					// collapsable: false,
-					children: [{
-							title: "页脚组件",
-							path: '/components/0.2.0/footer',
-						},
-						{
-							title: "进度条组件",
-							path: '/components/0.2.0/progress',
-						},
-					]
-				}, {
 					title: "形状组件",
 					path: '/components/0.1.0/shape',
 					// 设置展开全部子导航
@@ -179,7 +156,30 @@ module.exports = {
 							path: "/components/0.1.0/components/shape-talk-bubble"
 						}
 					],
-				}]
+				}, {
+					title: "页面组件",
+					path: '',
+					// 设置展开全部子导航
+					// collapsable: false,
+					children: [{
+							title: "页脚组件",
+							path: '/components/0.2.0/footer',
+						},
+						{
+							title: "进度条组件",
+							path: '/components/0.2.0/progress',
+						},
+					]
+				}, {
+					title: "时钟组件",
+					path: '',
+					// 设置展开全部子导航
+					// collapsable: false,
+					children: [{
+						title: "二进制时钟组件",
+						path: '/components/0.3.0/binary-clock',
+					}, ]
+				}, ]
 			}, ],
 		},
 	},

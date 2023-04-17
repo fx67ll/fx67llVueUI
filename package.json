@@ -55,7 +55,9 @@
 		"talk-bubble",
 		"footer",
 		"loading",
-		"progress"
+		"progress",
+		"clock",
+		"binary-clock"
 	],
 	"author": "fx67ll@github.com",
 	"license": "MIT"

@@ -1,6 +1,6 @@
 {
 	"name": "fx67ll-vue-ui",
-	"version": "0.3.6",
+	"version": "0.3.7",
 	"description": "practice vue components like elementui & do sth different ez to use",
 	"private": false,
 	"main": "lib/fx67ll-vue-ui.umd.min.js",

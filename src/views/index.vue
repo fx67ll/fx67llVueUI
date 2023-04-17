@@ -22,6 +22,9 @@
 		<shape-star-six shapeColor="#aaffff" :shapeSize="3.5"></shape-star-six>
 		<shape-talk-bubble talkText="测试文字" textColor="#ff0000" shapeColor="#00aa00" :shapeSize="2"></shape-talk-bubble>
 		<shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1"></shape-yinyang> -->
+		
+		<!-- 二进制时钟插件测试 -->
+		<!-- <fx67ll-binary-clock :isShowTime="true" :zoomSize="1"></fx67ll-binary-clock> -->
 	</div>
 </template>
 

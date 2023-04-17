@@ -44,6 +44,11 @@ import {
 	shapeTalkBubble
 } from '../../src/components/shape/talk-bubble/talk-bubble.js';
 
+// 引入二进制时钟组件
+import {
+	fx67llBinaryClock
+} from '../../src/components/clock/binary-clock/binary-clock-for-demo.js';
+
 export default ({
 	Vue
 }) => {
@@ -59,5 +64,6 @@ export default ({
 		Vue.use(shapeCross),
 		Vue.use(shapeMoon),
 		Vue.use(shapeStarSix),
-		Vue.use(shapeTalkBubble)
+		Vue.use(shapeTalkBubble),
+		Vue.use(fx67llBinaryClock)
 }

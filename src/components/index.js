@@ -5,12 +5,10 @@ import {
 	fx67llFooter
 } from '@c/fx67ll-footer/index.js';
 
-
 // 引入加载进度条组件
 import {
 	loadingProgress
 } from '@c/loading-progress/index.js';
-
 
 // 引入形状组件合集
 import {
@@ -65,15 +63,20 @@ import {
 	shapeTalkBubble
 } from '@c/shape/talk-bubble/talk-bubble.js';
 
+// 二进制时钟组件
+import {
+	fx67llBinaryClock
+} from '@c/clock/binary-clock/binary-clock.js';
+
 export default {
 	install(Vue) {
-		
+
 		// 注册网站页脚组件
 		Vue.use(fx67llFooter);
-		
+
 		// 注册加载进度条组件
 		Vue.use(loadingProgress);
-		
+
 		// 注册形状组件合集
 		Vue.use(shapeInfinity);
 		Vue.use(shapeStarFive);
@@ -89,5 +92,7 @@ export default {
 		Vue.use(shapeStarSix);
 		Vue.use(shapeTalkBubble);
 
+		// 注册二进制时钟组件
+		Vue.use(fx67llBinaryClock);
 	}
 }

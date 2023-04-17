@@ -110,30 +110,34 @@
 			width: 100%;
 			text-align: center;
 			color: #2ecc71;
-			font-size: 28px;
+			font-size: 3vw;
 			font-weight: bold;
 			position: relative;
 			top: 1vw;
-			right: 30px;
+			right: 2vw;
 			margin: 0;
 		}
 
 		table {
 			border-collapse: separate;
-			border-spacing: 3.5vw;
+			border-spacing: 3vw;
 
 			td {
-				height: 30px;
-				width: 30px;
+				height: 1.5vw;
+				width: 1.5vw;
 				background-color: #ffffff;
 				border-radius: 50%;
 			}
 
 			tr:after {
 				position: relative;
-				top: 8px;
+				top: 0.8vw;
 				font-size: 1.3vw;
 				color: #bababa;
+			}
+
+			tr:nth-child(2n) {
+				background-color: #ffffff;
 			}
 
 			.bc-seconds:after {

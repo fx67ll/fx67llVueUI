@@ -1,6 +1,6 @@
 # 二进制时钟组件
 
-::: demo​ 一个有意思的装饰用的时钟组件 (●ˇ∀ˇ●)
+::: demo​ 一个有意思的装饰用的时钟组件 (●ˇ∀ˇ●) ~ 注意！！！移动端查看并非完美的显示效果，请尽量使用PC端查看~  
 ```vue
 <template>
 	<fx67ll-binary-clock :isShowTime="true" :zoomSize="1" />

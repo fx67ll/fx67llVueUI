@@ -1,6 +1,6 @@
 {
 	"name": "fx67ll-vue-ui",
-	"version": "0.3.7",
+	"version": "0.3.8",
 	"description": "practice vue components like elementui & do sth different ez to use",
 	"private": false,
 	"main": "lib/fx67ll-vue-ui.umd.min.js",
@@ -12,6 +12,9 @@
 		"docs:build": "vuepress build docs"
 	},
 	"dependencies": {
+		"@vuepress/plugin-active-header-links": "^1.9.9",
+		"@vuepress/plugin-back-to-top": "^1.9.9",
+		"@vuepress/plugin-nprogress": "^1.9.9",
 		"core-js": "^2.6.5",
 		"less": "^3.12.2",
 		"less-loader": "^7.0.1",

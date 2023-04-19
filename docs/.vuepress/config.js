@@ -233,21 +233,6 @@ module.exports = {
 		},
 		// 官方插件，一键回顶
 		'@vuepress/back-to-top': {},
-		// 官方插件，最后更新时间，此插件包含在默认主题
-		'@vuepress/last-updated': {
-			// 默认情况下，本插件为每个页面生成一个 13 位的时间戳，你可以传入一个 transformer 将其转换为你想要的任何格式。
-			transformer: (timestamp, lang) => {
-				// 不要忘了安装 moment
-				const moment = require('moment')
-				moment.locale(lang)
-				return moment(timestamp).fromNow()
-			},
-			// 如果你在多语言模式下运行，你还可以使用第二个参数 lang 为不同语言生成时间字符串。
-			// 你也可以传入一个对象作为选项，以自定义时间戳的输出格式。详细信息请参阅 Date.prototype.toLocaleString() (opens new window)的选项参数。
-			// dateOptions: {
-			// 	hour12: false
-			// }
-		},
 		// 官方插件，进度条
 		'@vuepress/nprogress': {},
 		// 官方插件，搜索框，此插件包含在默认主题，这里修改配置主要是为了增加搜索数量

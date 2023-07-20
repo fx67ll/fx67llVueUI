@@ -162,11 +162,11 @@ module.exports = {
 					// 设置展开全部子导航
 					// collapsable: false,
 					children: [{
-							title: "页脚组件",
+							title: "网站页脚",
 							path: '/components/0.2.0/footer',
 						},
 						{
-							title: "进度条组件",
+							title: "加载进度条",
 							path: '/components/0.2.0/progress',
 						},
 					]
@@ -176,8 +176,17 @@ module.exports = {
 					// 设置展开全部子导航
 					// collapsable: false,
 					children: [{
-						title: "二进制时钟组件",
+						title: "二进制时钟",
 						path: '/components/0.3.0/binary-clock',
+					}, ]
+				}, {
+					title: "头像组件",
+					path: '',
+					// 设置展开全部子导航
+					// collapsable: false,
+					children: [{
+						title: "随机马赛克头像",
+						path: '/components/0.4.0/mosaic-avatar',
 					}, ]
 				}, ]
 			}, ],

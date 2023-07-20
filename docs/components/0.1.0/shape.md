@@ -19,13 +19,13 @@
 </template>
 
 <script>
-export default {
-	name: 'fx67llDemo',
-	data() {
-		return {};
-	},
-	methods: {}
-};
+	export default {
+		name: 'fx67llDemo',
+		data() {
+			return {};
+		},
+		methods: {}
+	};
 </script>
 
 <style>
@@ -97,6 +97,9 @@ export default {
 |  :----:  |  :----:  |  :----:  |  :----:  |  :----:  |
 |  talkText  |  聊天框文字  |  String  |  -  |  -  |
 |  textColor  |  聊天框文字颜色  |  String  |  -  |  #ffffff  |
+
+### 版本说明
+> 0.2.15 版本以上支持全部形状组件，其他版本支持情况请自行查看版本历史  
 
 ### 感谢使用
 我是 [fx67ll.com](https://fx67ll.com)，如果您发现本组件有什么错误，欢迎提交`issure`，感谢您的阅读！  

@@ -7,13 +7,13 @@
 </template>
 
 <script>
-export default {
-	name: 'fx67llDemo',
-	data() {
-		return {};
-	},
-	methods: {}
-};
+	export default {
+		name: 'fx67llDemo',
+		data() {
+			return {};
+		},
+		methods: {}
+	};
 </script>
 
 <style>

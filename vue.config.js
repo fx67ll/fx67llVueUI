@@ -46,7 +46,8 @@ module.exports = {
 				'@': resolve('src'),
 				'@a': resolve('src/assets'),
 				'@v': resolve('src/views'),
-				'@c': resolve('src/components')
+				'@c': resolve('src/components'),
+				'@u': resolve('src/utils')
 			}
 		},
 		// 暴露默认导出配置

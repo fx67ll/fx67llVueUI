@@ -68,6 +68,11 @@ import {
 	fx67llBinaryClock
 } from '@c/clock/binary-clock/binary-clock.js';
 
+// 随机马赛克头像组件
+import {
+	fx67llRandomMosaicAvatar
+} from '@c/mosaic-avatar/index.js';
+
 export default {
 	install(Vue) {
 
@@ -94,5 +99,8 @@ export default {
 
 		// 注册二进制时钟组件
 		Vue.use(fx67llBinaryClock);
+
+		// 注册随机马赛克头像组件
+		Vue.use(fx67llRandomMosaicAvatar);
 	}
 }

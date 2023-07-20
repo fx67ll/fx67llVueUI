@@ -100,10 +100,13 @@ module.exports = {
 				// collapsable: false,
 				children: [{
 					title: "形状组件",
-					path: '/components/0.1.0/shape',
+					path: '',
 					// 设置展开全部子导航
 					// collapsable: false,
 					children: [{
+							title: "概览",
+							path: "'/components/0.1.0/shape"
+						},{
 							title: "无限符号",
 							path: "/components/0.1.0/components/shape-infinity"
 						},

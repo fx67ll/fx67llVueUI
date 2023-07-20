@@ -4,6 +4,8 @@
 ::: demo​ 使用默认配置生成随机马赛克头像。这里是通过`iframe`嵌套个人站点来作为演示，使用代码请参考下方注释里的代码~  
 ```vue
 <template>
+	<iframe id="iframe" :src="iframeSrc" style="height: 300px" width="100%" frameborder="0"></iframe>
+
 	<!-- 本页面的组件代码，直接全部使用默认配置 -->
 	<!-- <fx67ll-random-mosaic-avatar /> -->
 </template>
@@ -12,7 +14,9 @@
 	export default {
 		name: 'fx67llDemo',
 		data() {
-			return {};
+			return {
+				iframeSrc: 'https://three.fx67ll.com/fx67ll-vue-ui-avatar?showType=default',
+			}
 		},
 		methods: {}
 	};
@@ -35,7 +39,9 @@
 	export default {
 		name: 'fx67llDemo',
 		data() {
-			return {};
+			return {
+				iframeSrc: 'https://three.fx67ll.com/fx67ll-vue-ui-avatar?showType=geturl',
+			}
 		},
 		methods: {
 			// 获取返回的头像Url
@@ -70,7 +76,9 @@
 	export default {
 		name: 'fx67llDemo',
 		data() {
-			return {};
+			return {
+				iframeSrc: 'https://three.fx67ll.com/fx67ll-vue-ui-avatar?showType=custome',
+			}
 		},
 		methods: {}
 	};

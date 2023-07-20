@@ -4,7 +4,7 @@
 ::: demo​ 使用默认配置生成随机马赛克头像。这里是通过`iframe`嵌套个人站点来作为演示，使用代码请参考下方注释里的代码~  
 ```vue
 <template>
-	<iframe id="iframe" :src="iframeSrc" style="height: 230px" width="100%" frameborder="0"></iframe>
+	<iframe id="iframe" :src="iframeSrc" style="height: 235px" width="100%" frameborder="0"></iframe>
 
 	<!-- 本页面的组件代码，直接全部使用默认配置 -->
 	<!-- <fx67ll-random-mosaic-avatar /> -->
@@ -31,7 +31,7 @@
 ::: demo​ 开启点击后重新生成，并返回随机生成的马赛克头像Url。这里是通过`iframe`嵌套个人站点来作为演示，使用代码请参考下方注释里的代码~  
 ```vue
 <template>
-	<iframe id="iframe" :src="iframeSrc" style="height: 230px" width="100%" frameborder="0"></iframe>
+	<iframe id="iframe" :src="iframeSrc" style="height: 235px" width="100%" frameborder="0"></iframe>
 
 	<!-- 本页面的组件代码，开启点击后重新生成，并返回头像Url -->
 	<!-- <fx67ll-random-mosaic-avatar :isAllowRefresh="true" @avatarUrlChange="getAvatarUrl" /> -->
@@ -63,7 +63,7 @@
 ::: demo​ 自定义生成的随机马赛克头像配置。这里是通过`iframe`嵌套个人站点来作为演示，使用代码请参考下方注释里的代码~  
 ```vue
 <template>
-	<iframe id="iframe" :src="iframeSrc" style="height: 300px" width="100%" frameborder="0"></iframe>
+	<iframe id="iframe" :src="iframeSrc" style="height: 305px" width="100%" frameborder="0"></iframe>
 
 	<!-- 本页面的组件代码，自定义配置 -->
 	<!-- <fx67ll-random-mosaic-avatar 

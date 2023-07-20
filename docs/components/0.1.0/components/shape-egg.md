@@ -10,7 +10,7 @@
 	export default {
 		name: 'fx67llDemo',
 		data() {
-			return {};
+			return {}
 		},
 		methods: {}
 	};

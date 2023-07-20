@@ -41,7 +41,7 @@
 	export default {
 		name: 'fx67llIndex',
 		data() {
-			return {};
+			return {}
 		},
 		methods: {
 			getAvatarUrl(url) {

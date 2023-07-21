@@ -3,7 +3,7 @@
 ::: demo​ `fx67ll` 个人搭建的主页统一使用的页脚组件，需要配合整体项目来使用，会自动固定在引入页面的底部。这里是通过`iframe`嵌套个人站点来作为演示，使用代码请参考下方注释里的代码~
 ```vue
 <template>
-	<iframe id="iframe" :src="iframeSrc" style="height: 100px" width="100%" frameborder="0" />
+	<iframe id="iframe" :src="iframeSrc" style="height: 80px" width="100%" frameborder="0" />
 	
 	<!-- 本页面的组件代码，直接全部使用默认配置 -->
 	<!-- <fx67ll-footer /> -->

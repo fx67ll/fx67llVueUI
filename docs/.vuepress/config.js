@@ -65,6 +65,9 @@ module.exports = {
 					text: '个人站点导航',
 					link: 'https://nav.fx67ll.com'
 				}, {
+					text: 'SpringBoot 学习示例',
+					link: 'https://vip.fx67ll.com'
+				},  {
 					text: 'Node.js 学习示例',
 					link: 'https://node.fx67ll.com'
 				}, {

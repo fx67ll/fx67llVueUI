@@ -66,7 +66,7 @@ module.exports = {
 					link: 'https://nav.fx67ll.com'
 				}, {
 					text: '个人会员服务（测试中......）',
-					link: 'https://nav.fx67ll.com'
+					link: 'https://fx67ll.vip'
 				}, {
 					text: 'SpringBoot 学习示例',
 					link: 'https://vip.fx67ll.com'

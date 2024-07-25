@@ -59,13 +59,16 @@ module.exports = {
 					text: "fx67ll's npm",
 					link: 'https://www.npmjs.com/search?q=fx67ll'
 				}, {
-					text: "个人技术博客",
+					text: "fx67ll's Home Page",
+					link: 'https://fx67ll.com'
+				}, {
+					text: "fx67ll's Blog",
 					link: 'https://fx67ll.xyz'
 				}, {
 					text: '个人站点导航',
 					link: 'https://nav.fx67ll.com'
 				}, {
-					text: '个人会员服务（测试中......）',
+					text: "fx67ll's H5 App",
 					link: 'https://fx67ll.vip'
 				}, {
 					text: 'SpringBoot 学习示例',
@@ -74,13 +77,13 @@ module.exports = {
 					text: 'Node.js 学习示例',
 					link: 'https://node.fx67ll.com'
 				}, {
-					text: 'Three.js 作品合集',
+					text: 'Three.js 作品示例合集',
 					link: 'https://three.fx67ll.com'
 				}, {
 					text: 'uni-app 作品示例合集',
 					link: 'https://uni.fx67ll.com'
 				}, {
-					text: '持续开发中......',
+					text: 'Big Data Map 作品示例合集',
 					link: 'https://map.fx67ll.com'
 				}, ]
 			}

@@ -68,8 +68,9 @@ module.exports = {
 					text: '个人站点导航',
 					link: 'https://nav.fx67ll.com'
 				}, {
-					text: "fx67ll's H5 App",
-					link: 'https://fx67ll.vip'
+					text: "fx67ll's Daily Tools H5 App",
+					// link: 'https://fx67ll.vip'
+					link: 'https://life.fx67ll.com'
 				}, {
 					text: 'SpringBoot 学习示例',
 					link: 'https://vip.fx67ll.com'

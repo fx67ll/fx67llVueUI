@@ -34,27 +34,38 @@
 		<!-- <fx67ll-random-mosaic-avatar :isAllowRefresh="true" @avatarUrlChange="getAvatarUrl" /> -->
 		<!-- <fx67ll-random-mosaic-avatar :avatarSize="300" :isNeedRandom="false" :avatarNum="404" avatarType="svg"
 			:avatarPadding="0.1" :avatarColor="[0, 0, 0, 255]" :avatarBgColor="[255, 255, 255, 255]" /> -->
+
+		<!-- 放烟花插件测试 -->
+		<!-- <div class="fx67ll-fireworks-box">
+			<fx67ll-nan-fireworks />
+		</div> -->
 	</div>
 </template>
 
 <script>
-	export default {
-		name: 'fx67llIndex',
-		data() {
-			return {}
+export default {
+	name: 'fx67llIndex',
+	data() {
+		return {}
+	},
+	methods: {
+		getAvatarUrl(url) {
+			console.log('avatarUrl: ', url);
 		},
-		methods: {
-			getAvatarUrl(url) {
-				console.log('avatarUrl: ', url);
-			},
-		}
-	};
+	}
+};
 </script>
 
 <style lang="less" scoped="scoped">
-	.fx67ll-box {
-		width: 100%;
-		height: 100%;
-		.ban-user-select();
+.fx67ll-box {
+	width: 100%;
+	height: 100%;
+	.ban-user-select();
+
+	.fx67ll-fireworks-box {
+		width: 500px;
+		height: 500px;
+		margin: 0 auto;
 	}
+}
 </style>

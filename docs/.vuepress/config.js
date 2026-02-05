@@ -97,6 +97,10 @@ module.exports = {
             link: 'https://uni.fx67ll.com',
           },
           {
+            text: 'React.js 学习示例',
+            link: 'https://react.fx67ll.com',
+          },
+          {
             text: 'Big Data Map 作品示例合集',
             link: 'https://map.fx67ll.com',
           },

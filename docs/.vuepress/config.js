@@ -76,20 +76,20 @@ module.exports = {
             link: 'https://nav.fx67ll.com',
           },
           {
-            text: "fx67ll's Daily Tools H5 App",
+            text: "个人日常H5工具",
             // link: 'https://fx67ll.vip'
             link: 'https://life.fx67ll.com',
           },
           {
-            text: 'SpringBoot 学习示例',
+            text: '个人管理后台',
             link: 'https://vip.fx67ll.com',
           },
           {
-            text: 'Node.js 学习示例',
+            text: 'Node.js(Express) + MongoDB',
             link: 'https://node.fx67ll.com',
           },
           {
-            text: 'Three.js 作品示例合集',
+            text: 'Three.js 作品合集',
             link: 'https://three.fx67ll.com',
           },
           {
@@ -97,11 +97,11 @@ module.exports = {
             link: 'https://uni.fx67ll.com',
           },
           {
-            text: 'React.js 学习示例',
+            text: 'React.js(Antd) + MongoDB',
             link: 'https://react.fx67ll.com',
           },
           {
-            text: 'Big Data Map 作品示例合集',
+            text: '大数据可视化地图示例(未完成)',
             link: 'https://map.fx67ll.com',
           },
         ],

@@ -1,0 +1,104 @@
+.bc-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  p {
+    width: 100%;
+    text-align: center;
+    color: #2ecc71;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 20px 0; // 替换vw单位，避免位置偏移
+    // 移除vw相对定位，改用固定值或flex布局居中
+    position: static;
+  }
+
+  table {
+    border-collapse: separate;
+    // 替换vw为px/em，避免间距随屏幕宽度过度变化
+    border-spacing: 20px;
+    // 确保表格居中
+    margin: 0 auto;
+
+    td {
+      // 核心：强制宽高相等，使用px固定值或vw统一相对单位
+      width: 30px;
+      height: 30px;
+      // 关键：固定宽高比，防止变形
+      aspect-ratio: 1/1;
+      // 兜底：即使宽高意外不一致，也强制圆形
+      border-radius: 50%;
+      background-color: #ffffff;
+      // 避免padding/border影响宽高
+      box-sizing: border-box;
+    }
+
+    tr {
+      // 单独包裹文字，避免:after伪元素影响td布局
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: 10px; // 行间距改用固定值
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: -80px; // 固定偏移，避免vw单位的适配问题
+        top: 50%;
+        transform: translateY(-50%); // 垂直居中
+        font-size: 16px; // 替换vw为px，保证文字大小稳定
+        color: @grey;
+      }
+    }
+
+    .bc-hours:after {
+      content: 'hour';
+    }
+
+    .bc-minutes:after {
+      content: 'minute';
+    }
+
+    .bc-seconds:after {
+      content: 'second';
+    }
+  }
+
+  .num1 {
+    background-color: #2ecc71 !important;
+    box-shadow: 0 0 15px 2px rgba(46, 204, 113, 0.7);
+  }
+
+  .num0 {
+    background-color: #ffffff !important;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// 响应式适配（可选，根据屏幕尺寸调整圆点大小）
+@media (max-width: 768px) {
+  .bc-box table td {
+    width: 20px;
+    height: 20px;
+  }
+  .bc-box table {
+    border-spacing: 10px;
+  }
+  .bc-box table tr:after {
+    right: -60px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bc-box table td {
+    width: 40px;
+    height: 40px;
+  }
+  .bc-box table {
+    border-spacing: 25px;
+  }
+}

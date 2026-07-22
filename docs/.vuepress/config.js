@@ -45,7 +45,7 @@ module.exports = {
       },
       {
         text: '组件',
-        link: '/components/0.1.0/shape',
+        link: '/components/0.6.0/loading',
       },
       {
         text: 'Github',
@@ -56,52 +56,52 @@ module.exports = {
         ariaLabel: 'Language Menu',
         items: [
           {
-            text: "fx67ll's github",
+            text: "fx67ll's Github 仓库",
             link: 'https://github.com/fx67ll',
           },
           {
-            text: "fx67ll's npm",
+            text: "fx67ll's Npm 仓库",
             link: 'https://www.npmjs.com/search?q=fx67ll',
           },
           {
-            text: "fx67ll's Home Page",
+            text: "fx67ll's 个人主页",
             link: 'https://fx67ll.com',
           },
           {
-            text: "fx67ll's Blog",
+            text: "fx67ll's 技术博客",
             link: 'https://fx67ll.xyz',
           },
           {
-            text: '个人站点导航',
+            text: "fx67ll's 站点导航",
             link: 'https://nav.fx67ll.com',
           },
           {
-            text: "个人日常H5工具",
+            text: "fx67ll's 日常 H5 工具",
             // link: 'https://fx67ll.vip'
             link: 'https://life.fx67ll.com',
           },
           {
-            text: '个人管理后台',
+            text: "fx67ll's 日常管理后台",
             link: 'https://vip.fx67ll.com',
           },
           {
-            text: 'Node.js(Express) + MongoDB',
+            text: 'Node.js + MongoDB 演示站点',
             link: 'https://node.fx67ll.com',
+          },
+          {
+            text: 'React.js + MongoDB 演示站点',
+            link: 'https://react.fx67ll.com',
           },
           {
             text: 'Three.js 作品合集',
             link: 'https://three.fx67ll.com',
           },
           {
-            text: 'uni-app 作品示例合集',
+            text: 'Uni-app 作品示例合集',
             link: 'https://uni.fx67ll.com',
           },
           {
-            text: 'React.js(Antd) + MongoDB',
-            link: 'https://react.fx67ll.com',
-          },
-          {
-            text: '大数据可视化地图示例(未完成)',
+            text: 'AI 大数据地图服务 Demo 合集',
             link: 'https://map.fx67ll.com',
           },
         ],
@@ -129,6 +129,70 @@ module.exports = {
           // 设置展开全部子导航
           // collapsable: false,
           children: [
+            {
+              title: '加载组件',
+              path: '',
+              // 设置展开全部子导航
+              // collapsable: false,
+              children: [
+                {
+                  title: '加载动画',
+                  path: '/components/0.6.0/loading',
+                },
+              ],
+            },
+            {
+              title: '烟花组件',
+              path: '',
+              // 设置展开全部子导航
+              // collapsable: false,
+              children: [
+                {
+                  title: '放烟花',
+                  path: '/components/0.5.0/nan-fireworks',
+                },
+              ],
+            },
+            {
+              title: '头像组件',
+              path: '',
+              // 设置展开全部子导航
+              // collapsable: false,
+              children: [
+                {
+                  title: '随机马赛克头像',
+                  path: '/components/0.4.0/mosaic-avatar',
+                },
+              ],
+            },
+            {
+              title: '时钟组件',
+              path: '',
+              // 设置展开全部子导航
+              // collapsable: false,
+              children: [
+                {
+                  title: '二进制时钟',
+                  path: '/components/0.3.0/binary-clock',
+                },
+              ],
+            },
+            {
+              title: '页面组件',
+              path: '',
+              // 设置展开全部子导航
+              // collapsable: false,
+              children: [
+                {
+                  title: '网站页脚',
+                  path: '/components/0.2.0/footer',
+                },
+                {
+                  title: '加载进度条',
+                  path: '/components/0.2.0/progress',
+                },
+              ],
+            },
             {
               title: '形状组件',
               path: '',
@@ -190,58 +254,6 @@ module.exports = {
                 {
                   title: '聊天框',
                   path: '/components/0.1.0/components/shape-talk-bubble',
-                },
-              ],
-            },
-            {
-              title: '页面组件',
-              path: '',
-              // 设置展开全部子导航
-              // collapsable: false,
-              children: [
-                {
-                  title: '网站页脚',
-                  path: '/components/0.2.0/footer',
-                },
-                {
-                  title: '加载进度条',
-                  path: '/components/0.2.0/progress',
-                },
-              ],
-            },
-            {
-              title: '时钟组件',
-              path: '',
-              // 设置展开全部子导航
-              // collapsable: false,
-              children: [
-                {
-                  title: '二进制时钟',
-                  path: '/components/0.3.0/binary-clock',
-                },
-              ],
-            },
-            {
-              title: '头像组件',
-              path: '',
-              // 设置展开全部子导航
-              // collapsable: false,
-              children: [
-                {
-                  title: '随机马赛克头像',
-                  path: '/components/0.4.0/mosaic-avatar',
-                },
-              ],
-            },
-            {
-              title: '烟花组件',
-              path: '',
-              // 设置展开全部子导航
-              // collapsable: false,
-              children: [
-                {
-                  title: '放烟花',
-                  path: '/components/0.5.0/nan-fireworks',
                 },
               ],
             },

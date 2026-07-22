@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import '@a/styles/binary-clock/binary-clock.less';
+@import '~@a/styles/binary-clock/binary-clock.less';
 .bc-box{
 	zoom: var(--zoomSize)
 }

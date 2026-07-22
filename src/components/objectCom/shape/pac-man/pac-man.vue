@@ -39,7 +39,5 @@ export default {
 	border-bottom-left-radius: 60px;
 	border-bottom-right-radius: 60px;
 	zoom: var(--shapeSize);
-	// 火狐不兼容zoom，用transform勉强代替
-	-moz-transform: scale(var(--shapeSize));
 }
 </style>

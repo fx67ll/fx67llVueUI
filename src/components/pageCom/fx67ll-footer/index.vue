@@ -32,7 +32,7 @@
 			},
 			// z-index
 			zIndex: {
-				type: String | Number,
+				type: [String, Number],
 				required: false,
 				default: 99999,
 				validator(num) {
@@ -53,7 +53,7 @@
 			},
 			// 网站开始运营年份
 			startYear: {
-				type: String | Number,
+				type: [String, Number],
 				required: false,
 				default: 2018,
 				validator(year) {

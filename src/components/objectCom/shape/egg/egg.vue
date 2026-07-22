@@ -37,7 +37,5 @@ export default {
 	// border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 	border-radius: ~"50% 50% 50% 50% / 60% 60% 40% 40%";
 	zoom: var(--shapeSize);
-	// 火狐不兼容zoom，用transform勉强代替
-	-moz-transform: scale(var(--shapeSize));
 }
 </style>

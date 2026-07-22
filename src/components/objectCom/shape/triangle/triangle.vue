@@ -40,8 +40,6 @@ export default {
 	width: 0;
 	height: 0;
 	zoom: var(--shapeSize);
-	// 火狐不兼容zoom，用transform勉强代替
-	-moz-transform: scale(var(--shapeSize));
 }
 .triangle-up {
 	border-left: 50px solid transparent;

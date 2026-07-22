@@ -56,8 +56,6 @@ export default {
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	zoom: var(--shapeSize);
-	// 火狐不兼容zoom，用transform勉强代替
-	-moz-transform: scale(var(--shapeSize));
 	.talk-bubble-text{
 		display: inline-block;
 		width: 100%;

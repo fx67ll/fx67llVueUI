@@ -33,8 +33,6 @@ export default {
 	height: 100px;
 	box-sizing: content-box;
 	zoom: var(--shapeSize);
-	// 火狐不兼容zoom，用transform勉强代替
-	-moz-transform: scale(var(--shapeSize));
 }
 .infinity:before,
 .infinity:after {

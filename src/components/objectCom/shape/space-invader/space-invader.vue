@@ -45,8 +45,6 @@ export default {
 		overflow: hidden;
 		margin: 50px 0 70px 65px;
 		zoom: var(--shapeSize);
-		// 火狐不兼容zoom，用transform勉强代替
-		-moz-transform: scale(var(--shapeSize));
 	}
 }
 </style>

@@ -32,8 +32,6 @@ export default {
 	height: 180px;
 	overflow: hidden;
 	zoom: var(--shapeSize);
-	// 火狐不兼容zoom，用transform勉强代替
-	-moz-transform: scale(var(--shapeSize));
 	.star-five {
 		position: relative;
 		top: 58px;

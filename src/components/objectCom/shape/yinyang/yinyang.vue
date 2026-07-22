@@ -46,8 +46,6 @@ export default {
 	border-radius: 100%;
 	position: relative;
 	zoom: var(--shapeSize);
-	// 火狐不兼容zoom，用transform勉强代替
-	-moz-transform: scale(var(--shapeSize));
 }
 .yinyang:before {
 	content: '';

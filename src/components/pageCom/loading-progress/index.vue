@@ -26,7 +26,7 @@
 		props: {
 			// 进度条当前进度数字 0-100，代表当前进度百分比
 			progressNum: {
-				type: String | Number,
+				type: [String, Number],
 				required: true,
 				default: 0,
 				validator(num) {
@@ -59,7 +59,7 @@
 			},
 			// z-index
 			zIndex: {
-				type: String | Number,
+				type: [String, Number],
 				required: false,
 				default: 99999,
 				validator(num) {
@@ -140,7 +140,7 @@
 			},
 			// 单次动画时间
 			animationTime: {
-				type: String | Number,
+				type: [String, Number],
 				required: false,
 				default: 0.6,
 				validator(time) {
@@ -154,7 +154,9 @@
 				// 透明样式
 				styleTransition: false,
 				// 隐藏样式
-				styleDisplay: false
+				styleDisplay: false,
+				// isFinished完成后的淡出/隐藏定时器id集合，用于组件销毁时清理避免内存泄漏
+				finishTimers: []
 			};
 		},
 		watch: {
@@ -166,17 +168,24 @@
 					// isFinished为true的时候隐藏当前加载进度
 					if (newval) {
 						// 延迟1秒透明
-						setTimeout(function() {
+						self.finishTimers.push(setTimeout(function() {
 							self.styleTransition = newval;
-						}, 1000);
+						}, 1000));
 
 						// 延迟2.6秒消失，因为前一次透明设置了1.6秒的过渡动画
-						setTimeout(function() {
+						self.finishTimers.push(setTimeout(function() {
 							self.styleDisplay = newval;
-						}, 2600);
+						}, 2600));
 					}
 				}
 			}
+		},
+		beforeDestroy() {
+			// 组件销毁时清理所有未触发的淡出/隐藏定时器，避免在已卸载实例上setData产生Vue警告
+			this.finishTimers.forEach(function(timer) {
+				clearTimeout(timer);
+			});
+			this.finishTimers = [];
 		}
 	};
 </script>

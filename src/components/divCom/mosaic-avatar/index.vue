@@ -18,7 +18,7 @@
 			// 生成的随机头像大小，默认230px*230px
 			// 默认值：230
 			avatarSize: {
-				type: String | Number,
+				type: [String, Number],
 				required: false,
 				default: 230,
 			},
@@ -46,7 +46,7 @@
 			// 指定生成的随机头像编号，可以是任意整数  
 			// 默认值：1023
 			avatarNum: {
-				type: String | Number,
+				type: [String, Number],
 				required: false,
 				default: 1023,
 				validator(num) {
@@ -68,7 +68,7 @@
 			// 指定生成的随机头像的内边距，必须是0-1之间两位以内小数，包括0和1
 			// 默认值：0.23
 			avatarPadding: {
-				type: String | Number,
+				type: [String, Number],
 				required: false,
 				default: 0.23,
 				validator(num) {

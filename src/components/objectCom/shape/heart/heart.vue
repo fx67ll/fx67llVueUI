@@ -32,8 +32,6 @@ export default {
 	width: 100px;
 	height: 82px;
 	zoom: var(--shapeSize);
-	// 火狐不兼容zoom，用transform勉强代替
-	-moz-transform: scale(var(--shapeSize));
 }
 .heart:before,
 .heart:after {

@@ -30,8 +30,6 @@ export default {
 .star-six-box {
 	padding-bottom: 30px;
 	zoom: var(--shapeSize);
-	// 火狐不兼容zoom，用transform勉强代替
-	-moz-transform: scale(var(--shapeSize));
 	.star-six {
 		width: 0;
 		height: 0;

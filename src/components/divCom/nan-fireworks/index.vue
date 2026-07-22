@@ -186,7 +186,9 @@ export default {
       glowStyle: {},
       clickTimeout: null,
       isTouching: false,
-      touchStartTime: 0
+      touchStartTime: 0,
+      // 点击效果（波纹/发光/弹跳/缩放）的定时器id集合，组件销毁时统一清理避免内存泄漏
+      effectTimers: []
     }
   },
 
@@ -382,6 +384,12 @@ export default {
       clearTimeout(this.clickTimeout)
     }
 
+    // 清理所有未触发的点击效果定时器，避免在已卸载实例上setData产生Vue警告
+    this.effectTimers.forEach((timer) => {
+      clearTimeout(timer)
+    })
+    this.effectTimers = []
+
     // 移除防缩放事件监听
     this.removeZoomPrevention()
 
@@ -445,6 +453,10 @@ export default {
       this.triggerClickEffect(event)
 
       // 延迟执行烟花发射，让动画先完成
+      // 设置新定时器前先清理旧的，避免连点时旧定时器引用丢失导致烟花重复发射
+      if (this.clickTimeout) {
+        clearTimeout(this.clickTimeout)
+      }
       this.clickTimeout = setTimeout(() => {
         this.launchFireworks()
       }, 300)
@@ -485,6 +497,10 @@ export default {
 
       // 如果是短触摸（类似点击），发射烟花
       if (touchDuration < 300) {
+        // 设置新定时器前先清理旧的，避免连续触摸时旧定时器引用丢失导致烟花重复发射
+        if (this.clickTimeout) {
+          clearTimeout(this.clickTimeout)
+        }
         this.clickTimeout = setTimeout(() => {
           this.launchFireworks()
         }, 200)
@@ -556,9 +572,9 @@ export default {
 
       this.rippleActive = true
 
-      setTimeout(() => {
+      this.effectTimers.push(setTimeout(() => {
         this.rippleActive = false
-      }, 600)
+      }, 600))
     },
 
     // 显示发光效果
@@ -573,9 +589,9 @@ export default {
 
       this.glowActive = true
 
-      setTimeout(() => {
+      this.effectTimers.push(setTimeout(() => {
         this.glowActive = false
-      }, 800)
+      }, 800))
     },
 
     // 显示弹跳效果
@@ -585,9 +601,9 @@ export default {
 
       button.classList.add('bounce-animation')
 
-      setTimeout(() => {
+      this.effectTimers.push(setTimeout(() => {
         button.classList.remove('bounce-animation')
-      }, 300)
+      }, 300))
     },
 
     // 显示缩放效果
@@ -600,10 +616,10 @@ export default {
       button.classList.add('scale-animation')
       button.style.setProperty('--click-scale', scale)
 
-      setTimeout(() => {
+      this.effectTimers.push(setTimeout(() => {
         button.classList.remove('scale-animation')
         button.style.removeProperty('--click-scale')
-      }, 200)
+      }, 200))
     },
 
     // 发射烟花

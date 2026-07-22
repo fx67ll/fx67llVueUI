@@ -15,7 +15,7 @@ features:
 ---
 
 ::: slot footer
-MIT Licensed | Copyright © 2018-2023 Powered By [fx67ll.com](https://fx67ll.com)
+MIT Licensed | Copyright © 2018-2026 Powered By [fx67ll.com](https://fx67ll.com)
 :::
 
 ## 像数 1, 2, 3 一样容易

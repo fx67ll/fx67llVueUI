@@ -9,6 +9,33 @@
 			textColor="#d0ff34" :isShowText="false" stripedFirstColor="#ff0000" stripedSecondColor="#00aa00"
 			gradientFirstColor="#ff5500" gradientSecondColor="#00ff00" animationTime="0.4" /> -->
 
+		<!-- 加载动画组件测试 -->
+		<!-- 静态示例：不同类型 / 颜色 / 大小，放开注释即可查看 -->
+		<!-- <fx67ll-loading type="ball-pulse" color="#42b983" />
+		<fx67ll-loading type="pacman" color="#f6d860" size="lg" />
+		<fx67ll-loading type="ball-spin" color="#3ccad1" size="sm" />
+		<fx67ll-loading type="circle" color="#ef8e81" />
+		<fx67ll-loading type="jumping" color="#42b983" size="lg" />
+		<fx67ll-loading type="heart" color="#ef8e81" />
+		<fx67ll-loading type="line-scale" color="#dbbe39" size="lg" /> -->
+
+		<!-- 交互示例：切换类型 / 大小 / 颜色，放开下方注释块与对应 data/methods 即可 -->
+		<!-- <div class="fx67ll-loading-test">
+			<div class="fx67ll-loading-preview">
+				<fx67ll-loading :type="currentLoadingType" :color="currentLoadingColor" :size="currentLoadingSize" tip="加载中..." />
+			</div>
+			<div class="fx67ll-loading-controls">
+				<button @click="prevLoadingType">上一个</button>
+				<span>{{ currentLoadingType }}</span>
+				<button @click="nextLoadingType">下一个</button>
+				<button @click="toggleLoadingSize">切换大小</button>
+				<button @click="toggleLoadingColor">切换颜色</button>
+				<button @click="showFullscreenLoading">全屏加载</button>
+				<button @click="showDelayLoading">延迟加载</button>
+			</div>
+			<fx67ll-loading v-model="isFullscreen" fullscreen tip="全屏加载中..." background="#20232a" />
+		</div> -->
+
 		<!-- 形状插件合集测试 -->
 		<!-- <shape-infinity shapeColor="#ffff7f" :shapeSize="0.5" />
 		<shape-star-five shapeColor="#aaffff" :shapeSize="3" />
@@ -46,12 +73,70 @@
 export default {
 	name: 'fx67llIndex',
 	data() {
-		return {}
+		return {
+			// loading 组件交互演示相关数据（放开模板中交互示例注释后生效）
+			loadingTypeList: [
+				'ball-pulse', 'ball-clip-rotate', 'ball-fall', 'ball-newton-cradle',
+				'ball-running-dots', 'ball-scale-pulse', 'ball-scale', 'ball-spin-clockwise',
+				'ball-spin-rotate', 'ball-spin', 'line-scale', 'pacman',
+				'square-jelly-box', 'square-loader', 'timer', 'ball-climbing-dot',
+				'circle', 'circle-side', 'arrow-circle', 'ball-circle',
+				'rectangle', 'heart', 'ball-rotate', 'jumping', 'satellite'
+			],
+			loadingTypeIndex: 0,
+			loadingSizeList: ['sm', 'md', 'lg', 'xl'],
+			loadingSizeIndex: 1,
+			loadingColorList: ['#42b983', '#ef8e81', '#3ccad1', '#f6d860', '#9b7ad5'],
+			loadingColorIndex: 0,
+			isFullscreen: false
+		}
+	},
+	computed: {
+		// 当前演示的 loading 类型
+		currentLoadingType() {
+			return this.loadingTypeList[this.loadingTypeIndex];
+		},
+		// 当前演示的 loading 大小
+		currentLoadingSize() {
+			return this.loadingSizeList[this.loadingSizeIndex];
+		},
+		// 当前演示的 loading 颜色
+		currentLoadingColor() {
+			return this.loadingColorList[this.loadingColorIndex];
+		}
 	},
 	methods: {
 		getAvatarUrl(url) {
 			console.log('avatarUrl: ', url);
 		},
+		// 上一个 loading 类型
+		prevLoadingType() {
+			this.loadingTypeIndex = (this.loadingTypeIndex - 1 + this.loadingTypeList.length) % this.loadingTypeList.length;
+		},
+		// 下一个 loading 类型
+		nextLoadingType() {
+			this.loadingTypeIndex = (this.loadingTypeIndex + 1) % this.loadingTypeList.length;
+		},
+		// 切换 loading 大小
+		toggleLoadingSize() {
+			this.loadingSizeIndex = (this.loadingSizeIndex + 1) % this.loadingSizeList.length;
+		},
+		// 切换 loading 颜色
+		toggleLoadingColor() {
+			this.loadingColorIndex = (this.loadingColorIndex + 1) % this.loadingColorList.length;
+		},
+		// 显示全屏加载
+		showFullscreenLoading() {
+			this.isFullscreen = true;
+			// 3 秒后自动关闭
+			setTimeout(() => {
+				this.isFullscreen = false;
+			}, 3000);
+		},
+		// 延迟显示加载（delay 属性演示）
+		showDelayLoading() {
+			console.log('delay 加载已触发，500ms 后显示');
+		}
 	}
 };
 </script>
@@ -66,6 +151,52 @@ export default {
 		width: 500px;
 		height: 500px;
 		margin: 0 auto;
+	}
+
+	// loading 组件交互测试区样式（放开模板中交互示例注释后生效）
+	.fx67ll-loading-test {
+		width: 500px;
+		margin: 40px auto;
+		text-align: center;
+
+		.fx67ll-loading-preview {
+			height: 120px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #f7f8fa;
+			border-radius: 8px;
+			margin-bottom: 20px;
+		}
+
+		.fx67ll-loading-controls {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			justify-content: center;
+
+			button {
+				padding: 6px 12px;
+				border: 1px solid #42b983;
+				border-radius: 4px;
+				background: #fff;
+				color: #42b983;
+				cursor: pointer;
+				font-size: 13px;
+
+				&:hover {
+					background: #42b983;
+					color: #fff;
+				}
+			}
+
+			span {
+				line-height: 30px;
+				padding: 0 8px;
+				color: #666;
+				font-size: 13px;
+			}
+		}
 	}
 }
 </style>

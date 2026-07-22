@@ -24,6 +24,9 @@ import { fx67llBinaryClock } from '../../src/components/objectCom/clock/binary-c
 // 引入放烟花组件
 import { fx67llNanFireworks } from '../../src/components/divCom/nan-fireworks/index.js';
 
+// 引入加载动画组件
+import { fx67llLoading } from '../../src/components/pageCom/loading/index.js';
+
 export default ({ Vue }) => {
   Vue.use(shapeInfinity),
     Vue.use(shapeStarFive),
@@ -40,4 +43,5 @@ export default ({ Vue }) => {
     Vue.use(shapeTalkBubble),
     Vue.use(fx67llBinaryClock);
 	Vue.use(fx67llNanFireworks);
+	Vue.use(fx67llLoading);
 };

@@ -1,0 +1,83 @@
+// ============================================================
+// fx67ll-loading 共享样式
+// 包含：外层容器、全屏遮罩、提示文字、尺寸缩放等与具体动效无关的公共样式
+// 具体动效样式见 la.less 与 better.less
+// ============================================================
+
+// 桥接外部传入的 CSS 变量，less 编译期不求值，运行时由 :style 注入
+@loaderColor: var(--loader-color);
+@loaderTipColor: var(--loader-tip-color);
+@loaderBg: var(--loader-bg);
+@loaderZIndex: var(--loader-zindex);
+@loaderScale: var(--loader-scale);
+@loaderDuration: var(--loader-duration);
+
+// loading 根容器，非全屏时作为 inline-block 容器，可放入任意相对父容器做局部 loading
+.fx67ll-loading {
+	display: inline-block;
+	// 颜色统一通过 --loader-color 注入，部分动效经 currentColor 继承生效
+	color: @loaderColor;
+	// 缩放倍数：数字型 size 通过此变量统一缩放
+	// 注意：部分动效自身用修饰类控制尺寸，不走此变量
+	transform: scale(@loaderScale);
+	transform-origin: center center;
+	line-height: 0;
+}
+
+// 全屏遮罩模式：fixed 铺满视口
+.fx67ll-loading-mask {
+	position: fixed;
+	inset: 0;
+	z-index: @loaderZIndex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// 默认半透明遮罩背景，mask=false 时不显示
+	background-color: rgba(0, 0, 0, 0.5);
+
+	// 用户自定义背景色优先于默认遮罩
+	&.fx67ll-loading-mask--custom-bg {
+		background-color: @loaderBg;
+	}
+
+	// mask=false 时去掉遮罩背景，仅保留居中的 loading 内容
+	&.fx67ll-loading-mask--no-mask {
+		background-color: transparent;
+	}
+}
+
+// 全屏模式下的居中内容容器（spinner + tip）
+.fx67ll-loading-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+// 提示文字
+.fx67ll-loading-tip {
+	margin-top: 16px;
+	font-size: 14px;
+	line-height: 1.5;
+	color: @loaderTipColor;
+	text-align: center;
+	// tip 默认跟随 spinner 颜色，未单独设置时继承根容器 color
+}
+
+// 全屏模式下根容器不需要 inline-block 与缩放变形，重置为正常块级
+.fx67ll-loading--fullscreen {
+	display: block;
+	transform: none;
+	line-height: normal;
+}
+
+// 自定义动画时长：当 duration 属性非 null 时，根容器追加此 class，
+// 用 !important 统一覆盖所有后代元素（含伪元素）的 animation-duration，
+// 实现 27 款动效统一的时长调节（各款原有时长作为 --loader-duration 未设置时的回退）
+.fx67ll-loading--custom-duration,
+.fx67ll-loading--custom-duration *,
+.fx67ll-loading--custom-duration *:before,
+.fx67ll-loading--custom-duration *:after {
+	animation-duration: @loaderDuration !important;
+}
+

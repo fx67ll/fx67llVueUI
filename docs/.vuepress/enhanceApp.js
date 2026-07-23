@@ -27,6 +27,9 @@ import { fx67llNanFireworks } from '../../src/components/divCom/nan-fireworks/in
 // 引入加载动画组件
 import { fx67llLoading } from '../../src/components/pageCom/loading/index.js';
 
+// 引入加载动画场景式组件
+import { fx67llLoadingScreen } from '../../src/components/pageCom/loading-screen/index.js';
+
 export default ({ Vue }) => {
   Vue.use(shapeInfinity),
     Vue.use(shapeStarFive),
@@ -44,4 +47,5 @@ export default ({ Vue }) => {
     Vue.use(fx67llBinaryClock);
 	Vue.use(fx67llNanFireworks);
 	Vue.use(fx67llLoading);
+	Vue.use(fx67llLoadingScreen);
 };

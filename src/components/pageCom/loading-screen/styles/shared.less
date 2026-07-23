@@ -1,0 +1,73 @@
+// ============================================================
+// fx67ll-loading-screen 共享样式
+// 包含：全屏遮罩、居中容器、提示文字等与具体动效无关的公共样式
+// 具体动效样式见 multiple.less（10 款）与 single.less（4 款）
+// ============================================================
+
+// 桥接外部传入的 CSS 变量，less 编译期不求值，运行时由 :style 注入
+@lsBg: var(--ls-bg);
+@lsZIndex: var(--ls-zindex);
+@lsTipColor: var(--ls-tip-color);
+@lsColor: var(--ls-color);
+
+// 全屏遮罩：fixed 铺满视口
+.fx67ll-ls-mask {
+	position: fixed;
+	inset: 0;
+	z-index: @lsZIndex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// 使用 background 简写以支持纯色与渐变背景（engine-loader 默认为渐变）
+	background: @lsBg;
+}
+
+// 居中内容容器（动效 + tip）
+.fx67ll-ls-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+// 动效舞台
+.fx67ll-ls-stage {
+	line-height: 0;
+}
+
+// 提示文字（绝对定位到面板顶部居中，不占据动效布局空间，避免遮挡动效主体）
+.fx67ll-ls-tip {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+	font-size: 22px;
+	line-height: 1.5;
+	font-weight: 500;
+	color: @lsTipColor;
+	text-align: center;
+}
+
+// 右上角关闭按钮
+.fx67ll-ls-close {
+	position: absolute;
+	top: 16px;
+	right: 20px;
+	width: 32px;
+	height: 32px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 24px;
+	font-family: Arial, sans-serif;
+	color: #ffffff;
+	background: rgba(0, 0, 0, 0.35);
+	border-radius: 50%;
+	cursor: pointer;
+	user-select: none;
+	z-index: 1;
+	transition: background 0.2s ease;
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.6);
+	}
+}

@@ -136,8 +136,12 @@ module.exports = {
               // collapsable: false,
               children: [
                 {
-                  title: '加载动画',
+                  title: '加载动画（内联）',
                   path: '/components/0.6.0/loading',
+                },
+                {
+                  title: '加载动画（场景式）',
+                  path: '/components/0.6.0/loading-screen',
                 },
               ],
             },

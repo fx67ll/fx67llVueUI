@@ -36,6 +36,16 @@
 			<fx67ll-loading v-model="isFullscreen" fullscreen tip="全屏加载中..." background="#20232a" />
 		</div> -->
 
+		<!-- 加载动画场景式组件测试（天生全屏遮罩，放开注释触发，右上角自带关闭按钮） -->
+		<!-- <button class="fx67ll-loading-demo-btn" @click="isScreenLoading = true">显示场景式加载</button>
+		<fx67ll-loading-screen v-model="isScreenLoading" type="grid-pulse" tip="场景式加载中..." /> -->
+		<!-- <fx67ll-loading-screen v-model="isScreenLoading" type="solar-system" tip="太阳系加载中..." /> -->
+		<!-- <fx67ll-loading-screen v-model="isScreenLoading" type="windows-flag" tip="Windows 加载中..." /> -->
+		<!-- <fx67ll-loading-screen v-model="isScreenLoading" type="robot-engine" tip="引擎启动中..." /> -->
+		<!-- <fx67ll-loading-screen v-model="isScreenLoading" type="book-flip" tip="翻书加载中..." /> -->
+		<!-- <fx67ll-loading-screen v-model="isScreenLoading" type="dot-matrix" color="#42b983" tip="八点方阵..." /> -->
+		<!-- 隐藏关闭按钮：:closeable="false" -->
+
 		<!-- 形状插件合集测试 -->
 		<!-- <shape-infinity shapeColor="#ffff7f" :shapeSize="0.5" />
 		<shape-star-five shapeColor="#aaffff" :shapeSize="3" />
@@ -88,7 +98,8 @@ export default {
 			loadingSizeIndex: 1,
 			loadingColorList: ['#42b983', '#ef8e81', '#3ccad1', '#f6d860', '#9b7ad5'],
 			loadingColorIndex: 0,
-			isFullscreen: false
+			isFullscreen: false,
+			isScreenLoading: false
 		}
 	},
 	computed: {

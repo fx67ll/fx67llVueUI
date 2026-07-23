@@ -9,6 +9,9 @@ import { loadingProgress } from '@c/pageCom/loading-progress/index.js';
 // 引入加载动画组件
 import { fx67llLoading } from '@c/pageCom/loading/index.js';
 
+// 引入加载动画场景式组件
+import { fx67llLoadingScreen } from '@c/pageCom/loading-screen/index.js';
+
 // 引入形状组件合集
 import { shapeInfinity } from '@c/objectCom/shape/infinity/infinity.js';
 import { shapeStarFive } from '@c/objectCom/shape/star-five/star-five.js';
@@ -43,6 +46,9 @@ export default {
 
     // 注册加载动画组件
     Vue.use(fx67llLoading);
+
+    // 注册加载动画场景式组件
+    Vue.use(fx67llLoadingScreen);
 
     // 注册形状组件合集
     Vue.use(shapeInfinity);

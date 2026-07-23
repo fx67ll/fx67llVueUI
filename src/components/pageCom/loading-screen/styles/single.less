@@ -1,0 +1,676 @@
+// ============================================================
+// Single 组 4 款场景式动效样式
+// 各自独立结构，多色硬编码保持原配色（color 属性对这 4 款无效）
+// 每款的 keyframes 与选择器均带 type 前缀，避免跨款命名冲突
+// 已补齐无前缀 animation 与 @keyframes，确保现代浏览器正常渲染
+// ============================================================
+
+
+/* ===== robot-engine ===== */
+@-webkit-keyframes fx67ll-ls-robot-engine-piston {
+          0% { margin-top: 0; }
+          50% { margin-top: 80px; }
+          100% { margin-top: 0; }
+      }
+      @keyframes fx67ll-ls-robot-engine-piston {
+          0% { margin-top: 0; }
+          50% { margin-top: 80px; }
+          100% { margin-top: 0; }
+      }
+      @-webkit-keyframes fx67ll-ls-robot-engine-arm {
+          0% { -webkit-transform: rotate(0); }
+          25% { -webkit-transform: rotate(-18deg); }
+          50% { -webkit-transform: rotate(0); }
+          75% { -webkit-transform: rotate(18deg); }
+          100% { -webkit-transform: rotate(0); }
+      }
+      @keyframes fx67ll-ls-robot-engine-arm {
+          0% { transform: rotate(0); }
+          25% { transform: rotate(-18deg); }
+          50% { transform: rotate(0); }
+          75% { transform: rotate(18deg); }
+          100% { transform: rotate(0); }
+      }
+
+      .fx67ll-ls-robot {
+          position: absolute;
+          top:50%; left:50%;
+          width: 540px;
+          height: 250px;
+          margin-top:-125px; margin-left:-270px;
+          font-family: 'Oswald', sans-serif;
+          font-size: 30px;
+          font-weight: 700;
+          color: #444;
+          text-shadow: 0px -1px 1px rgba(0,0,0,.7), 0px 1px 1px rgba(255,255,255,.4);
+      }
+
+      .fx67ll-ls-piston {
+          float: left;
+          margin-right: 10px;
+          position: relative;
+          width: 100px;
+          height: 250px;
+          background: rgba(0,0,0,.1);
+          border-radius: 10px 10px 50px 50px;
+          box-shadow: 0 -4px 0 rgba(0,0,0,.2), 0 4px 0 rgba(255,255,255,.2);
+      }
+      .fx67ll-ls-piston:last-child {
+          margin: 0;
+      }
+
+      .fx67ll-ls-piston .fx67ll-ls-block {
+          position: relative;
+          width: 100px;
+          height: 60px;
+          line-height: 60px;
+          background: #555;
+          border-radius: 10px;
+-webkit-animation: fx67ll-ls-robot-engine-piston 1.2s cubic-bezier(.5,0,.5,1) infinite;
+          animation: fx67ll-ls-robot-engine-piston 1.2s cubic-bezier(.5,0,.5,1) infinite;animation: fx67ll-ls-robot-engine-piston 1.2s cubic-bezier(.5,0,.5,1) infinite;
+          box-shadow: inset 0 -4px 0 rgba(0,0,0,.2), inset 0 4px 0 rgba(255,255,255,.2);
+      }
+      .fx67ll-ls-piston:nth-child(1) .fx67ll-ls-block { -webkit-animation-delay: 0s; animation-delay: 0s; }
+      .fx67ll-ls-piston:nth-child(2) .fx67ll-ls-block { -webkit-animation-delay: .1s; animation-delay: .1s; }
+      .fx67ll-ls-piston:nth-child(3) .fx67ll-ls-block { -webkit-animation-delay: .2s; animation-delay: .2s; }
+      .fx67ll-ls-piston:nth-child(4) .fx67ll-ls-block { -webkit-animation-delay: .3s; animation-delay: .3s; }
+      .fx67ll-ls-piston:nth-child(5) .fx67ll-ls-block { -webkit-animation-delay: .4s; animation-delay: .4s; }
+
+      .fx67ll-ls-piston .fx67ll-ls-arm {
+          position: absolute;
+          top:50%; left:50%;
+          margin: -10px 0 0 -10px;
+          width: 20px;
+          height: 150px;
+          background: #555;
+          border-radius: 10px;
+          box-shadow: inset 0 -22px 0 rgba(0,0,0,.2);
+          z-index: -1;
+          -webkit-transform-origin: center 10px;
+-webkit-animation: fx67ll-ls-robot-engine-arm 1.2s linear infinite;
+          animation: fx67ll-ls-robot-engine-arm 1.2s linear infinite;-webkit-animation-delay: inherit;
+          transform-origin: center 10px;
+          animation: fx67ll-ls-robot-engine-arm 1.2s linear infinite;
+          animation-delay: inherit;
+      }
+      .fx67ll-ls-piston .fx67ll-ls-arm:before,
+      .fx67ll-ls-piston .fx67ll-ls-arm:after{
+          content: '';
+          position: absolute;
+          right:0; left:0;
+          height: 16px;
+          background: #eee;
+          border-radius: 50%;
+          margin: 2px;
+      }
+      .fx67ll-ls-piston .fx67ll-ls-arm:before { top: 0; }
+      .fx67ll-ls-piston .fx67ll-ls-arm:after { bottom: 0; }
+
+      .fx67ll-ls-piston .fx67ll-ls-rotator {
+          position: absolute;
+          bottom: 0;
+          width: 100px;
+          height: 100px;
+          border-radius: 10px;
+          border-radius: 50%;
+          border: 20px solid rgba(0,0,0,.1);
+          box-sizing: border-box;
+          z-index: -1;
+      }
+
+/* ===== solar-system ===== */
+
+          .fx67ll-ls-solar-system {
+            margin: 0 auto;
+            height: 50px;
+            width: 50px;
+            background: orange;
+            border-radius: 25px;
+            position: relative;
+-webkit-animation: fx67ll-ls-solar-system-glow 1.5s linear infinite;
+            -moz-animation: fx67ll-ls-solar-system-glow 1.5s linear infinite;
+            animation: fx67ll-ls-solar-system-glow 1.5s linear infinite;
+          }
+          .fx67ll-ls-solar-system i {
+            border-radius: 250px;
+            display: block;
+            position: absolute;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 50% 50%;
+          }
+          .fx67ll-ls-solar-system i:before {
+            content: '';
+            border-radius: 25px;
+            background: black;
+            display: block;
+            position: absolute;
+            top: -5px;
+            right: 45%;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-mercury {
+            width: 80px;
+            height: 80px;
+            margin-left: -40px;
+            left: 50%;
+            top: 50%;
+            margin-top: -40px;
+-webkit-animation: fx67ll-ls-solar-system-orbit 0.5s linear infinite;
+            -moz-animation: fx67ll-ls-solar-system-orbit 0.5s linear infinite;
+            animation: fx67ll-ls-solar-system-orbit 0.5s linear infinite;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-mercury:before {
+            background: #6f5f5f;
+            height: 7px;
+            width: 7px;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-venus {
+            width: 110px;
+            height: 110px;
+            margin-left: -55px;
+            left: 50%;
+            top: 50%;
+            margin-top: -55px;
+-webkit-animation: fx67ll-ls-solar-system-orbit 1s linear infinite;
+            -moz-animation: fx67ll-ls-solar-system-orbit 1s linear infinite;
+            animation: fx67ll-ls-solar-system-orbit 1s linear infinite;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-venus:before {
+            background: #e7a71f;
+            height: 10px;
+            width: 10px;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-earth {
+            width: 140px;
+            height: 140px;
+            margin-left: -70px;
+            left: 50%;
+            top: 50%;
+            margin-top: -70px;
+-webkit-animation: fx67ll-ls-solar-system-orbit 1.5s linear infinite;
+            -moz-animation: fx67ll-ls-solar-system-orbit 1.5s linear infinite;
+            animation: fx67ll-ls-solar-system-orbit 1.5s linear infinite;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-earth:before {
+            background: #63bee2;
+            height: 10px;
+            width: 10px;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-mars {
+            width: 170px;
+            height: 170px;
+            margin-left: -85px;
+            left: 50%;
+            top: 50%;
+            margin-top: -85px;
+-webkit-animation: fx67ll-ls-solar-system-orbit 2s linear infinite;
+            -moz-animation: fx67ll-ls-solar-system-orbit 2s linear infinite;
+            animation: fx67ll-ls-solar-system-orbit 2s linear infinite;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-mars:before {
+            background: red;
+            height: 10px;
+            width: 10px;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-belt {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border-width: 25px;
+            width: 240px;
+            height: 240px;
+            margin-left: -120px;
+            border-color: rgba(36, 35, 35, 0.21);
+            left: 50%;
+            top: 50%;
+            margin-top: -120px;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-jupiter {
+            width: 260px;
+            height: 260px;
+            margin-left: -130px;
+            left: 50%;
+            top: 50%;
+            margin-top: -130px;
+-webkit-animation: fx67ll-ls-solar-system-orbit 2.5s linear infinite;
+            -moz-animation: fx67ll-ls-solar-system-orbit 2.5s linear infinite;
+            animation: fx67ll-ls-solar-system-orbit 2.5s linear infinite;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-jupiter:before {
+            background: #cf9b2b;
+            top: -15px;
+            height: 30px;
+            width: 30px;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-saturn {
+            width: 320px;
+            height: 320px;
+            margin-left: -160px;
+            left: 50%;
+            top: 50%;
+            margin-top: -160px;
+-webkit-animation: fx67ll-ls-solar-system-orbit 3s linear infinite;
+            -moz-animation: fx67ll-ls-solar-system-orbit 3s linear infinite;
+            animation: fx67ll-ls-solar-system-orbit 3s linear infinite;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-saturn:before {
+            background: #cf7a2b;
+            top: -10px;
+            height: 20px;
+            width: 20px;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-saturn:after {
+            background: #fff;
+            width: 30px;
+            height: 1px;
+            content: '';
+            position: absolute;
+            display: block;
+            background: #fff;
+            width: 30px;
+            height: 1px;
+            content: '';
+            right: 43.5%;
+            -webkit-transform: rotate(20deg);
+            -moz-transform: rotate(20deg);
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-uranus {
+            width: 360px;
+            height: 360px;
+            margin-left: -180px;
+            left: 50%;
+            top: 50%;
+            margin-top: -180px;
+-webkit-animation: fx67ll-ls-solar-system-orbit 3.5s linear infinite;
+            -moz-animation: fx67ll-ls-solar-system-orbit 3.5s linear infinite;
+            animation: fx67ll-ls-solar-system-orbit 3.5s linear infinite;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-uranus:before {
+            background: #10c593;
+            top: -8px;
+            height: 15px;
+            width: 15px;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-neptune {
+            width: 400px;
+            height: 400px;
+            margin-left: -200px;
+            left: 50%;
+            top: 50%;
+            margin-top: -200px;
+-webkit-animation: fx67ll-ls-solar-system-orbit 4s linear infinite;
+            -moz-animation: fx67ll-ls-solar-system-orbit 4s linear infinite;
+            animation: fx67ll-ls-solar-system-orbit 4s linear infinite;
+          }
+          .fx67ll-ls-solar-system i.fx67ll-ls-neptune:before {
+            background: #1470e4;
+            top: -8px;
+            height: 15px;
+            width: 15px;
+          }
+          @-webkit-keyframes fx67ll-ls-solar-system-orbit {
+            0% {
+              -webkit-transform: rotate(0deg);
+            }
+            50% {
+              -webkit-transform: rotate(-180deg);
+            }
+            100% {
+              -webkit-transform: rotate(-360deg);
+            }
+          }
+@keyframes fx67ll-ls-solar-system-orbit {
+            0% {
+              transform: rotate(0deg);
+            }
+            50% {
+              transform: rotate(-180deg);
+            }
+            100% {
+              transform: rotate(-360deg);
+            }
+          
+      }
+          @-webkit-keyframes fx67ll-ls-solar-system-glow {
+            0% {
+              box-shadow: none;
+            }
+            50% {
+              background: #ffeb00;
+              box-shadow: 0 0 20px orange;
+            }
+            100% {
+              box-shadow: none;
+            }
+          }
+@keyframes fx67ll-ls-solar-system-glow {
+            0% {
+              box-shadow: none;
+            }
+            50% {
+              background: #ffeb00;
+              box-shadow: 0 0 20px orange;
+            }
+            100% {
+              box-shadow: none;
+            }
+          
+      }
+          @-moz-keyframes fx67ll-ls-solar-system-orbit {
+            0% {
+              -moz-transform: rotate(0deg);
+            }
+            50% {
+              -moz-transform: rotate(-180deg);
+            }
+            100% {
+              -moz-transform: rotate(-360deg);
+            }
+          }
+          @-moz-keyframes fx67ll-ls-solar-system-glow {
+            0% {
+              box-shadow: none;
+            }
+            50% {
+              background: #ffeb00;
+              box-shadow: 0 0 20px orange;
+            }
+            100% {
+              box-shadow: none;
+            }
+          }
+
+/* ===== book-flip ===== */
+.fx67ll-ls-book{
+          width: 56px;
+          height: 50px;
+          margin: 50px auto;
+          position: relative;
+          perspective: 100px;
+          perspective-origin: 50% 100%;
+          transform-style: preserve-3d;
+          transform: translateZ(-1px);
+      }
+      .fx67ll-ls-book .fx67ll-ls-book-inner{
+          width: 50%;
+          height: 100%;
+          background: #fff;
+          border: 3px solid #fc440f;
+          position: absolute;
+          right: 0;
+          transform-origin: 0% 100%;
+      }
+      .fx67ll-ls-book .fx67ll-ls-book-inner:first-child{
+          left: 0;
+      }
+      .fx67ll-ls-book .fx67ll-ls-book-inner hr{
+          margin: 3px 3px 6px;
+          border: 1px solid rgba(252,68,15, 0.9);
+      }
+      .fx67ll-ls-book .fx67ll-ls-book-inner.fx67ll-ls-box{
+-webkit-animation: fx67ll-ls-book-flip-loading-1 3.6s infinite ease-in-out;
+          animation: fx67ll-ls-book-flip-loading-1 3.6s infinite ease-in-out;
+      }
+      .fx67ll-ls-book .fx67ll-ls-book-inner.fx67ll-ls-box-1{
+          animation-delay: .2s;
+      }
+      .fx67ll-ls-book .fx67ll-ls-book-inner.fx67ll-ls-box-2{
+          animation-delay: .4s;
+      }
+      .fx67ll-ls-book .fx67ll-ls-book-inner.fx67ll-ls-box-3{
+          animation-delay: 0.6s;
+      }
+      .fx67ll-ls-book .fx67ll-ls-book-inner.fx67ll-ls-box-4{
+          animation-delay: 0.8s;
+      }
+      .fx67ll-ls-book .fx67ll-ls-book-inner.fx67ll-ls-box-5{
+          animation-delay: 1.8s;
+      }
+      .fx67ll-ls-book .fx67ll-ls-book-inner.fx67ll-ls-box-6{
+          animation-delay: 2.2s;
+      }
+      @-webkit-keyframes fx67ll-ls-book-flip-loading-1{
+          25%,100%{
+              transform: translateX(3px) rotateY(-180deg);
+          }
+      }
+      @keyframes fx67ll-ls-book-flip-loading-1{
+          25%,100%{
+              transform: translateX(3px) rotateY(-180deg);
+          }
+      }
+
+/* ===== windows-flag ===== */
+.fx67ll-ls-windows {
+        margin: 0 auto;
+        height: 20px;
+        width: 20px;
+        position: relative;
+-webkit-animation: fx67ll-ls-windows-flag-spin 1.5s linear infinite;
+        -moz-animation: fx67ll-ls-windows-flag-spin 1.5s linear infinite;
+        animation: fx67ll-ls-windows-flag-spin 1.5s linear infinite;
+      }
+      .fx67ll-ls-windows i {
+        height: 20px;
+        width: 20px;
+        border-radius: 25px;
+        display: block;
+        position: absolute;
+      }
+      .fx67ll-ls-windows i:before,
+      .fx67ll-ls-windows i:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        border-radius: inherit;
+      }
+      .fx67ll-ls-windows i:first-child:before {
+        background: rgba(52, 149, 221, 0.9);
+-webkit-animation: fx67ll-ls-windows-flag-rotate-top-left 1.5s linear infinite;
+        -moz-animation: fx67ll-ls-windows-flag-rotate-top-left 1.5s linear infinite;
+        animation: fx67ll-ls-windows-flag-rotate-top-left 1.5s linear infinite;
+      }
+      .fx67ll-ls-windows i:first-child:after {
+        background: rgba(225, 73, 44, 0.9);
+-webkit-animation: fx67ll-ls-windows-flag-rotate-top-right 1.5s linear infinite;
+        -moz-animation: fx67ll-ls-windows-flag-rotate-top-right 1.5s linear infinite;
+        animation: fx67ll-ls-windows-flag-rotate-top-right 1.5s linear infinite;
+      }
+      .fx67ll-ls-windows i:last-child:before {
+        background: rgba(249, 206, 43, 0.9);
+-webkit-animation: fx67ll-ls-windows-flag-rotate-bottom-left 1.5s linear infinite;
+        -moz-animation: fx67ll-ls-windows-flag-rotate-bottom-left 1.5s linear infinite;
+        animation: fx67ll-ls-windows-flag-rotate-bottom-left 1.5s linear infinite;
+      }
+      .fx67ll-ls-windows i:last-child:after {
+        background: rgba(0, 153, 117, 0.9);
+-webkit-animation: fx67ll-ls-windows-flag-rotate-bottom-right 1.5s linear infinite;
+        -moz-animation: fx67ll-ls-windows-flag-rotate-bottom-right 1.5s linear infinite;
+        animation: fx67ll-ls-windows-flag-rotate-bottom-right 1.5s linear infinite;
+      }
+      @-webkit-keyframes fx67ll-ls-windows-flag-spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        50% {
+          -webkit-transform: rotate(-180deg);
+        }
+        100% {
+          -webkit-transform: rotate(-360deg);
+        }
+      }
+@keyframes fx67ll-ls-windows-flag-spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(-180deg);
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      
+      }
+      @-webkit-keyframes fx67ll-ls-windows-flag-rotate-top-right {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        50% {
+          -webkit-transform: rotate(-180deg);
+          -webkit-transform-origin: 20% 20%;
+        }
+        100% {
+          -webkit-transform: rotate(-360deg);
+        }
+      }
+@keyframes fx67ll-ls-windows-flag-rotate-top-right {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(-180deg);
+          transform-origin: 20% 20%;
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      
+      }
+      @-webkit-keyframes fx67ll-ls-windows-flag-rotate-top-left {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        50% {
+          -webkit-transform: rotate(180deg);
+          -webkit-transform-origin: 80% 20%;
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+@keyframes fx67ll-ls-windows-flag-rotate-top-left {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+          transform-origin: 80% 20%;
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      
+      }
+      @-webkit-keyframes fx67ll-ls-windows-flag-rotate-bottom-right {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        50% {
+          -webkit-transform: rotate(-180deg);
+          -webkit-transform-origin: 80% 80%;
+        }
+        100% {
+          -webkit-transform: rotate(-360deg);
+        }
+      }
+@keyframes fx67ll-ls-windows-flag-rotate-bottom-right {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(-180deg);
+          transform-origin: 80% 80%;
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      
+      }
+      @-webkit-keyframes fx67ll-ls-windows-flag-rotate-bottom-left {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        50% {
+          -webkit-transform: rotate(180deg);
+          -webkit-transform-origin: 20% 80%;
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+@keyframes fx67ll-ls-windows-flag-rotate-bottom-left {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+          transform-origin: 20% 80%;
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      
+      }
+
+      @-moz-keyframes fx67ll-ls-windows-flag-spin {
+        0% {
+          -moz-transform: rotate(0deg);
+        }
+        50% {
+          -moz-transform: rotate(-180deg);
+        }
+        100% {
+          -moz-transform: rotate(-360deg);
+        }
+      }
+      @-moz-keyframes fx67ll-ls-windows-flag-rotate-top-right {
+        0% {
+          -moz-transform: rotate(0deg);
+        }
+        50% {
+          -moz-transform: rotate(-180deg);
+          -moz-transform-origin: 20% 20%;
+        }
+        100% {
+          -moz-transform: rotate(-360deg);
+        }
+      }
+      @-moz-keyframes fx67ll-ls-windows-flag-rotate-top-left {
+        0% {
+          -moz-transform: rotate(0deg);
+        }
+        50% {
+          -moz-transform: rotate(180deg);
+          -moz-transform-origin: 80% 20%;
+        }
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }
+      @-moz-keyframes fx67ll-ls-windows-flag-rotate-bottom-right {
+        0% {
+          -moz-transform: rotate(0deg);
+        }
+        50% {
+          -moz-transform: rotate(-180deg);
+          -moz-transform-origin: 80% 80%;
+        }
+        100% {
+          -moz-transform: rotate(-360deg);
+        }
+      }
+      @-moz-keyframes fx67ll-ls-windows-flag-rotate-bottom-left {
+        0% {
+          -moz-transform: rotate(0deg);
+        }
+        50% {
+          -moz-transform: rotate(180deg);
+          -moz-transform-origin: 20% 80%;
+        }
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }

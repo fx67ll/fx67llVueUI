@@ -232,107 +232,6 @@
     }
 }
 
-[data-loader='ball-scale']
-{
-    width: 50px;
-    height: 50px;
-
-    -webkit-animation: ball-scale infinite linear .75s;
-       -moz-animation: ball-scale infinite linear .75s;
-         -o-animation: ball-scale infinite linear .75s;
-            animation: ball-scale infinite linear .75s;
-
-    border-radius: 100%;
-    background-color: var(--loader-color, #fff);
-}
-@-webkit-keyframes ball-scale
-{
-    0%
-    {
-        -webkit-transform: scale(.1);
-            -ms-transform: scale(.1);
-             -o-transform: scale(.1);
-                transform: scale(.1);
-
-        opacity: 1;
-    }
-    100%
-    {
-        -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-             -o-transform: scale(1);
-                transform: scale(1);
-
-        opacity: 0;
-    }
-}
-
-@-moz-keyframes ball-scale
-{
-    0%
-    {
-        -webkit-transform: scale(.1);
-            -ms-transform: scale(.1);
-             -o-transform: scale(.1);
-                transform: scale(.1);
-
-        opacity: 1;
-    }
-    100%
-    {
-        -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-             -o-transform: scale(1);
-                transform: scale(1);
-
-        opacity: 0;
-    }
-}
-
-@-o-keyframes ball-scale
-{
-    0%
-    {
-        -webkit-transform: scale(.1);
-            -ms-transform: scale(.1);
-             -o-transform: scale(.1);
-                transform: scale(.1);
-
-        opacity: 1;
-    }
-    100%
-    {
-        -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-             -o-transform: scale(1);
-                transform: scale(1);
-
-        opacity: 0;
-    }
-}
-
-@keyframes ball-scale
-{
-    0%
-    {
-        -webkit-transform: scale(.1);
-            -ms-transform: scale(.1);
-             -o-transform: scale(.1);
-                transform: scale(.1);
-
-        opacity: 1;
-    }
-    100%
-    {
-        -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-             -o-transform: scale(1);
-                transform: scale(1);
-
-        opacity: 0;
-    }
-}
-
 [data-loader='ball-rotate']
 {
     position: relative;
@@ -499,21 +398,21 @@
 {
     left: -15px;
 
-    -webkit-animation: ball-pulse infinite .75s -.4s cubic-bezier(.2, .68, .18, 1.08);
-       -moz-animation: ball-pulse infinite .75s -.4s cubic-bezier(.2, .68, .18, 1.08);
-         -o-animation: ball-pulse infinite .75s -.4s cubic-bezier(.2, .68, .18, 1.08);
-            animation: ball-pulse infinite .75s -.4s cubic-bezier(.2, .68, .18, 1.08);
+    -webkit-animation: ball-pulse-bt infinite .75s -.4s cubic-bezier(.2, .68, .18, 1.08);
+       -moz-animation: ball-pulse-bt infinite .75s -.4s cubic-bezier(.2, .68, .18, 1.08);
+         -o-animation: ball-pulse-bt infinite .75s -.4s cubic-bezier(.2, .68, .18, 1.08);
+            animation: ball-pulse-bt infinite .75s -.4s cubic-bezier(.2, .68, .18, 1.08);
 }
 [data-loader='ball-pulse']:after
 {
     right: -15px;
 
-    -webkit-animation: ball-pulse infinite .75s cubic-bezier(.2, .68, .18, 1.08);
-       -moz-animation: ball-pulse infinite .75s cubic-bezier(.2, .68, .18, 1.08);
-         -o-animation: ball-pulse infinite .75s cubic-bezier(.2, .68, .18, 1.08);
-            animation: ball-pulse infinite .75s cubic-bezier(.2, .68, .18, 1.08);
+    -webkit-animation: ball-pulse-bt infinite .75s cubic-bezier(.2, .68, .18, 1.08);
+       -moz-animation: ball-pulse-bt infinite .75s cubic-bezier(.2, .68, .18, 1.08);
+         -o-animation: ball-pulse-bt infinite .75s cubic-bezier(.2, .68, .18, 1.08);
+            animation: ball-pulse-bt infinite .75s cubic-bezier(.2, .68, .18, 1.08);
 }
-@-webkit-keyframes ball-pulse
+@-webkit-keyframes ball-pulse-bt
 {
     0%
     {
@@ -534,7 +433,7 @@
         opacity: 1;
     }
 }
-@-moz-keyframes ball-pulse
+@-moz-keyframes ball-pulse-bt
 {
     0%
     {
@@ -555,7 +454,7 @@
         opacity: 1;
     }
 }
-@-o-keyframes ball-pulse
+@-o-keyframes ball-pulse-bt
 {
     0%
     {
@@ -576,7 +475,7 @@
         opacity: 1;
     }
 }
-@keyframes ball-pulse
+@keyframes ball-pulse-bt
 {
     0%
     {
@@ -1232,6 +1131,7 @@
     height: 20px;
 
     content: '';
+    -webkit-animation: jumping .5s infinite alternate;
     animation: jumping .5s infinite alternate;
 
     background: rgba(0,0,0,0);

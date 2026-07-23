@@ -1,6 +1,6 @@
 # 加载动画
 
-`fx67ll-loading` 是一个内置 **27 款** 纯 CSS 加载动效的组件，通过统一的 `type` 属性切换动效，并支持颜色、大小、动画时长、全屏遮罩、提示文字、延迟显示、`v-model` 显隐控制等丰富的配置。
+`fx67ll-loading` 是一个内置 **26 款** 纯 CSS 加载动效的组件，通过统一的 `type` 属性切换动效，并支持颜色、大小、动画时长、全屏遮罩、提示文字、延迟显示、`v-model` 显隐控制等丰富的配置。
 
 > 所有动效均为纯 CSS 实现，无任何 JS 动画依赖，性能良好且可轻松定制。
 
@@ -37,9 +37,9 @@
 
 ## 所有类型一览
 
-下方网格展示了全部 27 款加载动效，鼠标悬浮卡片可查看 `type` 名称。点击卡片可切换深浅背景以查看不同颜色下的效果。
+下方网格展示了全部 26 款加载动效，鼠标悬浮卡片可查看 `type` 名称。点击卡片可切换深浅背景以查看不同颜色下的效果。
 
-::: demo 将全部 27 款动效以卡片网格形式展示，方便快速预览和选择合适的类型。
+::: demo 将全部 26 款动效以卡片网格形式展示，方便快速预览和选择合适的类型。
 ```vue
 <template>
 	<div class="loading-gallery">
@@ -72,7 +72,6 @@
 					{ type: 'ball-running-dots', dark: false },
 					{ type: 'ball-scale-pulse', dark: false },
 					{ type: 'ball-scale', dark: false },
-					{ type: 'bt-ball-scale', dark: false },
 					{ type: 'ball-spin-clockwise', dark: false },
 					{ type: 'ball-spin-rotate', dark: false },
 					{ type: 'ball-spin', dark: false },
@@ -88,7 +87,7 @@
 					{ type: 'rectangle', dark: false },
 					{ type: 'heart', dark: false },
 					{ type: 'ball-rotate', dark: false },
-					{ type: 'bt-ball-pulse', dark: false },
+					{ type: 'ball-pulse-double', dark: false },
 					{ type: 'jumping', dark: false },
 					{ type: 'satellite', dark: false }
 				]
@@ -162,7 +161,7 @@
 ```
 :::
 
-> 说明：`ball-scale` 与 `ball-pulse` 各有两个视觉不同的版本，重名版本使用 `bt-` 前缀作为 `type` 区分（即 `bt-ball-scale`、`bt-ball-pulse`）。
+> 说明：`ball-pulse`（三球依次脉冲）与 `ball-pulse-double`（两球交替脉冲）视觉效果不同，分别对应不同的实现，命名上以 `-double` 后缀区分。`ball-scale` 为单圆放大淡出动效。
 
 ---
 
@@ -237,7 +236,7 @@
 
 ## 颜色自定义
 
-`color` 属性接收十六进制颜色值（3 位或 6 位），所有 27 款动效均支持动态换色。
+`color` 属性接收十六进制颜色值（3 位或 6 位），所有 26 款动效均支持动态换色。
 
 ::: demo 不同颜色展示，任意 hex 颜色均可。
 ```vue
@@ -346,7 +345,7 @@
 ```vue
 <template>
 	<div>
-		<button class="loading-demo-btn" @click="showFullscreen = true">显示全屏加载</button>
+		<button class="loading-demo-btn" @click="open()">显示全屏加载</button>
 
 		<fx67ll-loading
 			v-model="showFullscreen"
@@ -354,7 +353,7 @@
 			type="ball-spin"
 			color="#42b983"
 			background="#20232a"
-			tip="正在加载，请稍候......"
+			tip="正在加载，请稍候"
 			:z-index="9999"
 		/>
 	</div>
@@ -365,10 +364,25 @@
 		name: 'fx67llDemo',
 		data() {
 			return {
-				showFullscreen: false
+				showFullscreen: false,
+				timer: null
 			}
 		},
-		methods: {}
+		methods: {
+			open() {
+				// 清除上一次未触发的定时器，避免连续点击时旧定时器提前关闭面板
+				if (this.timer) {
+					clearTimeout(this.timer)
+					this.timer = null
+				}
+				this.showFullscreen = true
+				// 3 秒后自动关闭
+				this.timer = setTimeout(() => {
+					this.showFullscreen = false
+					this.timer = null
+				}, 3000)
+			}
+		}
 	};
 </script>
 
@@ -409,7 +423,7 @@
 			type="ball-clip-rotate"
 			color="#42b983"
 			:delay="500"
-			tip="加载中......"
+			tip="加载中"
 		/>
 	</div>
 </template>
@@ -419,14 +433,21 @@
 		name: 'fx67llDemo',
 		data() {
 			return {
-				loading: false
+				loading: false,
+				timer: null
 			}
 		},
 		methods: {
 			startRequest(duration) {
+				// 清除上一次未触发的定时器，避免连续点击时旧定时器提前关闭面板
+				if (this.timer) {
+					clearTimeout(this.timer)
+					this.timer = null
+				}
 				this.loading = true
-				setTimeout(() => {
+				this.timer = setTimeout(() => {
 					this.loading = false
+					this.timer = null
 				}, duration)
 			}
 		}
@@ -464,7 +485,7 @@
 	<div>
 		<button class="loading-demo-btn" @click="visible = !visible">{{ visible ? '隐藏' : '显示' }} loading</button>
 		<div class="loading-local-box">
-			<fx67ll-loading v-model="visible" type="ball-spin-clockwise" color="#42b983" tip="加载中..." />
+			<fx67ll-loading v-model="visible" type="ball-spin-clockwise" color="#42b983" tip="加载中" />
 			<span v-if="!visible">这里可以放任意需要加载的内容区域</span>
 		</div>
 	</div>
@@ -510,7 +531,7 @@
 <fx67ll-loading type="pacman" color="#f6d860" size="lg" />
 
 <!-- 全屏加载 -->
-<fx67ll-loading v-model="loading" fullscreen type="ball-spin" tip="加载中..." background="#20232a" />
+<fx67ll-loading v-model="loading" fullscreen type="ball-spin" tip="加载中" background="#20232a" />
 
 <!-- 延迟显示 -->
 <fx67ll-loading v-model="loading" fullscreen :delay="500" type="ball-clip-rotate" />
@@ -540,7 +561,7 @@
 
 ## 所有类型
 
-组件共内置 27 款动效，完整 `type` 列表如下：
+组件共内置 26 款动效，完整 `type` 列表如下：
 
 |  type  |  效果描述  |
 |  :----:  |  :----:  |
@@ -563,12 +584,11 @@
 |  circle  |  圆环单段缺口持续旋转  |
 |  circle-side  |  半透明圆环加一段高亮  |
 |  arrow-circle  |  圆环两端箭头反向旋转  |
-|  bt-ball-scale  |  一圆持续放大并淡出  |
 |  ball-circle  |  两圆球交替沿四角移动  |
 |  rectangle  |  三根条形依次跳起（音柱）  |
 |  heart  |  心形放大缩小  |
 |  ball-rotate  |  三圆球绕中心旋转并缩放  |
-|  bt-ball-pulse  |  左右两圆球交替脉冲  |
+|  ball-pulse-double  |  左右两圆球交替脉冲  |
 |  jumping  |  两方块跳起翻转（3D 透视）  |
 |  satellite  |  卫星围绕中心月球旋转  |
 
@@ -628,7 +648,7 @@
 
 ### 0.6.0
 
-- 首版加载动画组件，内置 **27 款** 纯 CSS 内联加载动效
+- 首版加载动画组件，内置 **26 款** 纯 CSS 内联加载动效
 - 支持 `type` / `color` / `size` / `duration` / `fullscreen` / `background` / `mask` / `tip` / `tipColor` / `delay` / `v-model` / `customClass` 等属性
 
 ---

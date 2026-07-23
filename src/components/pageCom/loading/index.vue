@@ -38,14 +38,14 @@
 	/**
 	 * fx67ll-loading 加载动画组件
 	 *
-	 * 内置 27 款纯 CSS 内联加载动效，按渲染方式分为两组：
+	 * 内置 26 款纯 CSS 内联加载动效，按渲染方式分为两组：
 	 * 1. 第一组 16 款 —— 颜色走 currentColor 继承，天然支持 color/size 参数化
-	 * 2. 第二组 11 款 —— 颜色通过 CSS 变量 --loader-color 注入，支持动态换色
+	 * 2. 第二组 10 款 —— 颜色通过 CSS 变量 --loader-color 注入，支持动态换色
 	 *
 	 * 支持：类型选择、颜色、大小、动画时长、全屏遮罩、提示文字、延迟显示、v-model 显隐控制
 	 *
 	 * @author fx67ll
-	 * @version 0.6.0
+	 * @version 0.6.1
 	 */
 
 	// 第一组 16 款配置：type -> 子 div 数量（子 div 为空，靠 nth-child 分配 delay/角色）
@@ -69,18 +69,17 @@
 	};
 
 	// 第二组 11 款配置：type -> data-loader 属性值，0 个子 div，伪元素生成图形
-	// 其中 ball-scale / ball-pulse 与第一组重名，故使用 bt- 前缀作为 type 别名，
-	// 渲染时剥离前缀作为 data-loader 属性值传给样式
+	// 注：第一组已有 ball-scale（单圆放大淡出），视觉效果与第二组一致，故第二组不再重复提供；
+	//     第二组的 ball-pulse 为两球交替脉冲，与第一组的三球脉冲不同，命名为 ball-pulse-double 以示区分
 	const GROUP2_LOADERS = {
 		'circle': 'circle',
 		'circle-side': 'circle-side',
 		'arrow-circle': 'arrow-circle',
-		'bt-ball-scale': 'ball-scale',
 		'ball-circle': 'ball-circle',
 		'rectangle': 'rectangle',
 		'heart': 'heart',
 		'ball-rotate': 'ball-rotate',
-		'bt-ball-pulse': 'ball-pulse',
+		'ball-pulse-double': 'ball-pulse',
 		'jumping': 'jumping',
 		'satellite': 'satellite'
 	};

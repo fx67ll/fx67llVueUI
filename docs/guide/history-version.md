@@ -1,5 +1,16 @@
 # 历史版本记录
 
+## 0.6.1
+* 完成 **加载动画场景式组件** 的封装，内置 **14 款** 整页场景式加载动效（Multiple 组 10 款 + Single 组 4 款），与 0.6.0 的内联加载组件互补，天生全屏遮罩，适合页面级启动加载场景
+* 优化场景式组件：右上角新增关闭按钮（`closeable` 属性控制），提示文字移至面板顶部居中显示
+* 自测修复加载组件动效相关 BUG：
+  + 修复场景式 `dot-matrix` / `dot-matrix-round` 中央大点不可见的问题（`object-big` 缺少背景色）
+  + 修复场景式 `robot-engine` 五活塞错峰延迟失效的问题（延迟选择器 `.block` 与实际 class 名不一致）
+  + 修复内联组件 `la.less` 与 `better.less` 的 `@keyframes ball-pulse` / `ball-scale` 同名覆盖导致 GROUP1 对应动效视觉被悄悄替换的问题（better 侧关键帧改名 `ball-pulse-bt`，并删除孤立的 `ball-scale` 死代码段）
+  + 修复内联组件 `jumping` 伪元素动画缺少 `-webkit-` 前缀的一致性问题
+  + 清理内联组件 `ball-running-dots` 多余的 nth-child(6)~(10) 死规则（官方配置为 5 球）
+  + 修复内联组件 `square-jelly-box` 阴影元素硬编码黑色未跟随 `color` 的问题（改为 `currentColor`）
+
 ## 0.6.0
 * 完成 **加载动画组件** 的封装，内置 **27 款** 纯 CSS 内联加载动效，支持类型选择、颜色、大小、动画时长、全屏遮罩、提示文字、延迟显示、`v-model` 显隐控制
 * 修复 `type: String | Number` 联合类型写法错误导致 props 类型校验失效的问题（涉及加载进度条、页脚、马赛克头像组件共 8 处）

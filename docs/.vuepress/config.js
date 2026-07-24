@@ -2,6 +2,11 @@
 // https://vuepress.vuejs.org/zh/
 // https://calebman.github.io/vuepress-plugin-demo-container/zh/
 
+const path = require('path');
+
+// 源码根目录，用于配置 webpack 别名（与 vue.config.js 保持一致）
+const SRC = path.resolve(__dirname, '../../src');
+
 module.exports = {
   // 网站皮肤主题
   theme: '@vuepress/theme-default',
@@ -143,6 +148,10 @@ module.exports = {
                   title: '加载动画（场景式）',
                   path: '/components/0.6.0/loading-screen',
                 },
+                {
+                  title: '加载进度条',
+                  path: '/components/0.2.0/progress',
+                },
               ],
             },
             {
@@ -190,10 +199,6 @@ module.exports = {
                 {
                   title: '网站页脚',
                   path: '/components/0.2.0/footer',
-                },
-                {
-                  title: '加载进度条',
-                  path: '/components/0.2.0/progress',
                 },
               ],
             },
@@ -343,6 +348,15 @@ module.exports = {
   },
   // Webpack 配置
   chainWebpack: config => {
+    // 配置 webpack 别名，与 vue.config.js 保持一致，
+    // 使文档站编译源码组件时能正确解析 @c / @u / @a / @v 等别名
+    config.resolve.alias
+      .set('@', SRC)
+      .set('@a', path.resolve(SRC, 'assets'))
+      .set('@v', path.resolve(SRC, 'views'))
+      .set('@c', path.resolve(SRC, 'components'))
+      .set('@u', path.resolve(SRC, 'utils'));
+
     // 为 fireworks-js 创建专用规则
     config.module
       .rule('fireworks-js')

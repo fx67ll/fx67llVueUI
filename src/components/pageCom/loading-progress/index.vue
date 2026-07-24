@@ -22,7 +22,7 @@
 
 <script>
 	export default {
-		name: 'loadingProgress',
+		name: 'fx67llLoadingProgress',
 		props: {
 			// 进度条当前进度数字 0-100，代表当前进度百分比
 			progressNum: {
@@ -295,7 +295,7 @@
 		}
 	}
 
-	.keyframes(all, progressAnimationGradient, {
+	@keyframes progressAnimationGradient {
 		from {
 			background-color: @gradientFirstColor;
 		}
@@ -303,11 +303,9 @@
 		to {
 			background-color: @gradientSecondColor;
 		}
-	});
+	}
 
-	.keyframes(all,
-		progressAnimationColorful,
-		{
+	@keyframes progressAnimationColorful {
 		0% {
 			background-image: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #7dc8e8, #5856d6, #ff2d55);
 		}
@@ -391,5 +389,5 @@
 		100% {
 			background-image: linear-gradient(to left, #007aff, #7dc8e8, #5856d6, #ff2d55, #4cd964, #5ac8fa);
 		}
-	});
+	}
 </style>

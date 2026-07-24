@@ -16,3 +16,5 @@
 /.temp/
 /.vuepress/
 /docs/
+/.history/
+/.claude/

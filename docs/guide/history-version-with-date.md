@@ -1,5 +1,13 @@
 # 历史版本记录
 
+## 0.6.2.20260723
+* **组件名称统一加 `fx67ll-` 前缀**：`loading-progress` 更名为 `fx67ll-loading-progress`，`shape-*` 系列组件（13 款）更名为 `fx67ll-shape-*`，统一整体组件命名格式
+* **旧名称兼容**：所有更名组件均保留旧名称注册，老版本可直接升级，使用旧名称的代码无需修改即可正常运行（旧名称将在未来大版本中废弃）
+* 老文档整改：`footer.md` 改为实际运行代码演示；`progress.md`、`mosaic-avatar.md` 因文档站 demo-container 多 demo 编译 bug 与 identicon.js 依赖 Node 环境的限制，保留 `iframe` 嵌套演示
+* 丰富老组件文档：`binary-clock.md` 补显示/隐藏时间与缩放对比示例，`nan-fireworks-basic.md` 补自动发射示例，13 个 `shape-*` 子页补颜色与尺寸对比示例
+* 修复 `footer.md` 属性表中 `ipNumber` 与组件实际 `icpNumber` 不一致的问题
+* 修复 `yinyang` 组件属性表多余的无效 `shapeColor` 属性
+
 ## 0.6.1.20260722
 * 完成 **加载动画场景式组件** 的封装，内置 **14 款** 整页场景式加载动效（Multiple 组 10 款 + Single 组 4 款），与 0.6.0 的内联加载组件互补，天生全屏遮罩，适合页面级启动加载场景
 * 优化场景式组件：右上角新增关闭按钮（`closeable` 属性控制），提示文字移至面板顶部居中显示

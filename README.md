@@ -51,18 +51,34 @@ Vue.use(fx67llVueUI);
 
 ---
 
-## 🧱 组件概览（v0.6.1，共 20 个）
+## 🧱 组件概览（v0.6.2，共 20 个）
 
 | 分类 | 组件 | 说明 |
 | :---: | :--- | :--- |
 | 🔄 加载 | `fx67ll-loading` | 26 款内联加载动效，支持颜色/大小/时长/全屏遮罩/v-model |
 | 🔄 加载 | `fx67ll-loading-screen` | 14 款整页场景式加载动效，天生全屏，适合首屏等待 |
-| 📊 加载 | `loading-progress` | 加载进度条，支持条纹/渐变/彩色三种样式 |
+| 📊 加载 | `fx67ll-loading-progress` | 加载进度条，支持条纹/渐变/彩色三种样式（旧名 `loading-progress`） |
 | 🎆 交互 | `fx67ll-nan-fireworks` | 放烟花组件，支持编程式控制与丰富配置 |
 | 🖼️ 头像 | `fx67ll-random-mosaic-avatar` | 随机马赛克头像，支持点击刷新与定制 |
 | ⏰ 时钟 | `fx67ll-binary-clock` | 二进制时钟 |
 | 📄 页面 | `fx67ll-footer` | 网站页脚，可配置作者/年份/备案号 |
-| 🔷 形状 | `shape-*` 系列（13 款） | 纯 CSS3 绘制的形状符号，可设颜色与大小 |
+| 🔷 形状 | `fx67ll-shape-*` 系列（13 款） | 纯 CSS3 绘制的形状符号，可设颜色与大小（旧名 `shape-*`） |
+
+---
+
+## 📌 升级指南（0.6.2）
+
+自 `0.6.2` 起，`loading-progress` 与 `shape-*` 系列组件统一加上 `fx67ll-` 前缀，与其它组件命名格式保持一致：
+
+| 旧名称 | 新名称 |
+| :---: | :---: |
+| `loading-progress` | `fx67ll-loading-progress` |
+| `shape-heart` | `fx67ll-shape-heart` |
+| `shape-triangle` | `fx67ll-shape-triangle` |
+| `shape-yinyang` | `fx67ll-shape-yinyang` |
+| ... | （其余 10 款 `shape-*` 同理加 `fx67ll-` 前缀） |
+
+> ✅ **向后兼容**：旧名称仍可正常使用，已做兼容注册，老版本可直接升级，旧代码无需修改。旧名称将在未来大版本中废弃。
 
 ---
 
@@ -85,6 +101,3 @@ Vue.use(fx67llVueUI);
 ## 📜 License
 
 [MIT](./LICENSE)
-`
-
-3. 在vue页面中导入使用

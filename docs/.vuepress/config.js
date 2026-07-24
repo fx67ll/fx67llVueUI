@@ -81,12 +81,12 @@ module.exports = {
             link: 'https://nav.fx67ll.com',
           },
           {
-            text: "fx67ll's 日常 H5 工具",
+            text: "fx67ll's H5 工具",
             // link: 'https://fx67ll.vip'
             link: 'https://life.fx67ll.com',
           },
           {
-            text: "fx67ll's 日常管理后台",
+            text: "fx67ll's 管理系统",
             link: 'https://vip.fx67ll.com',
           },
           {
@@ -106,7 +106,7 @@ module.exports = {
             link: 'https://uni.fx67ll.com',
           },
           {
-            text: 'AI 大数据地图服务 Demo 合集',
+            text: "fx67ll's AI 大数据地图服务",
             link: 'https://map.fx67ll.com',
           },
         ],

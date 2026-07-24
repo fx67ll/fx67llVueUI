@@ -4,7 +4,7 @@
 
 <script>
 export default {
-	name: 'shapeYinyang',
+	name: 'fx67llShapeYinyang',
 	props: {
 		shapeColorYin: {
 			type: String,

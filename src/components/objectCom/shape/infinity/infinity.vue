@@ -4,7 +4,7 @@
 
 <script>
 export default {
-	name: 'shapeInfinity',
+	name: 'fx67llShapeInfinity',
 	props: {
 		shapeColor: {
 			type: String,

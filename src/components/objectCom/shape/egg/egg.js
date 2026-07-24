@@ -1,8 +1,11 @@
-import shapeEgg from './egg.vue';
-shapeEgg.install = function(Vue) {
-	Vue.component(shapeEgg.name, shapeEgg);
+import fx67llShapeEgg from './egg.vue';
+fx67llShapeEgg.install = function(Vue) {
+	// 注册新名称（推荐使用）
+	Vue.component(fx67llShapeEgg.name, fx67llShapeEgg);
+	// 兼容旧名称，确保老版本直接升级不崩溃
+	Vue.component('shapeEgg', fx67llShapeEgg);
 };
 export {
-	default as shapeEgg
+	default as fx67llShapeEgg
 }
 from './egg.vue'

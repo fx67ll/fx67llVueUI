@@ -4,7 +4,7 @@
 
 <script>
 export default {
-	name: 'shapeTalkBubble',
+	name: 'fx67llShapeTalkBubble',
 	props: {
 		talkText: {
 			type: String,

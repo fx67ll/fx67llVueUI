@@ -4,7 +4,7 @@
 
 <script>
 export default {
-	name: 'shapeEgg',
+	name: 'fx67llShapeEgg',
 	props: {
 		shapeColor: {
 			type: String,

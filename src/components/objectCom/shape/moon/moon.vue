@@ -4,7 +4,7 @@
 
 <script>
 export default {
-	name: 'shapeMoon',
+	name: 'fx67llShapeMoon',
 	props: {
 		shapeColor: {
 			type: String,

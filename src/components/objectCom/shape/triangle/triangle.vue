@@ -8,7 +8,7 @@
 
 <script>
 export default {
-	name: 'shapeTriangle',
+	name: 'fx67llShapeTriangle',
 	props: {
 		type: {
 			type: String,

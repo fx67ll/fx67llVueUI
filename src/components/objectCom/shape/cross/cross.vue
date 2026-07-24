@@ -4,7 +4,7 @@
 
 <script>
 export default {
-	name: 'shapeCross',
+	name: 'fx67llShapeCross',
 	props: {
 		shapeColor: {
 			type: String,

@@ -4,7 +4,7 @@
 
 <script>
 export default {
-	name: 'shapeSpaceInvader',
+	name: 'fx67llShapeSpaceInvader',
 	props: {
 		shapeColor: {
 			type: String,

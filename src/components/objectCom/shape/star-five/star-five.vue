@@ -4,7 +4,7 @@
 
 <script>
 export default {
-	name: 'shapeStarFive',
+	name: 'fx67llShapeStarFive',
 	props: {
 		shapeColor: {
 			type: String,

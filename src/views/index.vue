@@ -5,7 +5,7 @@
 			homePage="https:fx67ll.xyz" startYear="1234" icpNumber="1234567890" /> -->
 
 		<!-- 加载进度条插件测试 -->
-		<!-- <loading-progress progressNum="38" :isFinished="false" styleType="colorful" zIndex="999999" bgColor="#20232a"
+		<!-- <fx67ll-loading-progress progressNum="38" :isFinished="false" styleType="colorful" zIndex="999999" bgColor="#20232a"
 			textColor="#d0ff34" :isShowText="false" stripedFirstColor="#ff0000" stripedSecondColor="#00aa00"
 			gradientFirstColor="#ff5500" gradientSecondColor="#00ff00" animationTime="0.4" /> -->
 
@@ -47,21 +47,21 @@
 		<!-- 隐藏关闭按钮：:closeable="false" -->
 
 		<!-- 形状插件合集测试 -->
-		<!-- <shape-infinity shapeColor="#ffff7f" :shapeSize="0.5" />
-		<shape-star-five shapeColor="#aaffff" :shapeSize="3" />
-		<shape-triangle type="up" shapeColor="#ff5500" :shapeSize="2" />
-		<shape-heart shapeColor="#dedede" :shapeSize="4" />
-		<shape-triangle shapeColor="#ff5500" :shapeSize="2" />
-		<shape-space-invader shapeColor="#00ff00" :shapeSize="2.5" />
-		<shape-egg shapeColor="#ffff7f" :shapeSize="1.5" />
-		<shape-pac-man shapeColor="#aaffff" :shapeSize="2" />
-		<shape-diamond shapeColor="#ff0000" :shapeSize="1" />
-		<shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1" />
-		<shape-cross shapeColor="#ffaaff" :shapeSize="2.5" />
-		<shape-moon shapeColor="#ffff00" :shapeSize="4" />
-		<shape-star-six shapeColor="#aaffff" :shapeSize="3.5" />
-		<shape-talk-bubble talkText="测试文字" textColor="#ff0000" shapeColor="#00aa00" :shapeSize="2" />
-		<shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1" /> -->
+		<!-- <fx67ll-shape-infinity shapeColor="#ffff7f" :shapeSize="0.5" />
+		<fx67ll-shape-star-five shapeColor="#aaffff" :shapeSize="3" />
+		<fx67ll-shape-triangle type="up" shapeColor="#ff5500" :shapeSize="2" />
+		<fx67ll-shape-heart shapeColor="#dedede" :shapeSize="4" />
+		<fx67ll-shape-triangle shapeColor="#ff5500" :shapeSize="2" />
+		<fx67ll-shape-space-invader shapeColor="#00ff00" :shapeSize="2.5" />
+		<fx67ll-shape-egg shapeColor="#ffff7f" :shapeSize="1.5" />
+		<fx67ll-shape-pac-man shapeColor="#aaffff" :shapeSize="2" />
+		<fx67ll-shape-diamond shapeColor="#ff0000" :shapeSize="1" />
+		<fx67ll-shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1" />
+		<fx67ll-shape-cross shapeColor="#ffaaff" :shapeSize="2.5" />
+		<fx67ll-shape-moon shapeColor="#ffff00" :shapeSize="4" />
+		<fx67ll-shape-star-six shapeColor="#aaffff" :shapeSize="3.5" />
+		<fx67ll-shape-talk-bubble talkText="测试文字" textColor="#ff0000" shapeColor="#00aa00" :shapeSize="2" />
+		<fx67ll-shape-yinyang shapeColorYin="#ff0000" shapeColorYang="#ffffff" :shapeSize="1" /> -->
 
 		<!-- 二进制时钟插件测试 -->
 		<!-- <fx67ll-binary-clock :isShowTime="true" :zoomSize="1" /> -->

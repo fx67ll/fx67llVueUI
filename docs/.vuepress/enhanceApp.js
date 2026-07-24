@@ -1,22 +1,28 @@
 // 复杂配置可以查阅下方的官方示例
 // https://calebman.github.io/vuepress-plugin-demo-container/zh/complex.html#%E7%BB%93%E5%90%88%E7%BB%84%E4%BB%B6%E5%BA%93%E7%A4%BA%E4%BE%8B
 
-// 页面组件通过iframe演示！！！
+// 所有组件均通过实际运行代码演示（0.6.2 起页面/头像组件也改为实际运行 demo）
+
+// 引入网站页脚组件
+import { fx67llFooter } from '../../src/components/pageCom/fx67ll-footer/index.js';
+
+// 引入加载进度条组件（progress 文档页用 iframe 演示，但组件已改名，此处注册不影响）
+import { fx67llLoadingProgress } from '../../src/components/pageCom/loading-progress/index.js';
 
 // 引入形状组件合集
-import { shapeInfinity } from '../../src/components/objectCom/shape/infinity/infinity.js';
-import { shapeStarFive } from '../../src/components/objectCom/shape/star-five/star-five.js';
-import { shapeTriangle } from '../../src/components/objectCom/shape/triangle/triangle.js';
-import { shapeHeart } from '../../src/components/objectCom/shape/heart/heart.js';
-import { shapeSpaceInvader } from '../../src/components/objectCom/shape/space-invader/space-invader.js';
-import { shapeEgg } from '../../src/components/objectCom/shape/egg/egg.js';
-import { shapePacMan } from '../../src/components/objectCom/shape/pac-man/pac-man.js';
-import { shapeDiamond } from '../../src/components/objectCom/shape/diamond/diamond.js';
-import { shapeYinyang } from '../../src/components/objectCom/shape/yinyang/yinyang.js';
-import { shapeCross } from '../../src/components/objectCom/shape/cross/cross.js';
-import { shapeMoon } from '../../src/components/objectCom/shape/moon/moon.js';
-import { shapeStarSix } from '../../src/components/objectCom/shape/star-six/star-six.js';
-import { shapeTalkBubble } from '../../src/components/objectCom/shape/talk-bubble/talk-bubble.js';
+import { fx67llShapeInfinity } from '../../src/components/objectCom/shape/infinity/infinity.js';
+import { fx67llShapeStarFive } from '../../src/components/objectCom/shape/star-five/star-five.js';
+import { fx67llShapeTriangle } from '../../src/components/objectCom/shape/triangle/triangle.js';
+import { fx67llShapeHeart } from '../../src/components/objectCom/shape/heart/heart.js';
+import { fx67llShapeSpaceInvader } from '../../src/components/objectCom/shape/space-invader/space-invader.js';
+import { fx67llShapeEgg } from '../../src/components/objectCom/shape/egg/egg.js';
+import { fx67llShapePacMan } from '../../src/components/objectCom/shape/pac-man/pac-man.js';
+import { fx67llShapeDiamond } from '../../src/components/objectCom/shape/diamond/diamond.js';
+import { fx67llShapeYinyang } from '../../src/components/objectCom/shape/yinyang/yinyang.js';
+import { fx67llShapeCross } from '../../src/components/objectCom/shape/cross/cross.js';
+import { fx67llShapeMoon } from '../../src/components/objectCom/shape/moon/moon.js';
+import { fx67llShapeStarSix } from '../../src/components/objectCom/shape/star-six/star-six.js';
+import { fx67llShapeTalkBubble } from '../../src/components/objectCom/shape/talk-bubble/talk-bubble.js';
 
 // 引入二进制时钟组件
 import { fx67llBinaryClock } from '../../src/components/objectCom/clock/binary-clock/binary-clock-for-demo.js';
@@ -31,21 +37,23 @@ import { fx67llLoading } from '../../src/components/pageCom/loading/index.js';
 import { fx67llLoadingScreen } from '../../src/components/pageCom/loading-screen/index.js';
 
 export default ({ Vue }) => {
-  Vue.use(shapeInfinity),
-    Vue.use(shapeStarFive),
-    Vue.use(shapeTriangle),
-    Vue.use(shapeHeart),
-    Vue.use(shapeSpaceInvader),
-    Vue.use(shapeEgg),
-    Vue.use(shapePacMan),
-    Vue.use(shapeDiamond),
-    Vue.use(shapeYinyang),
-    Vue.use(shapeCross),
-    Vue.use(shapeMoon),
-    Vue.use(shapeStarSix),
-    Vue.use(shapeTalkBubble),
-    Vue.use(fx67llBinaryClock);
-	Vue.use(fx67llNanFireworks);
-	Vue.use(fx67llLoading);
-	Vue.use(fx67llLoadingScreen);
+  Vue.use(fx67llFooter);
+  Vue.use(fx67llLoadingProgress);
+  Vue.use(fx67llShapeInfinity);
+  Vue.use(fx67llShapeStarFive);
+  Vue.use(fx67llShapeTriangle);
+  Vue.use(fx67llShapeHeart);
+  Vue.use(fx67llShapeSpaceInvader);
+  Vue.use(fx67llShapeEgg);
+  Vue.use(fx67llShapePacMan);
+  Vue.use(fx67llShapeDiamond);
+  Vue.use(fx67llShapeYinyang);
+  Vue.use(fx67llShapeCross);
+  Vue.use(fx67llShapeMoon);
+  Vue.use(fx67llShapeStarSix);
+  Vue.use(fx67llShapeTalkBubble);
+  Vue.use(fx67llBinaryClock);
+  Vue.use(fx67llNanFireworks);
+  Vue.use(fx67llLoading);
+  Vue.use(fx67llLoadingScreen);
 };

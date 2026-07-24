@@ -3,7 +3,7 @@
 ::: demo​ 如果你懒得找 **UI** 切图，可以试试这个`没什么卵用`的组件，O(∩_∩)O哈哈~
 ```vue
 <template>
-	<shape-yinyang shapeColorYin="#000000" shapeColorYang="#ffffff" :shapeSize="1" />
+	<fx67ll-shape-yinyang shapeColorYin="#000000" shapeColorYang="#ffffff" :shapeSize="1" />
 </template>
 
 <script>
@@ -21,15 +21,69 @@
 ```
 :::
 
+### 配色与尺寸对比
+
+阴阳符号通过 `shapeColorYin`（阴）与 `shapeColorYang`（阳）分别设置两半颜色，`shapeSize` 控制大小。
+
+::: demo 不同阴/阳配色与尺寸对比。
+```vue
+<template>
+	<div class="shape-compare">
+		<div class="shape-compare__group">
+			<div class="shape-compare__item"><fx67ll-shape-yinyang shapeColorYin="#000000" shapeColorYang="#ffffff" :shapeSize="1" /></div>
+			<div class="shape-compare__item"><fx67ll-shape-yinyang shapeColorYin="#42b983" shapeColorYang="#ef8e81" :shapeSize="1" /></div>
+			<div class="shape-compare__item"><fx67ll-shape-yinyang shapeColorYin="#9b7ad5" shapeColorYang="#f6d860" :shapeSize="1" /></div>
+		</div>
+		<div class="shape-compare__group">
+			<div class="shape-compare__item"><fx67ll-shape-yinyang :shapeSize="0.6" /></div>
+			<div class="shape-compare__item"><fx67ll-shape-yinyang :shapeSize="1" /></div>
+			<div class="shape-compare__item"><fx67ll-shape-yinyang :shapeSize="1.6" /></div>
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'fx67llDemo',
+		data() {
+			return {}
+		},
+		methods: {}
+	};
+</script>
+
+<style>
+.shape-compare {
+	display: flex;
+	gap: 32px;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 24px;
+	background: #f7f8fa;
+	border-radius: 8px;
+}
+.shape-compare__group {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+}
+.shape-compare__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+</style>
+```
+:::
+
 ### 快速上手
 ```Vue
-<shape-yinyang shapeColorYin="#000000" shapeColorYang="#ffffff" :shapeSize="1" />
+<fx67ll-shape-yinyang shapeColorYin="#000000" shapeColorYang="#ffffff" :shapeSize="1" />
 ```
 
 ### 属性说明
 |  参数   | 说明  |  类型  |  可选值  |  默认值  |
 |  :----:  |  :----:  |  :----:  |  :----:  |  :----:  |
-|  shapeColor  |  符号的颜色，十六进制颜色代码  |  String  |  -  |  #000000  |
 |  shapeSize  |  符号的大小，支持数字，包括小数  |  Number  |  -  |  1  |
 |  shapeColorYin  |  阴阳符号阴的颜色，十六进制颜色代码  |  String  |  -  |  #000000  |
 |  shapeColorYang  |  阴阳符号阳的颜色，十六进制颜色代码  |  String  |  -  |  #ffffff  |

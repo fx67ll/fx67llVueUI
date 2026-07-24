@@ -3,7 +3,7 @@
 ::: demo​ 如果你懒得找 **UI** 切图，可以试试这个`没什么卵用`的组件，O(∩_∩)O哈哈~
 ```vue
 <template>
-	<shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1" />
 </template>
 
 <script>
@@ -21,9 +21,64 @@
 ```
 :::
 
+### 文字与配色对比
+
+通过 `talkText` 设置聊天框文字，`textColor` 设置文字颜色，`shapeColor` 设置框体颜色。
+
+::: demo 不同文字内容与配色对比。
+```vue
+<template>
+	<div class="shape-compare">
+		<div class="shape-compare__group">
+			<div class="shape-compare__item"><fx67ll-shape-talk-bubble talkText="你好" textColor="#ffffff" shapeColor="#42b983" :shapeSize="1" /></div>
+			<div class="shape-compare__item"><fx67ll-shape-talk-bubble talkText="Hello" textColor="#ffffff" shapeColor="#ef8e81" :shapeSize="1" /></div>
+			<div class="shape-compare__item"><fx67ll-shape-talk-bubble talkText="测试" textColor="#000000" shapeColor="#f6d860" :shapeSize="1" /></div>
+		</div>
+		<div class="shape-compare__group">
+			<div class="shape-compare__item"><fx67ll-shape-talk-bubble talkText="小" shapeColor="#000000" :shapeSize="0.6" /></div>
+			<div class="shape-compare__item"><fx67ll-shape-talk-bubble talkText="中" shapeColor="#000000" :shapeSize="1" /></div>
+			<div class="shape-compare__item"><fx67ll-shape-talk-bubble talkText="大" shapeColor="#000000" :shapeSize="1.6" /></div>
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'fx67llDemo',
+		data() {
+			return {}
+		},
+		methods: {}
+	};
+</script>
+
+<style>
+.shape-compare {
+	display: flex;
+	gap: 32px;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 24px;
+	background: #f7f8fa;
+	border-radius: 8px;
+}
+.shape-compare__group {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+}
+.shape-compare__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+</style>
+```
+:::
+
 ### 快速上手
 ```Vue
-<shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1" />
 ```
 
 ### 属性说明

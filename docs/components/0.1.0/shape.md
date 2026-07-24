@@ -1,21 +1,23 @@
 # 形状组件一览
 
+> 📌 **组件名称变更（0.6.2）**：形状系列组件统一加 `fx67ll-` 前缀，如 `shape-heart` 更名为 `fx67ll-shape-heart`。**旧名称（如 `<shape-heart>`）仍可使用**（已做兼容），老版本可直接升级，旧代码无需修改。
+
 ::: demo​ 如果你懒得找 **UI** 切图，可以试试这个`没什么卵用`的组件，O(∩_∩)O哈哈~
 ```vue
 <template>
-	<shape-infinity shapeColor="#000000" :shapeSize="1" />
-	<shape-star-five shapeColor="#000000" :shapeSize="1" />
-	<shape-triangle type="up" shapeColor="#000000" :shapeSize="1" />
-	<shape-heart shapeColor="#000000" :shapeSize="1" />
-	<shape-space-invader shapeColor="#000000" :shapeSize="1" />
-	<shape-egg shapeColor="#000000" :shapeSize="1" />
-	<shape-pac-man shapeColor="#000000" :shapeSize="1" />
-	<shape-diamond shapeColor="#000000" :shapeSize="1" />
-	<shape-yinyang shapeColorYin="#000000" shapeColorYang="#ffffff" :shapeSize="1" />
-	<shape-cross shapeColor="#000000" :shapeSize="1" />
-	<shape-moon shapeColor="#000000" :shapeSize="1" />
-	<shape-star-six shapeColor="#000000" :shapeSize="1" />
-	<shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-infinity shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-star-five shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-triangle type="up" shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-heart shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-space-invader shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-egg shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-pac-man shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-diamond shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-yinyang shapeColorYin="#000000" shapeColorYang="#ffffff" :shapeSize="1" />
+	<fx67ll-shape-cross shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-moon shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-star-six shapeColor="#000000" :shapeSize="1" />
+	<fx67ll-shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1" />
 </template>
 
 <script>
@@ -36,43 +38,43 @@
 ### 快速上手
 ```Vue
 // 无限符号
-<shape-infinity shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-infinity shapeColor="#000000" :shapeSize="1" />
 
 // 五角星符号
-<shape-star-five shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-star-five shapeColor="#000000" :shapeSize="1" />
 
 // 三角形符号
-<shape-triangle type="up" shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-triangle type="up" shapeColor="#000000" :shapeSize="1" />
 
 // 爱心符号
-<shape-heart shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-heart shapeColor="#000000" :shapeSize="1" />
 
 // 太空入侵者
-<shape-space-invader shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-space-invader shapeColor="#000000" :shapeSize="1" />
 
 // 鸡蛋符号
-<shape-egg shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-egg shapeColor="#000000" :shapeSize="1" />
 
 // 吃豆人
-<shape-pac-man shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-pac-man shapeColor="#000000" :shapeSize="1" />
 
 // 钻石符号
-<shape-diamond shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-diamond shapeColor="#000000" :shapeSize="1" />
 
 // 阴阳符号
-<shape-yinyang shapeColorYin="#000000" shapeColorYang="#ffffff" :shapeSize="1" />
+<fx67ll-shape-yinyang shapeColorYin="#000000" shapeColorYang="#ffffff" :shapeSize="1" />
 
 // 十字架符号
-<shape-cross shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-cross shapeColor="#000000" :shapeSize="1" />
 
 // 月亮符号
-<shape-moon shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-moon shapeColor="#000000" :shapeSize="1" />
 
 // 六角星符号
-<shape-star-six shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-star-six shapeColor="#000000" :shapeSize="1" />
 
 // 聊天框
-<shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1" />
+<fx67ll-shape-talk-bubble talkText="测试文字" textColor="#ffffff" shapeColor="#000000" :shapeSize="1" />
 ```
 
 ### 通用公共属性说明

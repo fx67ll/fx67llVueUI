@@ -1,5 +1,5 @@
 <template>
-	<div class="bc-box" :style="{ '--zoomSize': zoomSize }">
+	<div class="bc-box" :class="{ 'bc-box--no-label': !showLabel }" :style="boxStyle">
 		<p v-if="isShowTime">{{ timeNow }}</p>
 		<table>
 			<tr class="bc-hours"><td v-for="(item, i) in hoursTimeArr" :key="i" :class="item === '0' ? 'num0' : 'num1'"></td></tr>
@@ -30,6 +30,66 @@ export default {
 			validator(num) {
 				return new RegExp('^((-?)0|([1-9][0-9]*))(\.[0-9]+)?$').test(num);
 			}
+		},
+		// 亮起的圆点颜色（二进制 1），十六进制颜色代码
+		dotColor: {
+			type: String,
+			required: false,
+			default: '#2ecc71',
+			validator(color) {
+				return new RegExp('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$').test(color);
+			}
+		},
+		// 熄灭的圆点颜色（二进制 0），十六进制颜色代码
+		dotBgColor: {
+			type: String,
+			required: false,
+			default: '#ffffff',
+			validator(color) {
+				return new RegExp('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$').test(color);
+			}
+		},
+		// 圆点基础尺寸（px），实际渲染会在该基础上随视口自适应（14~36px 之间）
+		dotSize: {
+			type: Number,
+			required: false,
+			default: 30,
+			validator(num) {
+				return typeof num === 'number' && num >= 8 && num <= 60;
+			}
+		},
+		// 十进制时间文字颜色，十六进制颜色代码
+		textColor: {
+			type: String,
+			required: false,
+			default: '#2ecc71',
+			validator(color) {
+				return new RegExp('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$').test(color);
+			}
+		},
+		// 是否显示 hour/minute/second 标签
+		showLabel: {
+			type: Boolean,
+			required: false,
+			default: true,
+			validator(val) {
+				return typeof val == 'boolean';
+			}
+		}
+	},
+	computed: {
+		// 注入到根容器的 CSS 变量集合，供 less 运行时读取
+		boxStyle() {
+			return {
+				'--zoomSize': this.zoomSize,
+				'--bc-dot-color': this.dotColor,
+				'--bc-dot-color-rgb': this.hexToRgb(this.dotColor),
+				'--bc-dot-bg-color': this.dotBgColor,
+				'--bc-dot-bg-color-rgb': this.hexToRgb(this.dotBgColor),
+				'--bc-text-color': this.textColor,
+				// dotSize 作为 clamp 的 preferred 值，配合 14px~36px 上下限自适应
+				'--bc-dot-size': this.dotSize + 'px'
+			};
 		}
 	},
 	data() {
@@ -57,6 +117,17 @@ export default {
 		this.timer = null;
 	},
 	methods: {
+		// 将十六进制颜色转为 "r,g,b" 字符串，供 less 中 rgba(var(--xxx-rgb), a) 使用，实现光晕颜色跟随自定义配色
+		hexToRgb(hex) {
+			let h = hex.replace('#', '');
+			if (h.length === 3) {
+				h = h.split('').map(function(c) { return c + c; }).join('');
+			}
+			var r = parseInt(h.substring(0, 2), 16);
+			var g = parseInt(h.substring(2, 4), 16);
+			var b = parseInt(h.substring(4, 6), 16);
+			return r + ',' + g + ',' + b;
+		},
 		// 获取当前时间
 		getNowTime() {
 			let d = new Date();

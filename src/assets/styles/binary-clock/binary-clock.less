@@ -1,3 +1,13 @@
+// 二进制时钟样式
+// 圆点用 td 的伪元素 ::before 渲染（固定正方形 + border-radius 50%），脱离 td 单元格尺寸计算，
+// 避免 table 布局/视口/zoom 缩放导致 border-radius:50% 变椭圆。
+// 圆点尺寸用 clamp 随视口自适应（以 --bc-dot-size 为基准，14~36px 限幅），颜色由 CSS 变量注入。
+
+// 圆点尺寸：以 dotSize 为 preferred，限制在 14px~36px，随视口等比自适应
+@dot-size: clamp(14px, var(--bc-dot-size, 30px), 36px);
+// 圆点间距：随视口自适应，限制在 8px~28px
+@dot-gap: clamp(8px, 1.4vw, 28px);
+
 .bc-box {
 	display: flex;
 	justify-content: center;
@@ -6,8 +16,8 @@
 	p {
 		width: 100%;
 		text-align: center;
-		color: #2ecc71;
-		font-size: 28px;
+		color: var(--bc-text-color, #2ecc71);
+		font-size: clamp(16px, 2vw, 28px);
 		font-weight: bold;
 		position: relative;
 		top: 1vw;
@@ -17,19 +27,43 @@
 
 	table {
 		border-collapse: separate;
-		border-spacing: 3.5vw;
+		border-spacing: @dot-gap;
+		// 固定表格布局，避免 td 尺寸被内容/视口重新计算
+		table-layout: fixed;
+		// 覆盖 vuepress 默认主题给 table 加的边框，避免圆点后方出现方形框
+		border: none;
 
 		td {
-			height: 30px;
-			width: 30px;
-			background-color: #ffffff;
-			border-radius: 50%;
+			// td 仅作为格子容器，不直接渲染圆形
+			position: relative;
+			width: @dot-size;
+			height: @dot-size;
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			background-color: transparent;
+			// 覆盖 vuepress 默认主题 / 浏览器默认给 td 加的边框
+			border: none;
+
+			// 圆点本体：正方形 + 居中 + 圆形，width===height 保证正圆，与 td 实际尺寸无关
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: @dot-size;
+				height: @dot-size;
+				transform: translate(-50%, -50%);
+				border-radius: 50%;
+				background-color: var(--bc-dot-bg-color, #ffffff);
+				box-sizing: border-box;
+			}
 		}
 
 		tr:after {
 			position: relative;
 			top: 8px;
-			font-size: 1.3vw;
+			font-size: clamp(10px, 1.1vw, 16px);
 			color: @grey;
 		}
 
@@ -46,13 +80,21 @@
 		}
 	}
 
-	.num1 {
-		background-color: #2ecc71 !important;
-		box-shadow: 0 0 15px 2px rgba(46, 204, 113, 0.7);
+	// num1 / num0 控制伪元素圆点的颜色与阴影，光晕颜色跟随自定义配色
+	.num1::before {
+		background-color: var(--bc-dot-color, #2ecc71);
+		box-shadow: 0 0 15px 2px rgba(var(--bc-dot-color-rgb, 46, 204, 113), 0.7);
 	}
 
-	.num0 {
-		background-color: #ffffff !important;
-		box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+	.num0::before {
+		background-color: var(--bc-dot-bg-color, #ffffff);
+		// 加细边框 + 适度阴影，让熄灭圆点在浅色背景上也有清晰轮廓，形成整体点阵感
+		border: 1px solid #d0d4da;
+		box-shadow: 0 2px 6px rgba(var(--bc-dot-bg-color-rgb, 0, 0, 0), 0.15);
+	}
+
+	// 隐藏 hour/minute/second 标签
+	&.bc-box--no-label table tr:after {
+		content: none;
 	}
 }

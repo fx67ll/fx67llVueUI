@@ -2,7 +2,7 @@
 
 > practice vue components like elementui & do sth different ez to use
 
-![version](https://img.shields.io/badge/version-0.6.3-42b983)
+![version](https://img.shields.io/badge/version-0.6.4-42b983)
 ![vue](https://img.shields.io/badge/Vue-2.6-42b983)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 

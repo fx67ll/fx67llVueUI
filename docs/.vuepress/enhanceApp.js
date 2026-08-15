@@ -27,6 +27,9 @@ import { fx67llShapeTalkBubble } from '../../src/components/objectCom/shape/talk
 // 引入二进制时钟组件
 import { fx67llBinaryClock } from '../../src/components/objectCom/clock/binary-clock/binary-clock-for-demo.js';
 
+// 引入数字时钟组件
+import { fx67llDigitalClock } from '../../src/components/objectCom/clock/digital-clock/digital-clock.js';
+
 // 引入放烟花组件
 import { fx67llNanFireworks } from '../../src/components/divCom/nan-fireworks/index.js';
 
@@ -53,6 +56,7 @@ export default ({ Vue }) => {
   Vue.use(fx67llShapeStarSix);
   Vue.use(fx67llShapeTalkBubble);
   Vue.use(fx67llBinaryClock);
+  Vue.use(fx67llDigitalClock);
   Vue.use(fx67llNanFireworks);
   Vue.use(fx67llLoading);
   Vue.use(fx67llLoadingScreen);

@@ -30,6 +30,9 @@ import { fx67llShapeTalkBubble } from '@c/objectCom/shape/talk-bubble/talk-bubbl
 // 二进制时钟组件
 import { fx67llBinaryClock } from '@c/objectCom/clock/binary-clock/binary-clock.js';
 
+// 数字时钟组件
+import { fx67llDigitalClock } from '@c/objectCom/clock/digital-clock/digital-clock.js';
+
 // 随机马赛克头像组件
 import { fx67llRandomMosaicAvatar } from '@c/divCom/mosaic-avatar/index.js';
 
@@ -67,6 +70,9 @@ export default {
 
     // 注册二进制时钟组件
     Vue.use(fx67llBinaryClock);
+
+    // 注册数字时钟组件
+    Vue.use(fx67llDigitalClock);
 
     // 注册随机马赛克头像组件
     Vue.use(fx67llRandomMosaicAvatar);

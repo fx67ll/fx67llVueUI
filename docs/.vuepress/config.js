@@ -50,7 +50,7 @@ module.exports = {
       },
       {
         text: '组件',
-        link: '/components/0.6.0/loading',
+        link: '/components/0.6.x/loading',
       },
       {
         text: 'Github',
@@ -142,15 +142,15 @@ module.exports = {
               children: [
                 {
                   title: '加载动画（内联）',
-                  path: '/components/0.6.0/loading',
+                  path: '/components/0.6.x/loading',
                 },
                 {
                   title: '加载动画（场景式）',
-                  path: '/components/0.6.0/loading-screen',
+                  path: '/components/0.6.x/loading-screen',
                 },
                 {
                   title: '加载进度条',
-                  path: '/components/0.2.0/progress',
+                  path: '/components/0.2.x/progress',
                 },
               ],
             },
@@ -162,7 +162,7 @@ module.exports = {
               children: [
                 {
                   title: '放烟花',
-                  path: '/components/0.5.0/nan-fireworks',
+                  path: '/components/0.5.x/nan-fireworks',
                 },
               ],
             },
@@ -174,7 +174,7 @@ module.exports = {
               children: [
                 {
                   title: '随机马赛克头像',
-                  path: '/components/0.4.0/mosaic-avatar',
+                  path: '/components/0.4.x/mosaic-avatar',
                 },
               ],
             },
@@ -186,7 +186,11 @@ module.exports = {
               children: [
                 {
                   title: '二进制时钟',
-                  path: '/components/0.3.0/binary-clock',
+                  path: '/components/0.3.x/binary-clock',
+                },
+                {
+                  title: '数字时钟',
+                  path: '/components/0.7.x/digital-clock',
                 },
               ],
             },
@@ -198,7 +202,7 @@ module.exports = {
               children: [
                 {
                   title: '网站页脚',
-                  path: '/components/0.2.0/footer',
+                  path: '/components/0.2.x/footer',
                 },
               ],
             },
@@ -210,59 +214,59 @@ module.exports = {
               children: [
                 {
                   title: '概览',
-                  path: '/components/0.1.0/shape',
+                  path: '/components/0.1.x/shape',
                 },
                 {
                   title: '无限符号',
-                  path: '/components/0.1.0/components/shape-infinity',
+                  path: '/components/0.1.x/components/shape-infinity',
                 },
                 {
                   title: '五角星符号',
-                  path: '/components/0.1.0/components/shape-starfive',
+                  path: '/components/0.1.x/components/shape-starfive',
                 },
                 {
                   title: '三角形符号',
-                  path: '/components/0.1.0/components/shape-triangle',
+                  path: '/components/0.1.x/components/shape-triangle',
                 },
                 {
                   title: '爱心符号',
-                  path: '/components/0.1.0/components/shape-heart',
+                  path: '/components/0.1.x/components/shape-heart',
                 },
                 {
                   title: '太空入侵者',
-                  path: '/components/0.1.0/components/shape-space-invader',
+                  path: '/components/0.1.x/components/shape-space-invader',
                 },
                 {
                   title: '鸡蛋符号',
-                  path: '/components/0.1.0/components/shape-egg',
+                  path: '/components/0.1.x/components/shape-egg',
                 },
                 {
                   title: '吃豆人',
-                  path: '/components/0.1.0/components/shape-pac-man',
+                  path: '/components/0.1.x/components/shape-pac-man',
                 },
                 {
                   title: '钻石符号',
-                  path: '/components/0.1.0/components/shape-diamond',
+                  path: '/components/0.1.x/components/shape-diamond',
                 },
                 {
                   title: '阴阳符号',
-                  path: '/components/0.1.0/components/shape-yinyang',
+                  path: '/components/0.1.x/components/shape-yinyang',
                 },
                 {
                   title: '十字架符号',
-                  path: '/components/0.1.0/components/shape-cross',
+                  path: '/components/0.1.x/components/shape-cross',
                 },
                 {
                   title: '月亮符号',
-                  path: '/components/0.1.0/components/shape-moon',
+                  path: '/components/0.1.x/components/shape-moon',
                 },
                 {
                   title: '六角星符号',
-                  path: '/components/0.1.0/components/shape-star-six',
+                  path: '/components/0.1.x/components/shape-star-six',
                 },
                 {
                   title: '聊天框',
-                  path: '/components/0.1.0/components/shape-talk-bubble',
+                  path: '/components/0.1.x/components/shape-talk-bubble',
                 },
               ],
             },

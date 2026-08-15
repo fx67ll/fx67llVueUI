@@ -2,9 +2,15 @@
 	<div class="bc-box" :class="{ 'bc-box--no-label': !showLabel }" :style="boxStyle">
 		<p v-if="isShowTime">{{ timeNow }}</p>
 		<table>
-			<tr class="bc-hours"><td v-for="(item, i) in hoursTimeArr" :key="i" :class="item === '0' ? 'num0' : 'num1'"></td></tr>
-			<tr class="bc-minutes"><td v-for="(item, i) in minutesTimeArr" :key="i" :class="item === '0' ? 'num0' : 'num1'"></td></tr>
-			<tr class="bc-seconds"><td v-for="(item, i) in secondsTimeArr" :key="i" :class="item === '0' ? 'num0' : 'num1'"></td></tr>
+			<tr class="bc-hours">
+				<td v-for="(item, i) in hoursTimeArr" :key="i" :class="item === '0' ? 'num0' : 'num1'"></td>
+			</tr>
+			<tr class="bc-minutes">
+				<td v-for="(item, i) in minutesTimeArr" :key="i" :class="item === '0' ? 'num0' : 'num1'"></td>
+			</tr>
+			<tr class="bc-seconds">
+				<td v-for="(item, i) in secondsTimeArr" :key="i" :class="item === '0' ? 'num0' : 'num1'"></td>
+			</tr>
 		</table>
 	</div>
 </template>
@@ -67,6 +73,24 @@ export default {
 				return new RegExp('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$').test(color);
 			}
 		},
+		// 十进制时间文字大小（px），0 表示使用组件默认（随视口 16~28px 自适应）
+		textSize: {
+			type: Number,
+			required: false,
+			default: 0,
+			validator(num) {
+				return typeof num === 'number' && num >= 0 && num <= 60;
+			}
+		},
+		// 十进制时间文字底部与点阵第一行圆点顶部的净间距（px）
+		textSpacing: {
+			type: Number,
+			required: false,
+			default: 10,
+			validator(num) {
+				return typeof num === 'number' && num >= 0 && num <= 100;
+			}
+		},
 		// 是否显示 hour/minute/second 标签
 		showLabel: {
 			type: Boolean,
@@ -80,7 +104,7 @@ export default {
 	computed: {
 		// 注入到根容器的 CSS 变量集合，供 less 运行时读取
 		boxStyle() {
-			return {
+			let style = {
 				'--zoomSize': this.zoomSize,
 				'--bc-dot-color': this.dotColor,
 				'--bc-dot-color-rgb': this.hexToRgb(this.dotColor),
@@ -88,8 +112,14 @@ export default {
 				'--bc-dot-bg-color-rgb': this.hexToRgb(this.dotBgColor),
 				'--bc-text-color': this.textColor,
 				// dotSize 作为 clamp 的 preferred 值，配合 14px~36px 上下限自适应
-				'--bc-dot-size': this.dotSize + 'px'
+				'--bc-dot-size': this.dotSize + 'px',
+				'--bc-text-spacing': this.textSpacing + 'px'
 			};
+			// textSize 为 0 时不注入变量，保持组件默认的自适应字号
+			if (this.textSize > 0) {
+				style['--bc-text-size'] = this.textSize + 'px';
+			}
+			return style;
 		}
 	},
 	data() {
@@ -108,7 +138,7 @@ export default {
 	},
 	mounted() {
 		var self = this;
-		this.timer = setInterval(function() {
+		this.timer = setInterval(function () {
 			self.getNowTime();
 		}, 1000);
 	},
@@ -121,7 +151,7 @@ export default {
 		hexToRgb(hex) {
 			let h = hex.replace('#', '');
 			if (h.length === 3) {
-				h = h.split('').map(function(c) { return c + c; }).join('');
+				h = h.split('').map(function (c) { return c + c; }).join('');
 			}
 			var r = parseInt(h.substring(0, 2), 16);
 			var g = parseInt(h.substring(2, 4), 16);
@@ -166,7 +196,8 @@ export default {
 
 <style lang="less" scoped>
 @import '~@a/styles/binary-clock/binary-clock.less';
-.bc-box{
+
+.bc-box {
 	zoom: var(--zoomSize)
 }
 </style>

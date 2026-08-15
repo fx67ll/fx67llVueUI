@@ -1,5 +1,17 @@
 # 历史版本记录
 
+## 0.7.1
+* 优化二进制时钟组件：修复十进制时间标题与点阵主体间距不稳定的问题，移除原 `top: 1vw` 相对定位偏移 hack，通过反向抵消 `border-spacing` 使标题底部到第一行圆点的净间距恒定（默认 10px），不随视口漂移；补充 `line-height: 1.2` 固定标题行高，避免字体渲染差异影响间距
+* 二进制时钟组件新增样式注入参数：`textSize`（十进制时间文字大小，0 为默认随视口 16~28px 自适应字号）、`textSpacing`（标题与点阵净间距），无需重写样式表即可调整
+
+## 0.7.0
+* 完成 **数字时钟组件** 的封装，同时提供模拟时钟（指针钟盘）与数字时间两种显示方式，支持显隐自由组合
+* 支持任意 IANA 时区（`timeZone`）与 12/24 小时制（`hour12`），时区换算基于 `Intl.DateTimeFormat` 实现
+* 内置 7 套时钟主题（`theme`：fx67ll / aurora / ocean / forest / sunset / violet / graphite），默认使用以 `#2ECC71` 为主色的 fx67ll 主题（时针直接采用主题主色，突出品牌绿），并提供 `faceColor` / `hourHandColor` / `minuteHandColor` / `secondHandColor` / `textColor` 粒度配色参数，主题仅作用于时钟本体，不污染页面背景
+* 支持 `smoothSeconds` 秒针平滑扫动 / 每秒跳格切换，`zoomSize` 整体缩放
+* 新增后台静默网络时间同步：本地时间优先，通过 HTTP `Date` 响应头估算网络时间，偏差超过 1 秒才静默校正，无任何界面加载提示；周期性重同步 + 页面切回前台立即重同步；渲染循环基于 `requestAnimationFrame`，免疫定时器漂移与后台标签页节流
+* 新增 `tick`（每秒）与 `time-sync`（同步完成）事件，便于父组件感知时间信息
+
 ## 0.6.4  
 * 修复已知问题  
 

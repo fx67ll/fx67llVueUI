@@ -2,7 +2,7 @@
 
 > practice vue components like elementui & do sth different ez to use
 
-![version](https://img.shields.io/badge/version-0.6.4-42b983)
+![version](https://img.shields.io/badge/version-0.7.1-42b983)
 ![vue](https://img.shields.io/badge/Vue-2.6-42b983)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 
@@ -51,7 +51,7 @@ Vue.use(fx67llVueUI);
 
 ---
 
-## 🧱 组件概览（v0.6.3，共 20 个）
+## 🧱 组件概览（v0.7.0，共 21 个）
 
 | 分类 | 组件 | 说明 |
 | :---: | :--- | :--- |
@@ -61,6 +61,7 @@ Vue.use(fx67llVueUI);
 | 🎆 交互 | `fx67ll-nan-fireworks` | 放烟花组件，支持编程式控制与丰富配置 |
 | 🖼️ 头像 | `fx67ll-random-mosaic-avatar` | 随机马赛克头像，支持点击刷新与定制 |
 | ⏰ 时钟 | `fx67ll-binary-clock` | 二进制时钟，圆点颜色/尺寸/标签可自定义，随视口自适应 |
+| ⏰ 时钟 | `fx67ll-digital-clock` | 数字时钟，指针钟盘 + 数字时间，多时区/多主题/后台静默时间同步 |
 | 📄 页面 | `fx67ll-footer` | 网站页脚，可配置作者/年份/备案号 |
 | 🔷 形状 | `fx67ll-shape-*` 系列（13 款） | 纯 CSS3 绘制的形状符号，可设颜色与大小（旧名 `shape-*`） |
 

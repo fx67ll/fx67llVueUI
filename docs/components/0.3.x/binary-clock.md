@@ -222,6 +222,70 @@
 
 ---
 
+## 自定义文字大小与间距
+
+通过 `textSize` 控制十进制时间文字大小（px，`0` 表示使用组件默认的随视口自适应字号），`textSpacing` 控制文字底部与点阵第一行圆点顶部的净间距（px，默认 10），均为样式注入参数，无需重写样式表。
+
+::: demo 左侧默认文字与间距，右侧加大文字并收紧间距。
+```vue
+<template>
+	<div class="clock-compare">
+		<div class="clock-compare__item">
+			<div class="clock-compare__label">默认文字与间距</div>
+			<div class="clock-demo-box">
+				<fx67ll-binary-clock :isShowTime="true" :zoomSize="1" />
+			</div>
+		</div>
+		<div class="clock-compare__item">
+			<div class="clock-compare__label">自定义文字大小 + 间距</div>
+			<div class="clock-demo-box">
+				<fx67ll-binary-clock :isShowTime="true" :zoomSize="1" :textSize="24" :textSpacing="4" />
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'fx67llDemo',
+		data() {
+			return {}
+		},
+		methods: {}
+	};
+</script>
+
+<style>
+.clock-compare {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+.clock-compare__item {
+	flex: 1;
+	min-width: 260px;
+}
+.clock-compare__label {
+	margin-bottom: 8px;
+	font-size: 13px;
+	color: #6b7280;
+	text-align: center;
+}
+.clock-demo-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	background: #f7f8fa;
+	border-radius: 8px;
+	overflow: auto;
+}
+</style>
+```
+:::
+
+---
+
 ## 隐藏标签
 
 设置 `showLabel` 为 `false` 可隐藏每行右侧的 hour/minute/second 文字标签，仅保留点阵。
@@ -272,6 +336,9 @@
 <!-- 自定义配色与圆点尺寸 -->
 <fx67ll-binary-clock dotColor="#9b7ad5" dotBgColor="#f3eefa" textColor="#9b7ad5" :dotSize="36" />
 
+<!-- 自定义十进制时间文字大小与间距 -->
+<fx67ll-binary-clock :textSize="24" :textSpacing="4" />
+
 <!-- 隐藏 hour/minute/second 标签 -->
 <fx67ll-binary-clock :showLabel="false" />
 
@@ -291,13 +358,15 @@
 |  dotBgColor  |  熄灭圆点（二进制 0）颜色，十六进制  |  String  |  -  |  #ffffff  |
 |  dotSize  |  圆点基础尺寸（px），实际随视口在 14~36px 间自适应  |  Number  |  8~60  |  30  |
 |  textColor  |  十进制时间文字颜色，十六进制  |  String  |  -  |  #2ecc71  |
+|  textSize  |  十进制时间文字大小（px），0 表示使用组件默认（随视口 16~28px 自适应）  |  Number  |  0~60  |  0  |
+|  textSpacing  |  十进制时间文字底部与点阵第一行圆点顶部的净间距（px）  |  Number  |  0~100  |  10  |
 |  showLabel  |  是否显示 hour/minute/second 标签  |  Boolean  |  true / false  |  true  |
 
 ---
 
 ## 版本说明
 
-> 0.3.7 版本以上支持二进制时钟组件；0.6.2 版本优化圆点渲染（伪元素方案，任意情况保持正圆）并新增 `dotColor` / `dotBgColor` / `dotSize` / `textColor` / `showLabel` 自定义参数，圆点尺寸随视口自适应；0.6.3 版本修复圆点方形框、光晕动态配色、白点轮廓优化。其他版本支持情况请自行查看版本历史
+> 0.3.7 版本以上支持二进制时钟组件；0.6.2 版本优化圆点渲染（伪元素方案，任意情况保持正圆）并新增 `dotColor` / `dotBgColor` / `dotSize` / `textColor` / `showLabel` 自定义参数，圆点尺寸随视口自适应；0.6.3 版本修复圆点方形框、光晕动态配色、白点轮廓优化；0.7.1 版本优化十进制时间标题与点阵主体的间距（净间距恒定不随视口漂移），并新增 `textSize` / `textSpacing` 样式注入参数，直接配置文字大小与间距，无需重写样式表。其他版本支持情况请自行查看版本历史
 
 ---
 

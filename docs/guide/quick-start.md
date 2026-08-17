@@ -104,6 +104,6 @@ Vue.use(fx67llVueUI);
 
 ## 下一步
 
-* 浏览全部组件与在线示例，请访问[组件](/components/0.7.0/digital-clock)文档，并通过左侧导航切换分类
+* 浏览全部组件与在线示例，请访问[组件](/components/0.7.x/digital-clock)文档，并通过左侧导航切换分类
 * 了解各版本变更内容，请查看[历史版本](/guide/history-version.md)
 * 使用中遇到问题或发现错误，欢迎提交 `issue` 反馈：[GitHub Issues](https://github.com/fx67ll/fx67llVueUI/issues)

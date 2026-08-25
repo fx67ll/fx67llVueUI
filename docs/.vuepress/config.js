@@ -61,53 +61,65 @@ module.exports = {
         ariaLabel: 'Language Menu',
         items: [
           {
-            text: "fx67ll's Github 仓库",
-            link: 'https://github.com/fx67ll',
+            text: '个人工具',
+            ariaLabel: 'Language Menu',
+            items: [
+              {
+                text: "fx67ll's 个人主页",
+                link: 'https://fx67ll.com',
+              },
+              {
+                text: "fx67ll's 在线简历",
+                link: 'https://resume.fx67ll.com',
+              },
+              {
+                text: "fx67ll's 技术博客",
+                link: 'https://fx67ll.xyz',
+              },
+              {
+                text: "fx67ll's 站点导航",
+                link: 'https://nav.fx67ll.com',
+              },
+              {
+                text: "fx67ll's 在线工具",
+                link: 'https://tool.fx67ll.com',
+              },
+              {
+                text: "个人日常 H5 工具",
+                // link: 'https://fx67ll.vip'
+                link: 'https://life.fx67ll.com',
+              },
+              {
+                text: "个人日常工具管理后台",
+                link: 'https://vip.fx67ll.com',
+              },
+            ],
           },
           {
-            text: "fx67ll's Npm 仓库",
-            link: 'https://www.npmjs.com/search?q=fx67ll',
-          },
-          {
-            text: "fx67ll's 个人主页",
-            link: 'https://fx67ll.com',
-          },
-          {
-            text: "fx67ll's 技术博客",
-            link: 'https://fx67ll.xyz',
-          },
-          {
-            text: "fx67ll's 站点导航",
-            link: 'https://nav.fx67ll.com',
-          },
-          {
-            text: "fx67ll's H5 工具",
-            // link: 'https://fx67ll.vip'
-            link: 'https://life.fx67ll.com',
-          },
-          {
-            text: "fx67ll's 管理系统",
-            link: 'https://vip.fx67ll.com',
-          },
-          {
-            text: 'Node.js + MongoDB 演示站点',
-            link: 'https://node.fx67ll.com',
-          },
-          {
-            text: 'React.js + MongoDB 演示站点',
-            link: 'https://react.fx67ll.com',
-          },
-          {
-            text: 'Three.js 作品合集',
-            link: 'https://three.fx67ll.com',
-          },
-          {
-            text: 'Uni-app 作品示例合集',
-            link: 'https://uni.fx67ll.com',
-          },
-          {
-            text: "fx67ll's AI 大数据地图服务",
-            link: 'https://map.fx67ll.com',
+            text: '演示作品',
+            ariaLabel: 'Language Menu',
+            items: [
+              {
+                text: 'Node.js + MongoDB 演示站点',
+                link: 'https://node.fx67ll.com',
+              },
+              {
+                text: 'React.js + MongoDB 演示站点',
+                link: 'https://react.fx67ll.com',
+              },
+              {
+                text: 'Three.js 作品合集',
+                link: 'https://three.fx67ll.com',
+              },
+              {
+                text: 'Uni-app 作品示例合集',
+                link: 'https://uni.fx67ll.com',
+              },
+              {
+                text: "fx67ll's AI 大数据地图服务",
+                link: 'https://map.fx67ll.com',
+              },
+            ],
           },
         ],
       },

@@ -86,7 +86,6 @@ module.exports = {
               },
               {
                 text: "个人日常 H5 工具",
-                // link: 'https://fx67ll.vip'
                 link: 'https://life.fx67ll.com',
               },
               {
